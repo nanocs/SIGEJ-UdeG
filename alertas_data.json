@@ -1,0 +1,2646 @@
+{
+ "corte": "2026-06-18",
+ "alertas": {
+  "vencimientos": [
+   {
+    "exp": "1207/2025",
+    "materia": "Laboral",
+    "abogado": "Tania Samantha Larios Salgado",
+    "prox": "2026-12-16",
+    "dias": 181,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "54/2024-PE",
+    "materia": "Laboral",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "prox": "2027-04-19",
+    "dias": 305,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "191/2024-PE",
+    "materia": "Laboral",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "prox": "2027-07-11",
+    "dias": 388,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "250/2025",
+    "materia": "Laboral",
+    "abogado": "Alicia Isabel Gutiérrez Gutiérrez",
+    "prox": "2028-03-28",
+    "dias": 649,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "32/2020-S",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "prox": "2028-04-03",
+    "dias": 655,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "66/2020-S",
+    "materia": "Laboral",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "prox": "2028-04-07",
+    "dias": 659,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "79/2018-A",
+    "materia": "Laboral",
+    "abogado": "Julio César Espinoza González",
+    "prox": "2028-04-28",
+    "dias": 680,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "80/2018-S",
+    "materia": "Laboral",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "prox": "2028-04-28",
+    "dias": 680,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "113/2018-A",
+    "materia": "Laboral",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "prox": "2028-04-28",
+    "dias": 680,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "1/2021-A",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "prox": "2028-04-28",
+    "dias": 680,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "24/2021-S",
+    "materia": "Laboral",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "prox": "2028-04-28",
+    "dias": 680,
+    "nivel": "Alto"
+   },
+   {
+    "exp": "233/2024-PO",
+    "materia": "Laboral",
+    "abogado": "Didier Ivan Gonzalez Rosas",
+    "prox": "2028-09-26",
+    "dias": 831,
+    "nivel": "Bajo"
+   }
+  ],
+  "inactividad": [
+   {
+    "exp": "287/2025",
+    "materia": "Civil",
+    "abogado": "Jorge Ubaldo Valadez Velázquez",
+    "ult": "2009-02-25",
+    "meses_sin_mov": 208,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "26/2011-S",
+    "materia": "Laboral",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "ult": "2012-04-19",
+    "meses_sin_mov": 170,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "476/2006",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "ult": "2012-08-30",
+    "meses_sin_mov": 166,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "60/2011-S",
+    "materia": "Laboral",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "ult": "2012-11-01",
+    "meses_sin_mov": 164,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "60/2014-S",
+    "materia": "Laboral",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "ult": "2015-01-20",
+    "meses_sin_mov": 137,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "26/2014-S",
+    "materia": "Laboral",
+    "abogado": "Edgar Franco Velázquez",
+    "ult": "2015-06-10",
+    "meses_sin_mov": 132,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "53/2014-A",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "ult": "2015-08-26",
+    "meses_sin_mov": 130,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "17/2015-A",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "ult": "2017-03-29",
+    "meses_sin_mov": 111,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "62/2016-S",
+    "materia": "Laboral",
+    "abogado": "Tania Samantha Larios Salgado",
+    "ult": "2017-12-13",
+    "meses_sin_mov": 102,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "50/2017-S",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "ult": "2018-05-04",
+    "meses_sin_mov": 98,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "1648/2013",
+    "materia": "Laboral",
+    "abogado": "Tania Samantha Larios Salgado",
+    "ult": "2018-05-11",
+    "meses_sin_mov": 97,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "21/2015-A",
+    "materia": "Laboral",
+    "abogado": "Edgar Franco Velázquez",
+    "ult": "2018-05-24",
+    "meses_sin_mov": 97,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "80/2015-S",
+    "materia": "Laboral",
+    "abogado": "Tania Samantha Larios Salgado",
+    "ult": "2018-05-29",
+    "meses_sin_mov": 97,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "64/2014-S",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "ult": "2018-08-09",
+    "meses_sin_mov": 94,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "70/2016-S",
+    "materia": "Laboral",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "ult": "2018-08-17",
+    "meses_sin_mov": 94,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "8/2018-S",
+    "materia": "Laboral",
+    "abogado": "Didier Ivan Gonzalez Rosas",
+    "ult": "2018-09-24",
+    "meses_sin_mov": 93,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "30/2018-S",
+    "materia": "Laboral",
+    "abogado": "Edgar Franco Velázquez",
+    "ult": "2018-09-10",
+    "meses_sin_mov": 93,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "45/2016-A",
+    "materia": "Laboral",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "ult": "2018-10-18",
+    "meses_sin_mov": 92,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "14/2018-S",
+    "materia": "Laboral",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "ult": "2018-10-17",
+    "meses_sin_mov": 92,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "77/2018-A",
+    "materia": "Laboral",
+    "abogado": "Julio César Espinoza González",
+    "ult": "2018-10-29",
+    "meses_sin_mov": 92,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "47/2016-A",
+    "materia": "Laboral",
+    "abogado": "Edgar Franco Velázquez",
+    "ult": "2018-12-18",
+    "meses_sin_mov": 90,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "91/2018-A",
+    "materia": "Laboral",
+    "abogado": "Edgar Franco Velázquez",
+    "ult": "2018-12-07",
+    "meses_sin_mov": 90,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "34/2018-S",
+    "materia": "Laboral",
+    "abogado": "Edgar Franco Velázquez",
+    "ult": "2019-01-24",
+    "meses_sin_mov": 89,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "55/2016-A",
+    "materia": "Laboral",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "ult": "2019-02-08",
+    "meses_sin_mov": 88,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "17/2017-A",
+    "materia": "Laboral",
+    "abogado": "Didier Ivan Gonzalez Rosas",
+    "ult": "2019-03-06",
+    "meses_sin_mov": 88,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "122/2018-A",
+    "materia": "Laboral",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "ult": "2019-02-26",
+    "meses_sin_mov": 88,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "89/2018-A",
+    "materia": "Laboral",
+    "abogado": "Didier Ivan Gonzalez Rosas",
+    "ult": "2019-03-28",
+    "meses_sin_mov": 87,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "45/2015-A",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "ult": "2019-07-02",
+    "meses_sin_mov": 84,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "55/2018-A",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "ult": "2019-06-13",
+    "meses_sin_mov": 84,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "1840/2015",
+    "materia": "Laboral",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "ult": "2019-08-13",
+    "meses_sin_mov": 82,
+    "nivel": "Alto"
+   },
+   {
+    "exp": "56/2016-S",
+    "materia": "Laboral",
+    "abogado": "Tania Samantha Larios Salgado",
+    "ult": "2019-11-28",
+    "meses_sin_mov": 79,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "46/2018-S",
+    "materia": "Laboral",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "ult": "2019-11-14",
+    "meses_sin_mov": 79,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "46/2019-A",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "ult": "2019-11-14",
+    "meses_sin_mov": 79,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "60/2016-S",
+    "materia": "Laboral",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "ult": "2020-01-17",
+    "meses_sin_mov": 77,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "504/2016-F",
+    "materia": "Laboral",
+    "abogado": "Tania Samantha Larios Salgado",
+    "ult": "2020-01-29",
+    "meses_sin_mov": 77,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "1025/2013",
+    "materia": "Laboral",
+    "abogado": "Edgar Franco Velázquez",
+    "ult": "2020-02-11",
+    "meses_sin_mov": 76,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "30/2017-S",
+    "materia": "Laboral",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "ult": "2020-02-13",
+    "meses_sin_mov": 76,
+    "nivel": "Medio"
+   },
+   {
+    "exp": "87/2018-A",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "ult": "2020-02-26",
+    "meses_sin_mov": 76,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "1023/2015-C",
+    "materia": "Laboral",
+    "abogado": "Tania Samantha Larios Salgado",
+    "ult": "2020-03-03",
+    "meses_sin_mov": 76,
+    "nivel": "Bajo"
+   },
+   {
+    "exp": "20/2018-S",
+    "materia": "Laboral",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "ult": "2020-03-11",
+    "meses_sin_mov": 75,
+    "nivel": "Bajo"
+   }
+  ],
+  "contingente": [
+   {
+    "exp": "2/2019-S",
+    "materia": "Laboral",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "dep": "CUCEA",
+    "monto": 502112,
+    "nivel": "Crítico",
+    "score": 84
+   },
+   {
+    "exp": "1475/2023",
+    "materia": "Civil",
+    "abogado": "Daniela Ontiveros Vargas",
+    "dep": "Coordinación General de Investigación, Posgrado y Vinculación",
+    "monto": 96118,
+    "nivel": "Alto",
+    "score": 57
+   },
+   {
+    "exp": "24/2021-S",
+    "materia": "Laboral",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "dep": "Coordinación General De Tecnologías De Información",
+    "monto": 90000,
+    "nivel": "Alto",
+    "score": 64
+   },
+   {
+    "exp": "44/2003-S",
+    "materia": "Laboral",
+    "abogado": "Edgar Franco Velázquez",
+    "dep": "Escuela Preparatoria 11 y 7",
+    "monto": 76333,
+    "nivel": "Crítico",
+    "score": 81
+   },
+   {
+    "exp": "86/2023",
+    "materia": "Laboral",
+    "abogado": "Tania Samantha Larios Salgado",
+    "dep": "Operadora del Sistema Universitario de Radio, Televisión y Cinematografía",
+    "monto": 64743,
+    "nivel": "Alto",
+    "score": 71
+   },
+   {
+    "exp": "24/2010-S",
+    "materia": "Laboral",
+    "abogado": "Alicia Isabel Gutiérrez Gutiérrez",
+    "dep": "CUCBA",
+    "monto": 14507,
+    "nivel": "Alto",
+    "score": 59
+   },
+   {
+    "exp": "71/2015-A",
+    "materia": "Laboral",
+    "abogado": "Julio César Espinoza González",
+    "dep": "Escuela Preparatoria No. 2",
+    "monto": 10655,
+    "nivel": "Alto",
+    "score": 71
+   },
+   {
+    "exp": "27/2018-A",
+    "materia": "Laboral",
+    "abogado": "Julio César Espinoza González",
+    "dep": "Escuela Preparatoria No. 11",
+    "monto": 9733,
+    "nivel": "Alto",
+    "score": 73
+   },
+   {
+    "exp": "95/2019-A",
+    "materia": "Laboral",
+    "abogado": "Julio César Espinoza González",
+    "dep": "Coordinación General Administrativa",
+    "monto": 1200,
+    "nivel": "Alto",
+    "score": 65
+   }
+  ],
+  "kpi": {
+   "venc": 12,
+   "inact": 205,
+   "conting": 9,
+   "pasivo_riesgo": 865401
+  }
+ },
+ "fichas": [
+  {
+   "exp": "2/2019-S",
+   "nivel": "Crítico",
+   "score": 84,
+   "resumen": "Laboral (Ordinario) · Manuel Flores Ayala\u000bTécnico Administrativo D y Profesor de asignatura B vs Universidad de Guadalajara · CUCEA · etapa Amparo · sentido Favorable. Responsable: Eduardo Daniel González Vázquez. Monto detectado: $502,112.",
+   "matriz": {
+    "probabilidad": "Muy alta",
+    "impacto": "Crítico"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Depuración procesal",
+     "accion": "Verificar procedencia, competencia y plazos para evitar improcedencia.",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Impulso procesal",
+     "accion": "Promover periódicamente para evitar caducidad por inactividad.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Evaluación de salida",
+     "accion": "Analizar viabilidad de convenio o desistimiento estratégico.",
+     "prioridad": "Baja"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 2/2019-S",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Favorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $502,112",
+    "Factores de riesgo: monto $502,112, en amparo, reinstalación/indemnización, 7 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "44/2003-S",
+   "nivel": "Crítico",
+   "score": 81,
+   "resumen": "Laboral (Ordinario) · Francisco Alberto Monroy Luna vs Universidad de Guadalajara - Preparatoria No- .7 · Escuela Preparatoria 11 y 7 · etapa Amparo · sentido Desfavorable. Responsable: Edgar Franco Velázquez. Monto detectado: $76,333.",
+   "matriz": {
+    "probabilidad": "Muy alta",
+    "impacto": "Medio"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 44/2003-S",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $76,333",
+    "Factores de riesgo: monto $76,333, en amparo, resolución desfavorable, reinstalación/indemnización, 23 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "45/2017-A",
+   "nivel": "Crítico",
+   "score": 79,
+   "resumen": "Laboral (Ordinario) · Mario Gallardo Sepúlveda\u000bAdministrativo, Auxiliar Operativo D vs Universidad de Guadalajara · CUCEA · etapa CONCLUIDO · sentido Desfavorable. Responsable: Julio César Espinoza González. Monto detectado: $413,858.",
+   "matriz": {
+    "probabilidad": "Muy alta",
+    "impacto": "Alto"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 45/2017-A",
+    "Estado (col0): CONCLUIDO",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $413,858",
+    "Factores de riesgo: monto $413,858, resolución desfavorable, reinstalación/indemnización"
+   ]
+  },
+  {
+   "exp": "27/2018-A",
+   "nivel": "Alto",
+   "score": 73,
+   "resumen": "Laboral (Ordinario) · Rosa María Valeriano Sánchez\u000bAcadémico, Profesor Asociado A vs Universidad de Guadalajara · Escuela Preparatoria No. 11 · etapa Laudo · sentido Desfavorable. Responsable: Julio César Espinoza González. Monto detectado: $9,733.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Medio"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 27/2018-A",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $9,733",
+    "Factores de riesgo: monto $9,733, etapa Laudo, resolución desfavorable, reinstalación/indemnización, 8 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "71/2015-A",
+   "nivel": "Alto",
+   "score": 71,
+   "resumen": "Laboral (Ordinario) · Marta Biviana Silva Serafín\u000bAcadémico, Profesor Docente Asociado B vs Universidad de Guadalajara · Escuela Preparatoria No. 2 · etapa Amparo · sentido Desfavorable. Responsable: Julio César Espinoza González. Monto detectado: $10,655.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Medio"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 71/2015-A",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $10,655",
+    "Factores de riesgo: monto $10,655, en amparo, resolución desfavorable, reinstalación/indemnización, 11 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "86/2023",
+   "nivel": "Alto",
+   "score": 71,
+   "resumen": "Laboral (Ordinario) · Héctor Pérez Morales vs Universidad de Guadalajara · Operadora del Sistema Universitario de Radio, Televisión y Cinematografía · etapa Amparo · sentido Desfavorable. Responsable: Tania Samantha Larios Salgado. Monto detectado: $64,743.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Medio"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 86/2023",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $64,743",
+    "Factores de riesgo: monto $64,743, en amparo, resolución desfavorable, reinstalación/indemnización"
+   ]
+  },
+  {
+   "exp": "36/2008-S",
+   "nivel": "Alto",
+   "score": 67,
+   "resumen": "Laboral (Ordinario) · Rocio Chávez Márquez\u000bAcadémico, Profesor Docente Asociado \"B\" vs Universidad de Guadalajara · Escuela Preparatoria No. 14 · etapa Laudo · sentido Desfavorable. Responsable: Julio César Espinoza González. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 36/2008-S",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, reinstalación/indemnización, 18 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "57/2018-A",
+   "nivel": "Alto",
+   "score": 67,
+   "resumen": "Laboral (Ordinario) · Alicia Dávila Jara\u000bAuxiliar Administrativo \"D\" vs Universidad de Guadalajara · Escuela Preparatoria Regional de Colotlán · etapa Laudo · sentido Desfavorable. Responsable: Jonathan Tlacaelel Plascencia López. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 57/2018-A",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, reinstalación/indemnización, 8 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "29/2019-A",
+   "nivel": "Alto",
+   "score": 67,
+   "resumen": "Laboral (Ordinario) · Rosa Araceli Lazcarro Real\u000bAcadémico, Profesor de Asignatura vs Universidad de Guadalajara · Escuela Politécnica de Guadalajara · etapa Laudo · sentido Desfavorable. Responsable: Tania Samantha Larios Salgado. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 29/2019-A",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, reinstalación/indemnización, 7 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "95/2019-A",
+   "nivel": "Alto",
+   "score": 65,
+   "resumen": "Laboral (Ordinario) · Fabiola Alaniz Lozano vs Universidad de Guadalajara · Coordinación General Administrativa · etapa Amparo · sentido Desfavorable. Responsable: Julio César Espinoza González. Monto detectado: $1,200.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Medio"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 95/2019-A",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $1,200",
+    "Factores de riesgo: monto $1,200, en amparo, resolución desfavorable, reinstalación/indemnización, 7 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "24/2021-S",
+   "nivel": "Alto",
+   "score": 64,
+   "resumen": "Laboral (Ordinario) · María Elena Guerrero Márquez\u000bAuxiliar General vs Universidad de Guadalajara · Coordinación General De Tecnologías De Información · etapa Laudo. Responsable: Aimé Karolina Ontiveros Tapia. Monto detectado: $90,000.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Medio"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Fortalecer probanza/alegatos",
+     "accion": "Robustecer pruebas y alegatos antes de la resolución; revisar carga probatoria.",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Salida negociada (MASC)",
+     "accion": "Evaluar conciliación/convenio temprano dado el riesgo, para evitar condena mayor.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Amparo de cobertura",
+     "accion": "Preparar proyecto de amparo por si la resolución resulta adversa.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 24/2021-S",
+    "Estado (col0): Laudo",
+    "Sentido (col12): —",
+    "Materia (col24): Laboral",
+    "Monto (texto): $90,000",
+    "Factores de riesgo: monto $90,000, etapa Laudo, reinstalación/indemnización, 5 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "24/2010-S",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Ricardo Gutiérrez Padilla\u000bAcadémico, Profesor Docente Titular \"B\" vs Universidad de Guadalajara · CUCBA · etapa Pruebas · sentido Desfavorable. Responsable: Alicia Isabel Gutiérrez Gutiérrez. Monto detectado: $14,507.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Medio"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 24/2010-S",
+    "Estado (col0): Pruebas",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $14,507",
+    "Factores de riesgo: monto $14,507, resolución desfavorable, reinstalación/indemnización, 16 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "1840/2015",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Jaime Alejandro Fernández Ramos\u000bAdministrativo, Mesero vs Universidad de Guadalajara · Hotel Montecarlo · etapa Amparo · sentido Desfavorable. Responsable: Aimé Karolina Ontiveros Tapia. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 1840/2015",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 11 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "38/2017-S",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Jorge Alberto Mendoza Mariscal\u000bAdministrativo, Fotógrafo y Reportero Gráfico vs Universidad de Guadalajara · Coordinación General de Comunicación Social · etapa Amparo · sentido Desfavorable. Responsable: Julio César Espinoza González. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 38/2017-S",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 9 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "56/2017-S",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Luis Alejandro Rodríguez Rizo\u000bAcadémico, Profesor de Asignatura B vs Universidad de Guadalajara · Escuela Preparatoria No. 9 · etapa Amparo · sentido Desfavorable. Responsable: Aimé Karolina Ontiveros Tapia. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 56/2017-S",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 9 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "67/2017-A",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Héctor Villaseñor Favela vs Universidad de Guadalajara · Escuela Preparatoria No. 5 · etapa Amparo · sentido Desfavorable. Responsable: Aimé Karolina Ontiveros Tapia. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 67/2017-A",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 9 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "18/2018-S",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Andrea Ontiveros Corona vs Universidad de Guadalajara · CUAAD · etapa Amparo · sentido Desfavorable. Responsable: Edgar Franco Velázquez. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 18/2018-S",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 8 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "61/2018-A",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Mario Alberto Jasso Salcido vs Universidad de Guadalajara · CUCEI · etapa Amparo · sentido Desfavorable. Responsable: Edgar Franco Velázquez. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 61/2018-A",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 8 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "70/2018-S",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Javier Leopoldo López Rubio\u000bAcadémico, Profesor de Asignatura B vs Universidad de Guadalajara · CUCOSTA · etapa Amparo · sentido Desfavorable. Responsable: Eduardo Daniel González Vázquez. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 70/2018-S",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 8 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "5/2019-A",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Josefina Rodríguez Ledesma vs Universidad de Guadalajara · Escuela Preparatoria No. 20 · etapa Amparo · sentido Desfavorable. Responsable: Edgar Franco Velázquez. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 5/2019-A",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 7 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "92/2018-F",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Jorge Ramcess Díaz Navarro vs Universidad de Guadalajara · CUCIÉNEGA · etapa Amparo · sentido Desfavorable. Responsable: Jonathan Tlacaelel Plascencia López. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 92/2018-F",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 8 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "126/2018-S",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Eduardo Huizar Ulloa\u000bTécnico Académico Asociado \"A\" y Profesor de Asignatura B vs Universidad de Guadalajara · Escuela Preparatoria No. 12 · etapa Amparo · sentido Desfavorable. Responsable: Eduardo Daniel González Vázquez. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 126/2018-S",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 8 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "206/2021",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Jorge Enrique Apecechea Monreal, Roberto Godínez Rodríguez, Karina Desiré Eguiarte Montes, José Andrés Flores García, Pedro Mora Guzmán, Saúl Manuel Rivera Castillo, Edgar Joel de la Cruz Alatorre, Emmanuel Rosales López, Cynthia Lizbeth Vázquez González, Gloria Cecilia Villa Leal, Felipe de Jesús López Vázquez, Jorge Ariel Adame Tovar vs Universidad de Guadalajara Operadora Auditorio Metropolitano\u000bUniversidad de Guadalajara\u000bIMSS · Operadora Auditorio Metropolitano · etapa Amparo · sentido Desfavorable. Responsable: Eduardo Daniel González Vázquez. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 206/2021",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 5 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "60/2021-S",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Jose Luis Flores Espinoza vs Universidad de Guadalajara · Escuela Preparatoria Regional de Ocotlan, Modulo Atequiza · etapa Amparo · sentido Desfavorable. Responsable: Eduardo Daniel González Vázquez. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 60/2021-S",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 5 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "3037/2021",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Mauricio Valenzuela Arroyo vs Universidad de Guadalajara\u000bIMSS · Coordinación General de Servicios Administrativos e Infraestructura Tecnológica · etapa Amparo · sentido Desfavorable. Responsable: Julio César Espinoza González. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 3037/2021",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 5 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "61/2021",
+   "nivel": "Alto",
+   "score": 59,
+   "resumen": "Laboral (Ordinario) · Arturo Heredia Arciniega\u000bEncargado de almacen 42.5 hrs semanales vs Universidad de Guadalajara · CUAAD · etapa Amparo · sentido Desfavorable. Responsable: Julio César Espinoza González. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 61/2021",
+    "Estado (col0): Amparo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: en amparo, resolución desfavorable, reinstalación/indemnización, 5 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "50/2022-S",
+   "nivel": "Alto",
+   "score": 57,
+   "resumen": "Laboral (Ordinario) · Rogelio Ramírez de la Torre\u000bProfesor de asignatura  \"B\" vs Universidad de Guadalajara · Escuela Preparatoria Regional de San Juan de los Lagos · etapa Laudo · sentido Desfavorable. Responsable: Jonathan Tlacaelel Plascencia López. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 50/2022-S",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, reinstalación/indemnización"
+   ]
+  },
+  {
+   "exp": "1475/2023",
+   "nivel": "Alto",
+   "score": 57,
+   "resumen": "Civil (Administrativo) · Universidad de Guadalajara vs H. Ayuntamiento de Guadalajara y otros · Coordinación General de Investigación, Posgrado y Vinculación · etapa Sentencia · sentido Favorable. Responsable: Daniela Ontiveros Vargas. Monto detectado: $96,118.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Medio"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Fortalecer probanza/alegatos",
+     "accion": "Robustecer pruebas y alegatos antes de la resolución; revisar carga probatoria.",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Salida negociada (MASC)",
+     "accion": "Evaluar conciliación/convenio temprano dado el riesgo, para evitar condena mayor.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Amparo de cobertura",
+     "accion": "Preparar proyecto de amparo por si la resolución resulta adversa.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 1475/2023",
+    "Estado (col0): Sentencia",
+    "Sentido (col12): Favorable",
+    "Materia (col24): Civil",
+    "Monto (texto): $96,118",
+    "Factores de riesgo: monto $96,118, etapa Sentencia, suspensión concedida"
+   ]
+  },
+  {
+   "exp": "50/2011-S",
+   "nivel": "Alto",
+   "score": 55,
+   "resumen": "Laboral (Ordinario) · Leticia Casillas Ochoa\u000bAcadémico, Profesor e Investigador titular \"B\" vs Universidad de Guadalajara · Escuela Preparatoria No. 5 · etapa Laudo · sentido Desfavorable. Responsable: Tania Samantha Larios Salgado. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 50/2011-S",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, 15 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "22/2012-S",
+   "nivel": "Alto",
+   "score": 55,
+   "resumen": "Laboral (Ordinario) · María Ascención Aguilar Buenrostro\u000bAcadémico, Profesor de Asignatura \"B\" vs Universidad de Guadalajara · CUCEA · etapa Laudo · sentido Desfavorable. Responsable: Tania Samantha Larios Salgado. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 22/2012-S",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, 14 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "292/2013",
+   "nivel": "Alto",
+   "score": 55,
+   "resumen": "Laboral (Ordinario) · Amado Herrera Martínez\u000bAcadémico, Profesor Docente Titular \"B\" vs Universidad de Guadalajara\u000bIMSS, STAUDEG · Escuela Preparatoria No. 2 · etapa Laudo · sentido Desfavorable. Responsable: Eduardo Daniel González Vázquez. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 292/2013",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, 13 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "1535/2013",
+   "nivel": "Alto",
+   "score": 55,
+   "resumen": "Laboral (Ordinario) · José Humberto Martínez Herrejón\u000bAcadémico, Profesor Docente Titular B vs Universidad de Guadalajara\u000bIMSS · CUCBA · etapa Laudo · sentido Desfavorable. Responsable: Didier Ivan Gonzalez Rosas. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 1535/2013",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, 13 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "1540/2013",
+   "nivel": "Alto",
+   "score": 55,
+   "resumen": "Laboral (Ordinario) · Ezequiel Montes Ruelas\u000bAcadémico, Profesor Investigador Titular C vs Universidad de Guadalajara\u000bIMSS · CUCBA · etapa Laudo · sentido Desfavorable. Responsable: Tania Samantha Larios Salgado. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 1540/2013",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, 13 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "18/2016-S",
+   "nivel": "Alto",
+   "score": 55,
+   "resumen": "Laboral (Ordinario) · José Teófilo Rodríguez Montes de Oca\u000bAcadémico, Profesor de Asignatura vs Universidad de Guadalajara · Escuela Vocacional y CUCSH · etapa Laudo · sentido Desfavorable. Responsable: Tania Samantha Larios Salgado. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 18/2016-S",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, 10 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "1702/2017",
+   "nivel": "Alto",
+   "score": 55,
+   "resumen": "Laboral (Ordinario) · Ana Guadalupe Sánchez García\u000bAcadémico, Profesor Investigador Titular c vs Universidad de Guadalajara\u000bIMSS · CUCS · etapa Laudo · sentido Desfavorable. Responsable: Jonathan Tlacaelel Plascencia López. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 1702/2017",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, 9 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "31/2021-A",
+   "nivel": "Alto",
+   "score": 55,
+   "resumen": "Laboral (Ordinario) · Susana Gabriela Díaz García\u000bJefe de Unidad \"A\" 26 horas semanales vs Universidad de Guadalajara · Rectoria General · etapa Laudo · sentido Desfavorable. Responsable: Aimé Karolina Ontiveros Tapia. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 31/2021-A",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, 5 años de antigüedad"
+   ]
+  },
+  {
+   "exp": "74/2021-S",
+   "nivel": "Alto",
+   "score": 55,
+   "resumen": "Laboral (Especial) · Ezequiel Moisés Pérez Saldaña, Dulce Denisse Pérez Saldaña y Altagracia Julia Saldaña Peña vs Universidad de Guadalajara · Escuela Preparatoria Vocacional · etapa Laudo · sentido Desfavorable. Responsable: Didier Ivan Gonzalez Rosas. Monto detectado: $0.",
+   "matriz": {
+    "probabilidad": "Alta",
+    "impacto": "Indeterminado"
+   },
+   "estrategias": [
+    {
+     "estrategia": "Impugnación / medio de defensa",
+     "accion": "Valorar amparo directo o recurso de revisión contra la resolución adversa. VERIFICAR plazo (≈15 días hábiles, Ley de Amparo arts. 17-18 — verificar vigencia).",
+     "prioridad": "Alta"
+    },
+    {
+     "estrategia": "Contención del daño",
+     "accion": "Negociar convenio en ejecución para acotar condena (salarios caídos topados, LFT art. 48 — verificar). Cuantificar exposición real.",
+     "prioridad": "Media"
+    },
+    {
+     "estrategia": "Provisión y causa raíz",
+     "accion": "Registrar provisión contable del contingente e identificar la causa que originó el resultado para prevención.",
+     "prioridad": "Media"
+    }
+   ],
+   "trazabilidad": [
+    "Expediente (col10): 74/2021-S",
+    "Estado (col0): Laudo",
+    "Sentido (col12): Desfavorable",
+    "Materia (col24): Laboral",
+    "Monto (texto): $0",
+    "Factores de riesgo: etapa Laudo, resolución desfavorable, 5 años de antigüedad"
+   ]
+  }
+ ],
+ "lecciones": [
+  {
+   "sentido": "Desechó",
+   "tipo": "Éxito UdeG",
+   "n": 8,
+   "causa": "Demanda desechada de plano por motivo manifiesto e indudable de improcedencia (o presentada fuera de plazo).",
+   "evitar": "Revisar requisitos de procedencia y cómputo de plazos antes de presentar; la improcedencia debe ser evidente desde la demanda.",
+   "marco": "Ley de Amparo art. 113 (desechamiento de plano por motivo manifiesto e indudable de improcedencia); plazos arts. 17-18.",
+   "verif": "verificado",
+   "casos": [
+    {
+     "exp": "1761/2025-1",
+     "materia": "Civil",
+     "dep": "Escuela Preparatoria No. 15",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    },
+    {
+     "exp": "26/2026",
+     "materia": "Laboral",
+     "dep": "CUSUR",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "346/2025",
+     "materia": "Laboral",
+     "dep": "Escuela Politécnica de Guadalajara",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "1355/2025",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria Regional de Ocotlan, Modulo Atequiza",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "2374/2025",
+     "materia": "Laboral",
+     "dep": "Operadora Auditorio Metropolitano",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "128/2026",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 12",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "122/2026",
+     "materia": "Laboral",
+     "dep": "CUCSH",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "95/2026",
+     "materia": "Laboral",
+     "dep": "CUCOSTA",
+     "abogado": "Eduardo Daniel González Vázquez"
+    }
+   ]
+  },
+  {
+   "sentido": "Desistimiento",
+   "tipo": "Éxito UdeG",
+   "n": 4,
+   "causa": "La parte se desistió de la acción; en ocasiones es estratégico (precedido de convenio).",
+   "evitar": "Documentar si el desistimiento derivó de un convenio favorable a la UdeG; auditar si fue evitable.",
+   "marco": "Ley de Amparo art. 63 fr. I (sobreseimiento por desistimiento del quejoso).",
+   "verif": "verificado",
+   "casos": [
+    {
+     "exp": "294/2024-PO",
+     "materia": "Laboral",
+     "dep": "Oficina de la Abogacía General",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "170/2026",
+     "materia": "Laboral",
+     "dep": "CUCEI",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "L-187/2025-PO",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria Regional de Tlajomulco de Zúñiga, Módulo San Agustín",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "367/2026",
+     "materia": "Civil",
+     "dep": "CUCEI",
+     "abogado": "Didier Ivan Gonzalez Rosas"
+    }
+   ]
+  },
+  {
+   "sentido": "Niega",
+   "tipo": "Éxito UdeG",
+   "n": 6,
+   "causa": "Los conceptos de violación/agravios se declararon infundados; el acto se estimó constitucional/legal.",
+   "evitar": "Reforzar agravios, ofrecer y desahogar pruebas idóneas, cuidar la técnica del amparo.",
+   "marco": "Ley de Amparo art. 74 (requisitos de la sentencia que concede, niega o sobresee; fr. IV, fundamentos legales) y art. 77 (efectos de la concesión).",
+   "verif": "verificado",
+   "casos": [
+    {
+     "exp": "563/2024",
+     "materia": "Laboral",
+     "dep": "CUCSH",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "821/2024",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 9",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "1579/2024",
+     "materia": "Laboral",
+     "dep": "Coordinación General de Extensión y Difusión Cultural",
+     "abogado": "Jonathan Tlacaelel Plascencia López"
+    },
+    {
+     "exp": "2466/2025-VI",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria Regional de Zacoalco de Torres",
+     "abogado": "Tania Samantha Larios Salgado"
+    },
+    {
+     "exp": "2665/2025-VI",
+     "materia": "Laboral",
+     "dep": "CUSUR",
+     "abogado": "Didier Ivan Gonzalez Rosas"
+    },
+    {
+     "exp": "60/2026",
+     "materia": "Civil",
+     "dep": "CUAAD",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    }
+   ]
+  },
+  {
+   "sentido": "Sobresee",
+   "tipo": "Éxito UdeG",
+   "n": 32,
+   "causa": "Se actualizó una causal de improcedencia o cesaron los efectos del acto reclamado; el juicio termina sin resolver el fondo.",
+   "evitar": "Depurar la procedencia antes de promover y vigilar el cumplimiento para evitar que el acto quede sin materia.",
+   "marco": "Ley de Amparo art. 63 (causales de sobreseimiento; p.ej. fr. IV, inexistencia del acto reclamado). Improcedencia: art. 61.",
+   "verif": "verificado",
+   "casos": [
+    {
+     "exp": "188/2024",
+     "materia": "Civil",
+     "dep": "CUCS",
+     "abogado": "Daniela Ontiveros Vargas"
+    },
+    {
+     "exp": "249/2024",
+     "materia": "Civil",
+     "dep": "CU- Tonalá",
+     "abogado": "Marlene Alejandra Rivera Ornelas"
+    },
+    {
+     "exp": "37/2024",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 11",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "402/2024",
+     "materia": "Civil",
+     "dep": "CUCSH",
+     "abogado": "Miriam Jaqueline Becerra Farfán"
+    },
+    {
+     "exp": "230/2024-IX-A",
+     "materia": "Civil",
+     "dep": "Escuela Preparatoria No. 16",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    },
+    {
+     "exp": "2708/2024",
+     "materia": "Civil",
+     "dep": "CUCSH",
+     "abogado": "Didier Ivan Gonzalez Rosas"
+    },
+    {
+     "exp": "53/2025",
+     "materia": "Laboral",
+     "dep": "CUCEA",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "47/2025",
+     "materia": "Civil",
+     "dep": "Escuela Preparatoria No. 14 Módulo la Experiencia",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    },
+    {
+     "exp": "1216/2024",
+     "materia": "Civil",
+     "dep": "Universidad de Guadalajara",
+     "abogado": "Marlene Alejandra Rivera Ornelas"
+    },
+    {
+     "exp": "138/2025-III",
+     "materia": "Civil",
+     "dep": "Escuela Preparatoria No. 14 Módulo la Experiencia",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    },
+    {
+     "exp": "1554/2024",
+     "materia": "Civil",
+     "dep": "Coordinación del Régimen de Pensiones, Jubilaciones y Prestaciones de Seguridad Social",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    },
+    {
+     "exp": "250/2025",
+     "materia": "Laboral",
+     "dep": "CUCBA",
+     "abogado": "Alicia Isabel Gutiérrez Gutiérrez"
+    },
+    {
+     "exp": "79/2025",
+     "materia": "Civil",
+     "dep": "Escuela Politécnica de Guadalajara",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "887/2025",
+     "materia": "Civil",
+     "dep": "SEMS",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    },
+    {
+     "exp": "650/2025",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 7, 11 y Tonalá",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "1009/2025-5",
+     "materia": "Civil",
+     "dep": "CUCSH",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    },
+    {
+     "exp": "1537/2025",
+     "materia": "Civil",
+     "dep": "",
+     "abogado": "Miriam Jaqueline Becerra Farfán"
+    },
+    {
+     "exp": "1561/2025",
+     "materia": "Civil",
+     "dep": "CULAGOS",
+     "abogado": "Daniela Ontiveros Vargas"
+    },
+    {
+     "exp": "1806/2025-VII",
+     "materia": "Civil",
+     "dep": "CUCS",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    },
+    {
+     "exp": "1913/2025",
+     "materia": "Civil",
+     "dep": "CUCSH",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    },
+    {
+     "exp": "1471/2025-I",
+     "materia": "Civil",
+     "dep": "CUCOSTA",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    },
+    {
+     "exp": "1983/2025-III",
+     "materia": "Civil",
+     "dep": "Escuela Preparatoria No. 15",
+     "abogado": "Miriam Jaqueline Becerra Farfán"
+    },
+    {
+     "exp": "1137/2025-I",
+     "materia": "Penal",
+     "dep": "Escuela Preparatoria No. 12",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    },
+    {
+     "exp": "2041/2025",
+     "materia": "Civil",
+     "dep": "Escuela Preparatoria Regional de Casimiro Castillo",
+     "abogado": "Marlene Alejandra Rivera Ornelas"
+    },
+    {
+     "exp": "2337/2025",
+     "materia": "Civil",
+     "dep": "Coordinación de Estudios Incorporados",
+     "abogado": "Miriam Jaqueline Becerra Farfán"
+    },
+    {
+     "exp": "2977/2025",
+     "materia": "Laboral",
+     "dep": "CUCEA",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "90/2026",
+     "materia": "Civil",
+     "dep": "Universidad de Guadalajara",
+     "abogado": "Didier Ivan Gonzalez Rosas"
+    },
+    {
+     "exp": "349/2026",
+     "materia": "Civil",
+     "dep": "CUCEI",
+     "abogado": "Didier Ivan Gonzalez Rosas"
+    },
+    {
+     "exp": "499/2026",
+     "materia": "Laboral",
+     "dep": "CUCEA",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "517/2026",
+     "materia": "Civil",
+     "dep": "Coordinación de Estudios Incorporados",
+     "abogado": "Didier Ivan Gonzalez Rosas"
+    },
+    {
+     "exp": "394/2026",
+     "materia": "Civil",
+     "dep": "Escuela Preparatoria de Jalisco",
+     "abogado": "Marlene Alejandra Rivera Ornelas"
+    },
+    {
+     "exp": "754/2026",
+     "materia": "Civil",
+     "dep": "CUCSH",
+     "abogado": "Jorge Ubaldo Valadez Velázquez"
+    }
+   ]
+  },
+  {
+   "sentido": "Caducidad",
+   "tipo": "Éxito UdeG",
+   "n": 12,
+   "causa": "Inactividad procesal del actor: en el juicio laboral ante Juntas, falta de promoción por el plazo legal.",
+   "evitar": "Control de plazos y promociones periódicas (ver módulo de Alertas: 205 expedientes activos ≥18 meses sin movimiento). Atender el requerimiento de los 45 días.",
+   "marco": "LFT art. 772 (inactividad de 45 días naturales → requerimiento al trabajador) y art. 773 (se tiene por desistida la acción si no hay promoción en 4 meses). Prescripción: arts. 516-522. Tesis aislada reg. 2025181 'CADUCIDAD EN EL JUICIO LABORAL', Tribunal Colegiado de Circuito, 11a Época, Gaceta del SJF Libro 17 (sep 2022) — valor ORIENTADOR, no obligatorio.",
+   "verif": "verificado",
+   "casos": [
+    {
+     "exp": "10/2015-S",
+     "materia": "Laboral",
+     "dep": "Coordinación General de Recursos Humanos",
+     "abogado": "Jonathan Tlacaelel Plascencia López"
+    },
+    {
+     "exp": "79/2015-A",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 16",
+     "abogado": "Tania Samantha Larios Salgado"
+    },
+    {
+     "exp": "14/2016-S",
+     "materia": "Laboral",
+     "dep": "CUNORTE",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "41/2016-A",
+     "materia": "Laboral",
+     "dep": "CUCEA",
+     "abogado": "Jonathan Tlacaelel Plascencia López"
+    },
+    {
+     "exp": "49/2016-A",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 9",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "51/2017-A",
+     "materia": "Laboral",
+     "dep": "CUAAD",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "19/2018-A",
+     "materia": "Laboral",
+     "dep": "CUTONALÁ",
+     "abogado": "Alicia Isabel Gutiérrez Gutiérrez"
+    },
+    {
+     "exp": "25/2018-A",
+     "materia": "Laboral",
+     "dep": "CUCIÉNEGA, sede La Barca",
+     "abogado": "Tania Samantha Larios Salgado"
+    },
+    {
+     "exp": "41/2018-A",
+     "materia": "Laboral",
+     "dep": "Sistema de Universidad Virtual",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "22/2019-S",
+     "materia": "Laboral",
+     "dep": "CUCEI",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "36/2020-S",
+     "materia": "Laboral",
+     "dep": "",
+     "abogado": "Didier Ivan Gonzalez Rosas"
+    },
+    {
+     "exp": "39/2020-A",
+     "materia": "Laboral",
+     "dep": "Conservación y Mantenimiento de la Rectoria General",
+     "abogado": "Tania Samantha Larios Salgado"
+    }
+   ]
+  },
+  {
+   "sentido": "Infundada",
+   "tipo": "Éxito UdeG",
+   "n": 1,
+   "causa": "La pretensión o el recurso carecieron de sustento jurídico suficiente.",
+   "evitar": "Análisis de viabilidad previo (probabilidad de éxito) antes de litigar o recurrir.",
+   "marco": "Según la vía (LFT / CNPP / CFPC / leyes locales).",
+   "verif": "a confirmar",
+   "casos": [
+    {
+     "exp": "2/2026",
+     "materia": "Laboral",
+     "dep": "CUSUR",
+     "abogado": "Edgar Franco Velázquez"
+    }
+   ]
+  },
+  {
+   "sentido": "Desfavorable",
+   "tipo": "Adverso",
+   "n": 63,
+   "causa": "En materia laboral, suele derivar de despido tenido por injustificado o de deficiencia probatoria de la parte patronal (UdeG); con frecuencia por falta del aviso de despido por escrito.",
+   "evitar": "Expediente laboral robusto: contratos, rescisión debidamente fundada y motivada, AVISO DE DESPIDO por escrito (su omisión vuelve injustificado el despido, art. 47 LFT), y defensa procesal en tiempo.",
+   "marco": "LFT art. 47 (causas de rescisión sin responsabilidad para el patrón; sin aviso por escrito el despido se reputa injustificado), art. 48 (reinstalación o indemnización de 3 meses + salarios vencidos hasta máx. 12 meses por reforma 2012, e intereses sobre 15 meses al 2% mensual capitalizable si se excede), art. 50 (indemnizaciones). Art. 123-A fr. XXII constitucional (estabilidad en el empleo: cumplir contrato o indemnizar 3 meses, a elección del trabajador).",
+   "verif": "verificado",
+   "casos": [
+    {
+     "exp": "44/2003-S",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria 11 y 7",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "36/2008-S",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 14",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "22/2010-S",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 2 y CUCEI",
+     "abogado": "Jonathan Tlacaelel Plascencia López"
+    },
+    {
+     "exp": "24/2010-S",
+     "materia": "Laboral",
+     "dep": "CUCBA",
+     "abogado": "Alicia Isabel Gutiérrez Gutiérrez"
+    },
+    {
+     "exp": "50/2011-S",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 5",
+     "abogado": "Tania Samantha Larios Salgado"
+    },
+    {
+     "exp": "22/2012-S",
+     "materia": "Laboral",
+     "dep": "CUCEA",
+     "abogado": "Tania Samantha Larios Salgado"
+    },
+    {
+     "exp": "47/2012-S",
+     "materia": "Laboral",
+     "dep": "Escuela Politécnica de Guadalajara",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "292/2013",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 2",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "1535/2013",
+     "materia": "Laboral",
+     "dep": "CUCBA",
+     "abogado": "Didier Ivan Gonzalez Rosas"
+    },
+    {
+     "exp": "1540/2013",
+     "materia": "Laboral",
+     "dep": "CUCBA",
+     "abogado": "Tania Samantha Larios Salgado"
+    },
+    {
+     "exp": "912/2014",
+     "materia": "Laboral",
+     "dep": "CUCS",
+     "abogado": "Tania Samantha Larios Salgado"
+    },
+    {
+     "exp": "26/2015-S",
+     "materia": "Laboral",
+     "dep": "CUSUR",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "518/2015",
+     "materia": "Laboral",
+     "dep": "CUCEI",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "35/2015-A",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 18",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "71/2015-A",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 2",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "5/2016-A",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 5",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "1840/2015",
+     "materia": "Laboral",
+     "dep": "Hotel Montecarlo",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "18/2016-S",
+     "materia": "Laboral",
+     "dep": "Escuela Vocacional y CUCSH",
+     "abogado": "Tania Samantha Larios Salgado"
+    },
+    {
+     "exp": "22/2017-S",
+     "materia": "Laboral",
+     "dep": "CUCEA",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "38/2017-S",
+     "materia": "Laboral",
+     "dep": "Coordinación General de Comunicación Social",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "40/2017-S",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 11",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "45/2017-A",
+     "materia": "Laboral",
+     "dep": "CUCEA",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "56/2017-S",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 9",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "67/2017-A",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 5",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "18/2018-S",
+     "materia": "Laboral",
+     "dep": "CUAAD",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "1702/2017",
+     "materia": "Laboral",
+     "dep": "CUCS",
+     "abogado": "Jonathan Tlacaelel Plascencia López"
+    },
+    {
+     "exp": "27/2018-A",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 11",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "39/2018-A",
+     "materia": "Laboral",
+     "dep": "CUVALLES",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "57/2018-A",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria Regional de Colotlán",
+     "abogado": "Jonathan Tlacaelel Plascencia López"
+    },
+    {
+     "exp": "61/2018-A",
+     "materia": "Laboral",
+     "dep": "CUCEI",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "62/2018-S",
+     "materia": "Laboral",
+     "dep": "CULAGOS",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "70/2018-S",
+     "materia": "Laboral",
+     "dep": "CUCOSTA",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "116/2018-A",
+     "materia": "Laboral",
+     "dep": "Unidad del Régimen de Pensiones, Jubilaciones y Prestaciones de Seguridad Social",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "4/2019-S",
+     "materia": "Laboral",
+     "dep": "Escuela Vocacional y CUCSH",
+     "abogado": "Tania Samantha Larios Salgado"
+    },
+    {
+     "exp": "5/2019-A",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 20",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "92/2018-F",
+     "materia": "Laboral",
+     "dep": "CUCIÉNEGA",
+     "abogado": "Jonathan Tlacaelel Plascencia López"
+    },
+    {
+     "exp": "126/2018-S",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 12",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "29/2019-A",
+     "materia": "Laboral",
+     "dep": "Escuela Politécnica de Guadalajara",
+     "abogado": "Tania Samantha Larios Salgado"
+    },
+    {
+     "exp": "67/2019-A",
+     "materia": "Laboral",
+     "dep": "Preparatoria No. 12 Mod. Tlaquepaque",
+     "abogado": "Jonathan Tlacaelel Plascencia López"
+    },
+    {
+     "exp": "95/2019-A",
+     "materia": "Laboral",
+     "dep": "Coordinación General Administrativa",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "3091/2019",
+     "materia": "Laboral",
+     "dep": "Sistema Corporativo Proulex Comlex",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "4/2021-S",
+     "materia": "Laboral",
+     "dep": "Coordinación General de Extensión y Difusión Cultural",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "206/2021",
+     "materia": "Laboral",
+     "dep": "Operadora Auditorio Metropolitano",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "31/2021-A",
+     "materia": "Laboral",
+     "dep": "Rectoria General",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "60/2021-S",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria Regional de Ocotlan, Modulo Atequiza",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "3037/2021",
+     "materia": "Laboral",
+     "dep": "Coordinación General de Servicios Administrativos e Infraestructura Tecnológica",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "61/2021",
+     "materia": "Laboral",
+     "dep": "CUAAD",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "93/2021-A",
+     "materia": "Laboral",
+     "dep": "Empresa Servicios Universitarios",
+     "abogado": "Jonathan Tlacaelel Plascencia López"
+    },
+    {
+     "exp": "24/2022-S",
+     "materia": "Laboral",
+     "dep": "Coordinación General de Extensión y Difusión Cultural",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "50/2022-S",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria Regional de San Juan de los Lagos",
+     "abogado": "Jonathan Tlacaelel Plascencia López"
+    },
+    {
+     "exp": "48/2022-S",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria No. 18",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "60/2022-S",
+     "materia": "Laboral",
+     "dep": "Feria Internacional del Libro FIL",
+     "abogado": "Eduardo Daniel González Vázquez"
+    },
+    {
+     "exp": "613/2012",
+     "materia": "Civil",
+     "dep": "Escuela Preparatoria No. 8",
+     "abogado": "Daniela Ontiveros Vargas"
+    },
+    {
+     "exp": "1020/2024",
+     "materia": "Civil",
+     "dep": "Universidad de Guadalajara",
+     "abogado": "Daniela Ontiveros Vargas"
+    },
+    {
+     "exp": "275/2023-PO",
+     "materia": "Laboral",
+     "dep": "CUCIENEGA",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "366/2023-PO",
+     "materia": "Laboral",
+     "dep": "Reivindicación Social de los Trabajadores Universitaris, A.C.",
+     "abogado": "Edgar Franco Velázquez"
+    },
+    {
+     "exp": "22/2023-PO",
+     "materia": "Laboral",
+     "dep": "Coordinación de Transparencia y Archivo General",
+     "abogado": "Didier Ivan Gonzalez Rosas"
+    },
+    {
+     "exp": "86/2023",
+     "materia": "Laboral",
+     "dep": "Operadora del Sistema Universitario de Radio, Televisión y Cinematografía",
+     "abogado": "Tania Samantha Larios Salgado"
+    },
+    {
+     "exp": "74/2021-S",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria Vocacional",
+     "abogado": "Didier Ivan Gonzalez Rosas"
+    },
+    {
+     "exp": "181/2024-PO",
+     "materia": "Laboral",
+     "dep": "Coordinación General de Extensión y Difusión Cultural",
+     "abogado": "Jonathan Tlacaelel Plascencia López"
+    },
+    {
+     "exp": "238/2024-PO",
+     "materia": "Laboral",
+     "dep": "CUCEA",
+     "abogado": "Julio César Espinoza González"
+    },
+    {
+     "exp": "69/2024-P0",
+     "materia": "Laboral",
+     "dep": "Escuela Preparatoria Regional de Lagos de Moreno",
+     "abogado": "Aimé Karolina Ontiveros Tapia"
+    },
+    {
+     "exp": "L-41/2025-PO",
+     "materia": "Laboral",
+     "dep": "Operadora Auditorio Metropolitano",
+     "abogado": "Eduardo Daniel González Vázquez"
+    }
+   ]
+  }
+ ]
+}

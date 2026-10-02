@@ -1,0 +1,207 @@
+# -*- coding: utf-8 -*-
+# PLANILLA DE INICIO / PORTAL DE ACCESO SIGEJ — estilo portal registral (login + panel de accesos rápidos).
+B="/Users/edithroque/Documents/CLAUDE/"
+HTML=r"""<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIGEJ-UdeG · Portal de acceso</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;color:#333;background:#fff}
+.top{text-align:center;padding:22px 16px 6px}
+.top b{font-size:17px;color:#222;vertical-align:middle}
+.aqui{display:inline-block;background:#5bc0de;color:#fff;border-radius:5px;padding:6px 16px;font-size:13px;margin-left:8px;text-decoration:none;cursor:pointer;border:none}
+.aqui:hover{background:#46b8da}
+.brand{color:#0a4d8c;font-weight:700;font-size:14px;margin-top:6px}
+.cols{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;max-width:1180px;margin:14px auto 40px;padding:0 18px;align-items:flex-start}
+.card{background:#fff;border:1px solid #ddd;border-radius:6px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.left{width:380px;max-width:100%}
+.right{flex:1;min-width:420px;max-width:640px;padding:16px}
+.lhd{background:#f0f0f0;border-bottom:1px solid #e2e2e2;text-align:center;font-weight:700;font-size:16px;padding:14px;border-radius:6px 6px 0 0;color:#333}
+.lbody{padding:22px 26px 26px}
+.avatar{width:120px;height:120px;border-radius:50%;background:#e0e0e0;margin:6px auto 18px;display:flex;align-items:center;justify-content:center}
+.avatar svg{width:74px;height:74px;fill:#b9b9b9}
+.lbl{font-size:15px;color:#333;margin:10px 0 5px}
+.inp{width:100%;padding:11px 12px;border:1px solid #ccc;border-radius:5px;font-size:14px}
+.inp.focus{border:2px solid #f0ad4e;outline:none}
+.inp.gray{background:#ececec}
+.btn{width:100%;border:none;border-radius:5px;padding:12px;font-size:15px;font-weight:600;color:#fff;cursor:pointer;margin-top:14px}
+.b-blue{background:#337ab7}.b-blue:hover{background:#2e6da4}
+.b-orange{background:#f0ad4e}.b-orange:hover{background:#ec971f}
+.b-green{background:#5cb85c}.b-green:hover{background:#4cae4c}
+.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 14px;border-bottom:1px solid #eee}
+.row .h{background:#f4f4f4;border-radius:5px;padding:9px 14px;font-weight:700;font-size:14px;color:#333;flex:1;min-width:200px}
+.row.sec{background:#f4f4f4;border-radius:5px;padding:11px 14px;font-weight:700;font-size:14px;color:#333;margin:0}
+.sbtn{background:#337ab7;color:#fff;border:none;border-radius:5px;padding:8px 15px;font-size:13px;cursor:pointer;text-decoration:none}
+.sbtn:hover{background:#2e6da4}
+.sbtn.dark{background:#123a1e}.sbtn.dark:hover{background:#0d2c16}
+.valwrap{padding:16px 14px}
+.valwrap p{font-size:16px;color:#333;margin:0 0 12px}
+.valrow{display:flex;gap:12px;flex-wrap:wrap}
+.valrow input{flex:1;min-width:150px;background:#ececec;border:1px solid #ccc;border-radius:5px;padding:11px 12px;font-size:14px}
+#valmsg{margin-top:10px;font-size:13px;border-radius:6px;padding:9px 12px;display:none}
+#valmsg.ok{display:block;background:#dff0d8;color:#3c763d;border:1px solid #b7dfb0}
+#valmsg.warn{display:block;background:#fcf8e3;color:#8a6d3b;border:1px solid #e6d59a}
+.foot{text-align:center;font-size:11.5px;color:#888;padding:6px 16px 26px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:18px;z-index:99}
+.modal.on{display:flex}
+.modal .mc{background:#fff;border-radius:8px;max-width:520px;padding:22px;font-size:13px;line-height:1.6;color:#333}
+.modal .mc h3{margin:0 0 8px;color:#0a4d8c}
+.modal .mc button{margin-top:12px;background:#337ab7;color:#fff;border:none;border-radius:5px;padding:9px 16px;cursor:pointer}
+</style></head><body>
+<div class="top"><b>Puede consultar nuestros Avisos de Privacidad</b> <button class="aqui" onclick="aviso('integral')">aquí</button> <button class="aqui" onclick="aviso('simplificado')">aquí</button>
+<div class="brand">⚖️ SIGEJ-UdeG · Oficina de la Abogacía General · Universidad de Guadalajara</div></div>
+<div class="cols">
+ <div class="card left">
+  <div class="lhd">Ingreso al sistema</div>
+  <div class="lbody">
+   <div class="avatar"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.4c-3.3 0-9.8 1.6-9.8 4.9v2.4h19.6v-2.4c0-3.3-6.5-4.9-9.8-4.9z"/></svg></div>
+   <div class="lbl">Código de trabajador</div>
+   <input class="inp focus" id="usuario" placeholder="Número de empleado (p. ej. CU-1001)" autocomplete="off" onkeydown="if(event.key==='Enter')ingresar()">
+   <button class="btn b-blue" onclick="ingresar()">Ingresar</button>
+   <div style="font-size:11px;color:#888;margin-top:8px;line-height:1.5">El acceso se define por tu <b>código de trabajador</b>: el sistema abre únicamente los módulos que tienes autorizados según tu perfil y nivel. <b>En esta fase de pruebas no se solicita contraseña</b>; la verificación real (NIP + 2FA) es fase backend.</div>
+   <div style="margin-top:12px;border-top:1px dashed #d8dee7;padding-top:10px">
+    <div style="font-size:11px;color:#666;font-weight:700;margin-bottom:6px">🧪 Acceso rápido de prueba (por perfil)</div>
+    <div id="demoBtns" style="display:flex;flex-wrap:wrap;gap:6px"></div>
+   </div>
+  </div>
+ </div>
+ <div class="card right">
+  <div class="row"><div class="h">Usuario externo · acceso a tu trámite autorizado</div><input id="extfolio" placeholder="Folio de tu oficio / trámite" style="flex:1;min-width:150px;border:1px solid #ccc;border-radius:5px;padding:9px 11px;font-size:13px"><button class="sbtn" onclick="accesoExterno()">Acceder a mi trámite</button></div>
+  <div class="row"><div class="h">Consulta de trámites y expedientes</div><a class="sbtn" href="seguimiento_SIGEJ.html">Consultar</a> <a class="sbtn" href="solicitud_convenios_SIGEJ.html">Solicitud de convenio</a></div>
+  <div class="row"><div class="h">Abogados de la Red (CU/SEMS) y de dependencias UdeG</div><a class="sbtn" href="abogados_cu_SIGEJ.html">Registro / Acceso</a> <a class="sbtn" href="abogados_cu_SIGEJ.html">Comunicación con Enlace</a></div>
+  <div class="row sec">Validación de documento</div>
+  <div class="valwrap"><p>Si desea validar el contenido de su documento, ingrese el número de folio o sello de verificación</p>
+   <div class="valrow"><input id="seq" placeholder="Folio o sello (p. ej. OFI-1042/2026)"><button class="btn b-green" style="width:auto;margin:0;padding:11px 26px" onclick="validar()">Validar</button></div>
+   <div id="valmsg"></div>
+  </div>
+ </div>
+</div>
+<div class="foot">Prototipo institucional · el ingreso se realiza por <b>código de trabajador</b>; el sistema selecciona los módulos autorizados según el perfil y nivel. La verificación real de credenciales (SSO + 2FA), la recuperación y el registro se resuelven con el backend de identidad.</div>
+<div class="modal" id="modal"><div class="mc" id="mc"></div></div>
+<script>
+// Acceso por CÓDIGO DE TRABAJADOR: resuelve el perfil contra el padrón IAM (sigej_usuarios.numEmp)
+// y, en su defecto, contra un mapa de demostración. El perfil determina los módulos visibles (PERMS).
+var DEMO_COD={'CU-1001':'Administrador','CU-1042':'Abogado','CU-1099':'Jefe del Área de Sistemas','CU-1200':'Abogado General','CU-1300':'Jefe de Unidad de lo Contencioso','CU-1400':'Coordinador de Enlace con la Red'};
+function esc(s){return String(s==null?'':s).replace(/[<>&]/g,function(c){return {'<':'&lt;','>':'&gt;','&':'&amp;'}[c];});}
+function ingresar(){
+ var code=(document.getElementById('usuario').value||'').trim();
+ if(!code){show('🔐 Ingreso al sistema','Escribe tu <b>código de trabajador</b> (número de empleado). El sistema seleccionará automáticamente los módulos que tienes autorizados según tu perfil y nivel.');return;}
+ var U=J('sigej_usuarios');var u=null;
+ for(var i=0;i<U.length;i++){if(String(U[i].numEmp||'').toLowerCase()===code.toLowerCase()){u=U[i];break;}}
+ var rol=u?u.rol:(DEMO_COD[code.toUpperCase()]||null);
+ if(!rol){show('⚠️ Código no reconocido','No se encontró un usuario con el código <b>'+esc(code)+'</b>. Verifica tu número de empleado o solicita tu alta al <b>Help Desk (IAM)</b>.<br><br><span style="color:#888;font-size:12px">Códigos de demostración: <b>CU-1001</b> Administrador · <b>CU-1042</b> Abogado · <b>CU-1099</b> Help Desk · <b>CU-1200</b> Abogado General.</span>');return;}
+ if(u&&u.estado&&u.estado!=='Activo'){show('⛔ Acceso no disponible','Tu usuario está en estado «<b>'+esc(u.estado)+'</b>». Contacta al <b>Help Desk (IAM)</b> para reactivar el acceso.');return;}
+ localStorage.setItem('sigej_perfil',rol);
+ localStorage.setItem('sigej_sesion',JSON.stringify({code:code,nombre:u?u.nombre:'',rol:rol,ts:new Date().toISOString()}));
+ location.href='SIGEJ_inicio.html';
+}
+function entrarComo(code){document.getElementById('usuario').value=code;ingresar();}
+function renderDemo(){var wrap=document.getElementById('demoBtns');if(!wrap)return;var etq={'CU-1001':'Administrador','CU-1200':'Abogado General','CU-1099':'Help Desk','CU-1042':'Abogado','CU-1300':'Jefe Unidad','CU-1400':'Coord. Enlace'};
+ wrap.innerHTML=Object.keys(etq).map(function(c){return '<button onclick="entrarComo(\''+c+'\')" style="font-size:11px;border:1px solid #cfe0f5;background:#eef6ff;color:#0a4d8c;border-radius:14px;padding:5px 10px;cursor:pointer">'+etq[c]+' · '+c+'</button>';}).join('');}
+renderDemo();
+function accesoExterno(){var v=document.getElementById('extfolio').value.trim();if(!v){show('🔐 Acceso de usuario externo','Ingresa el <b>folio de tu trámite autorizado</b> (el que te entregó la Oficina de la Abogacía General en tu acuse). Solo podrás consultar el estado de <b>ese</b> trámite.');return;}location.href='seguimiento_SIGEJ.html?folio='+encodeURIComponent(v);}
+function olvido(){show('🔑 Recuperación de NIP / contraseña','El restablecimiento se realiza mediante el <b>backend de identidad</b> (envío de enlace al correo institucional y verificación con 2FA). En este prototipo el acceso se resuelve por <b>código de trabajador</b>. Contacta al <b>Help Desk (IAM)</b> para soporte.');}
+function aviso(t){var txt=t==='integral'?'La Oficina de la Abogacía General de la Universidad de Guadalajara es responsable del tratamiento de los datos personales que se recaben en el SIGEJ, los cuales se utilizan para la gestión jurídica institucional. Los datos <b>sensibles</b> (salud, víctimas, biométricos) reciben protección reforzada. Puede ejercer sus derechos ARCO conforme a la Ley de Protección de Datos Personales en Posesión de Sujetos Obligados del Estado de Jalisco.':'Aviso simplificado: sus datos se tratan para la gestión de trámites y expedientes jurídicos; no se transfieren sin base legal; se resguardan con medidas de seguridad. Consulte el aviso integral para el detalle y el ejercicio de derechos ARCO.';
+ show('🔒 Aviso de Privacidad ('+(t==='integral'?'integral':'simplificado')+')',txt);}
+function show(t,h){document.getElementById('mc').innerHTML='<h3>'+t+'</h3><div>'+h+'</div><button onclick="document.getElementById(\'modal\').classList.remove(\'on\')">Cerrar</button>';document.getElementById('modal').classList.add('on');}
+function J(k){try{return JSON.parse(localStorage.getItem(k)||'[]');}catch(e){return [];}}
+function validar(){var v=document.getElementById('seq').value.trim();var m=document.getElementById('valmsg');
+ if(!v){m.className='warn';m.textContent='Ingresa un folio o número de sello.';return;}
+ var vl=v.toLowerCase();var found=null;
+ // La validación se realiza ÚNICAMENTE contra los documentos entregados/registrados en Oficialía de Partes.
+ J('sigej_oficios').forEach(function(e){if((String(e.folio||'').toLowerCase()===vl)||(e.verif&&String(e.verif)===v)){found={folio:e.folio,est:e.estatus||'—',sello:e.verif||''};}});
+ if(found){m.className='ok';m.innerHTML='✅ <b>Documento validado en Oficialía de Partes</b> — Folio '+found.folio+' · Estatus: <b>'+found.est+'</b>'+(found.sello?' · Sello: '+found.sello:'')+'. La validación criptográfica del sello (QR) y la firma electrónica se verifican en el backend.';}
+ else{m.className='warn';m.innerHTML='⚠️ No se localizó un documento entregado en Oficialía de Partes con «'+v+'». Solo se validan documentos recibidos y registrados en Oficialía. Verifica el folio/sello o consúltalo en el <a href="seguimiento_SIGEJ.html">portal de seguimiento</a>.';}
+}
+</script>
+
+<script>
+/* SIGEJ · PWA + RWD (responsive, Mobile First) + modo oscuro — capa universal */
+(function(){try{
+var isEmbed=/[?&]embed=1/.test(location.search);
+/* --- PWA: manifest + meta + service worker (instalable en iOS/iPadOS/Android sin tienda) --- */
+if(!isEmbed){
+ function meta(n,c){var m=document.createElement('meta');m.name=n;m.content=c;document.head.appendChild(m);}
+ if(!document.querySelector('link[rel="manifest"]')){var l=document.createElement('link');l.rel='manifest';l.href='sigej.webmanifest';document.head.appendChild(l);}
+ meta('theme-color','#00254a');meta('mobile-web-app-capable','yes');meta('apple-mobile-web-app-capable','yes');meta('apple-mobile-web-app-status-bar-style','black-translucent');meta('apple-mobile-web-app-title','SIGEJ');
+ var al=document.createElement('link');al.rel='apple-touch-icon';al.href='sigej_icon.svg';document.head.appendChild(al);
+ if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sigej_sw.js').catch(function(){});});}
+}
+/* --- RWD: endurecimiento responsivo universal (no altera la maqueta de escritorio) --- */
+var css=document.createElement('style');css.setAttribute('data-sigej','rwd');
+css.textContent=[
+ 'img,video,canvas{max-width:100%;height:auto}',
+ 'html{-webkit-text-size-adjust:100%}',
+ '@media (max-width:768px){',
+ '  .navbar{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}',
+ '  .navbar a{white-space:nowrap}',
+ '  button,.tb,.tab,.ootb,.navbar a{min-height:40px}',
+ '  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}',
+ '  .kpis,.cards,.apps{grid-template-columns:1fr!important}',
+ '  .grid[style*="1fr 1fr"],.grid[style*="1.3fr"],.grid[style*="1.4fr"]{grid-template-columns:1fr!important}',
+ '  .panel{width:100%!important}',
+ '}',
+ '@media (max-width:480px){ header h1{font-size:16px!important} .wrap{padding-left:10px!important;padding-right:10px!important} }',
+ /* modo oscuro global por inversión controlada (se re-invierte multimedia para no dañar imágenes/QR/iframes) */
+ 'html.sigej-dark{filter:invert(0.92) hue-rotate(180deg);background:#0e1626}',
+ 'html.sigej-dark img,html.sigej-dark canvas,html.sigej-dark iframe,html.sigej-dark video,html.sigej-dark svg,html.sigej-dark .cov,html.sigej-dark .fichacov,html.sigej-dark .acuse .q img{filter:invert(1) hue-rotate(180deg)}',
+ '#sigejDark{position:fixed;left:16px;bottom:16px;z-index:99990;background:#0a4d8c;color:#fff;border:none;border-radius:50%;width:42px;height:42px;font-size:18px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}'
+].join('\n');
+document.head.appendChild(css);
+if(localStorage.getItem('sigej_dark')==='1')document.documentElement.classList.add('sigej-dark');
+if(!isEmbed){
+ var db=document.createElement('button');db.id='sigejDark';db.type='button';db.title='Modo claro / oscuro';db.textContent=localStorage.getItem('sigej_dark')==='1'?'☀️':'🌙';
+ db.onclick=function(){var on=document.documentElement.classList.toggle('sigej-dark');localStorage.setItem('sigej_dark',on?'1':'0');db.textContent=on?'☀️':'🌙';};
+ if(document.body)document.body.appendChild(db);
+}
+}catch(e){}})();
+</script>
+
+<script>
+/* SIGEJ · Panel universal "Normativa aplicable" (asistente jurídico normativo por pantalla) */
+(function(){try{
+if(/[?&]embed=1/.test(location.search))return;
+var pk=(location.pathname.split('/').pop()||'x').replace('.html','')||'x';
+if(/^(index|acceso_SIGEJ|SIGEJ_inicio)$/.test(pk))return;if(!document.body)return;
+function J(k){try{return JSON.parse(localStorage.getItem(k)||'null');}catch(e){return null;}}
+function ec(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+var DEF=[
+ {amb:'Interna',cat:'Contratos',nombre:'Normatividad de Contratos',url:'https://secgral.udg.mx/normatividad/contratos',mods:['instrumentos_SIGEJ']},
+ {amb:'Interna',cat:'Contratos',nombre:'Empresa Universitaria',url:'https://secgral.udg.mx/normatividad/contratos/empresa-universitaria',mods:['instrumentos_SIGEJ','patrimonio_SIGEJ']},
+ {amb:'Interna',cat:'Acuerdos',nombre:'Acuerdos de Rectoría General',url:'https://secgral.udg.mx/acuerdos/rectoria-general',mods:[]},
+ {amb:'Interna',cat:'Acuerdos',nombre:'Acuerdos Comisión de Hacienda',url:'https://secgral.udg.mx/acuerdos/comision-de-hacienda',mods:['instrumentos_SIGEJ','administracion_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Comisión de Hacienda',url:'https://secgral.udg.mx/circulares/comision-de-hacienda',mods:['administracion_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Comisión de Responsabilidades y Sanciones',url:'https://secgral.udg.mx/circulares/comision-de-responsabilidades-y-sanciones',mods:['contencioso_SIGEJ','resp_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Rectoría General',url:'https://secgral.udg.mx/circulares/rectoria-general',mods:[]},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Secretaría General',url:'https://secgral.udg.mx/circulares/secretaria-general',mods:['oficialia_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Anuales',url:'https://secgral.udg.mx/circulares-anuales',mods:[]},
+ {amb:'Interna',cat:'Normatividad',nombre:'Normatividad General',url:'https://secgral.udg.mx/normatividad/general',mods:['normatividad_SIGEJ','instrumentos_SIGEJ','contencioso_SIGEJ']},
+ {amb:'Interna',cat:'Normatividad',nombre:'Normatividad Específica',url:'https://secgral.udg.mx/normatividad/especifica',mods:['normatividad_SIGEJ']},
+ {amb:'Interna',cat:'Órganos colegiados',nombre:'Sesiones del CGU',url:'http://www.hcgu.udg.mx/sesioneshcgu',mods:['normatividad_SIGEJ']},
+ {amb:'Interna',cat:'Órganos colegiados',nombre:'Dictámenes del CGU',url:'http://www.hcgu.udg.mx/dictamenes',mods:['normatividad_SIGEJ','instrumentos_SIGEJ']},
+ {amb:'Interna',cat:'Órganos colegiados',nombre:'Sesiones de Comisiones',url:'http://www.hcgu.udg.mx/sesiones-de-comisiones',mods:['normatividad_SIGEJ']},
+ {amb:'Externa',cat:'Federal',nombre:'Legislación Federal (Diputados)',url:'https://www.diputados.gob.mx/LeyesBiblio/index.htm',mods:['instrumentos_SIGEJ','contencioso_SIGEJ','internacional_SIGEJ','patrimonio_SIGEJ']},
+ {amb:'Externa',cat:'Federal',nombre:'Reglamentos Federales',url:'https://www.diputados.gob.mx/LeyesBiblio/regla.htm',mods:['instrumentos_SIGEJ','contencioso_SIGEJ']},
+ {amb:'Externa',cat:'Estatal',nombre:'Legislación de Jalisco',url:'https://congresoweb.congresojal.gob.mx/BibliotecaVirtual/LeyesEstatales.cfm',mods:['contencioso_SIGEJ','instrumentos_SIGEJ','oficialia_SIGEJ']},
+ {amb:'Externa',cat:'NOM',nombre:'Normas Oficiales Mexicanas',url:'https://platiica.economia.gob.mx/normalizacion/normas-oficiales-mexicanas/',mods:['patrimonio_SIGEJ','internacional_SIGEJ']}
+];
+function REPO(){var r=J('sigej_repo_normativo');return Array.isArray(r)&&r.length?r:DEF;}
+var base=pk;
+var rel=REPO().filter(function(x){return (x.mods||[]).indexOf(base)>=0;});
+var gen=REPO().filter(function(x){return !(x.mods||[]).length&&x.amb==='Interna';});
+var b=document.createElement('div');b.textContent='📖 Normativa';
+b.style.cssText='position:fixed;right:16px;bottom:100px;background:#5a2e8c;color:#fff;padding:9px 14px;border-radius:22px;font:600 12.5px system-ui,sans-serif;cursor:pointer;z-index:99994;box-shadow:0 4px 14px rgba(0,0,0,.25)';
+var p=document.createElement('div');
+p.style.cssText='position:fixed;right:16px;bottom:146px;width:360px;max-width:94vw;max-height:74vh;background:#fff;border:1px solid #cbd5e1;border-radius:12px;box-shadow:0 12px 34px rgba(0,0,0,.3);z-index:99995;display:none;flex-direction:column;overflow:hidden';
+document.body.appendChild(b);document.body.appendChild(p);
+function link(x){return '<a href="'+ec(x.url)+'" target="_blank" rel="noopener" style="display:flex;gap:7px;align-items:center;padding:7px 9px;border:1px solid #eef2f7;border-radius:8px;margin-bottom:5px;text-decoration:none;color:#0a2f4f;font:12px system-ui,sans-serif"><span>'+(x.amb==='Interna'?'🏛️':'🌐')+'</span><span>'+ec(x.nombre)+'</span><span style="margin-left:auto;font-size:10px;color:#94a3b8">↗</span></a>';}
+function render(){p.innerHTML='<div style="background:#5a2e8c;color:#fff;padding:9px 12px;font:700 13px system-ui,sans-serif;display:flex;justify-content:space-between;align-items:center"><span>📖 Normativa aplicable</span><span id="__nx" style="cursor:pointer;font-size:16px">✕</span></div><div style="overflow:auto;padding:10px 12px;flex:1">'+
+ (rel.length?'<div style="font:600 11px system-ui,sans-serif;color:#5a2e8c;margin-bottom:5px">RELACIONADA CON ESTE MÓDULO</div>'+rel.map(link).join(''):'<div style="font:12px system-ui,sans-serif;color:#94a3b8;margin-bottom:6px">Sin normas mapeadas específicamente a este módulo.</div>')+
+ '<div style="font:600 11px system-ui,sans-serif;color:#5a2e8c;margin:8px 0 5px">NORMATIVIDAD INSTITUCIONAL</div>'+gen.slice(0,5).map(link).join('')+
+ '<a href="cumplimiento_SIGEJ.html" style="display:block;text-align:center;margin-top:8px;background:#0a4d8c;color:#fff;border-radius:8px;padding:8px;text-decoration:none;font:600 12px system-ui,sans-serif">⚖️ Abrir Motor de Cumplimiento</a>'+
+ '<div style="font:10.5px system-ui,sans-serif;color:#64748b;margin-top:8px">Repositorio administrado por la Coordinación de Normatividad. Términos y plazos conforme a la ley aplicable.</div></div>';
+ p.querySelector('#__nx').onclick=function(){p.style.display='none';};}
+b.onclick=function(){var o=p.style.display!=='none';if(o){p.style.display='none';}else{render();p.style.display='flex';}};
+}catch(e){}})();
+</script>
+</body></html>"""
+open(B+"acceso_SIGEJ.html","w",encoding="utf-8").write(HTML)
+print("acceso_SIGEJ.html OK -",len(HTML),"bytes")

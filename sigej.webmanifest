@@ -1,0 +1,15 @@
+{
+  "name": "SIGEJ-UdeG · Sistema Integral de Gestión Jurídica",
+  "short_name": "SIGEJ",
+  "description": "Oficina de la Abogacía General · Universidad de Guadalajara",
+  "start_url": "SIGEJ_inicio.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b1f38",
+  "theme_color": "#00254a",
+  "lang": "es-MX",
+  "icons": [
+    { "src": "sigej_icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

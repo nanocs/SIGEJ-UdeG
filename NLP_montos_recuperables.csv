@@ -1,0 +1,455 @@
+expediente,materia_fina,estado,responsable,monto_estructurado,nlp_monto_texto,nlp_monto_anomalo,nlp_tipo_res,nlp_fecha_res,nlp_eventos
+1020/2024,Administrativa,CONCLUIDO,Daniela Ontiveros Vargas,0,5080559,0,Interlocutoria,2025-10-13,60
+24/2010-S,Laboral,Pruebas,Alicia Isabel Gutiérrez Gutiérrez,14507,2971525,0,Sobreseimiento,2026-04-14,119
+292/2013,Laboral,Laudo,Eduardo Daniel González Vázquez,0,1999538,0,Interlocutoria,2025-11-18,20
+62/2018-S,Laboral,CONCLUIDO,Eduardo Daniel González Vázquez,0,1568989,0,Laudo,2026-05-13,29
+44/2003-S,Laboral,Amparo,Edgar Franco Velázquez,76333,1390622,0,Interlocutoria,2026-02-06,90
+60/2021-S,Laboral,Amparo,Eduardo Daniel González Vázquez,0,1028726,0,Laudo,2026-04-28,19
+116/2021-B,Laboral,Contestación,Aimé Karolina Ontiveros Tapia,0,1000000,0,,,3
+43/2021-A,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,1000000,0,,,5
+39/2021-A,Laboral,Demanda,Tania Samantha Larios Salgado,0,1000000,0,,,4
+59/2021-A,Laboral,Contestación,Aimé Karolina Ontiveros Tapia,0,1000000,0,,,6
+7/2022-A,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,1000000,0,,,4
+10/2022-S,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,1000000,0,,,5
+16/2022-S,Laboral,Demanda,Didier Ivan Gonzalez Rosas,0,1000000,0,,,4
+28/2022-S,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,1000000,0,,,4
+113/2022-S,Laboral,Contestación,Tania Samantha Larios Salgado,0,1000000,0,,,5
+68/2023-PE-DB,Laboral,Contestación,Aimé Karolina Ontiveros Tapia,0,1000000,0,,,8
+529/2024,Administrativa,CONCLUIDO,Daniela Ontiveros Vargas,0,1000000,0,Sentencia definitiva,2025-05-22,20
+4/2024-PO,Laboral,Sentencia,Didier Ivan Gonzalez Rosas,0,1000000,0,Sentencia definitiva,2024-10-18,28
+244/2024-PE,Laboral,CONCLUIDO,Francisco Javier Carvajal Padilla,0,1000000,0,,,8
+L-5/2025,Laboral,Sentencia,Jonathan Tlacaelel Plascencia López,0,1000000,0,,,24
+1121/2016,Administrativa,Sentencia,Daniela Ontiveros Vargas,0,817177,0,Sentencia definitiva,2021-10-21,16
+22/2021-S,Laboral,Amparo,Julio César Espinoza González,0,750000,0,Laudo,2026-01-13,14
+25/2021-A,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,750000,0,,,5
+14/2022-S,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,750000,0,,,5
+39/2022-A,Laboral,Contestación,Tania Samantha Larios Salgado,0,750000,0,,,5
+60/2022-S,Laboral,Amparo,Eduardo Daniel González Vázquez,0,750000,0,Laudo,2025-12-12,20
+134/2024-PE,Laboral,Pruebas,Jonathan Tlacaelel Plascencia López,0,750000,0,,,8
+4/2021-S,Laboral,Convenio,Edgar Franco Velázquez,0,722702,0,Laudo,2026-05-13,40
+22/2017-S,Laboral,Amparo,Edgar Franco Velázquez,0,673567,0,Laudo,2026-02-25,33
+2/2019-S,Laboral,Amparo,Eduardo Daniel González Vázquez,502112,668855,0,Laudo,2025-10-30,118
+192/2024-PO,Laboral,CONCLUIDO,Edgar Franco Velázquez,0,544807,0,,,30
+36/2008-S,Laboral,Laudo,Julio César Espinoza González,0,500324,0,Laudo,2026-05-29,180
+75/2009-S,Laboral,Amparo,Julio César Espinoza González,25000,500324,0,Laudo,2021-09-13,26
+74/2009-S,Laboral,Amparo,Julio César Espinoza González,25000,500324,0,Laudo,2021-09-13,40
+95/2021-E,Laboral,Demanda,Didier Ivan Gonzalez Rosas,0,500000,0,,,10
+12/2022-S,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,500000,0,,,5
+9/2022-A,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,500000,0,,,5
+37/2022-A,Laboral,Demanda,Didier Ivan Gonzalez Rosas,0,500000,0,,,6
+117/2022-S,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,500000,0,,,5
+101/2025,Laboral,Contestación,Julio César Espinoza González,0,481833,0,,,3
+38/2018-S,Laboral,Laudo,Edgar Franco Velázquez,0,472812,0,,,21
+50/2023-PE,Laboral,Pruebas,Aimé Karolina Ontiveros Tapia,0,466595,0,,,10
+5/2016-A,Laboral,CONCLUIDO,Julio César Espinoza González,0,452377,0,Laudo,2026-04-30,71
+32/2020-S,Laboral,Laudo,Eduardo Daniel González Vázquez,0,446893,0,Interlocutoria,2025-10-07,13
+294/2024-PO,Laboral,CONCLUIDO,Julio César Espinoza González,245921,421500,0,Laudo,2024-12-04,15
+45/2017-A,Laboral,CONCLUIDO,Julio César Espinoza González,413858,413858,0,Laudo,2026-02-25,29
+L-358/2024-PO,Laboral,Pruebas,Tania Samantha Larios Salgado,0,378173,0,,,20
+121/2022-S,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,375000,0,,,5
+14/2019-S,Laboral,Pruebas,Edgar Franco Velázquez,0,352632,0,,,47
+1535/2013,Laboral,Laudo,Didier Ivan Gonzalez Rosas,0,346740,0,Laudo,2018-01-29,13
+40/2023-PE,Laboral,CONCLUIDO,Aimé Karolina Ontiveros Tapia,0,337500,0,,,7
+22/2010-S,Laboral,Amparo,Jonathan Tlacaelel Plascencia López,0,329607,0,Interlocutoria,2024-07-08,81
+153/2023-PO,Laboral,Sentencia,Tania Samantha Larios Salgado,139866,326354,0,Laudo,2024-01-31,12
+137/2022,Civil,Demanda,Aimé Karolina Ontiveros Tapia,318513,318513,0,,,9
+44/2019-S,Laboral,Laudo,Julio César Espinoza González,0,309411,0,Interlocutoria,2020-12-04,43
+401/2024,Administrativa,Pruebas,Marlene Alejandra Rivera Ornelas,0,297546,0,Interlocutoria,2017-10-23,103
+6/2018-S,Laboral,CONCLUIDO,Eduardo Daniel González Vázquez,0,292097,0,Laudo,2026-01-09,21
+3091/2019,Laboral,Amparo,Eduardo Daniel González Vázquez,12,281177,0,Laudo,2026-05-18,22
+66/2020-S,Laboral,Pruebas,Aimé Karolina Ontiveros Tapia,0,256588,0,,,45
+275/2024,Laboral,Sentencia,Aimé Karolina Ontiveros Tapia,0,255000,0,,,5
+8/2022-S,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,250000,0,,,5
+48/2018-S,Laboral,Laudo,Edgar Franco Velázquez,0,243154,0,,,13
+92/2018-F,Laboral,Amparo,Jonathan Tlacaelel Plascencia López,0,232646,0,Interlocutoria,2025-03-26,23
+76/2016-S,Laboral,Pruebas,Edgar Franco Velázquez,0,228502,0,,,15
+27/2022-A,Laboral,Contestación,Didier Ivan Gonzalez Rosas,225856,225856,0,,,5
+603/2024,Civil,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,222288,0,,,18
+175/2024-DB,Laboral,Sentencia,Didier Ivan Gonzalez Rosas,0,200000,0,Sentencia definitiva,2025-08-22,7
+51/2017-A,Laboral,CONCLUIDO,Edgar Franco Velázquez,0,185466,0,Ampara,2024-06-26,12
+47/2018-A,Laboral,Amparo,Julio César Espinoza González,0,184045,0,Laudo,2024-10-10,24
+1017/2022,Laboral,Pruebas,Jonathan Tlacaelel Plascencia López,0,180000,0,,,5
+67/2017-A,Laboral,Amparo,Aimé Karolina Ontiveros Tapia,0,177056,0,Laudo,2025-08-08,40
+62/2019-S,Laboral,Laudo,Eduardo Daniel González Vázquez,0,171851,0,,,8
+82/2018-S,Laboral,Laudo,Eduardo Daniel González Vázquez,0,165904,0,Interlocutoria,2022-09-06,24
+206/2021,Laboral,Amparo,Eduardo Daniel González Vázquez,0,162000,0,Interlocutoria,2025-09-09,46
+L-95/2025-PO,Laboral,Sentencia,Edgar Franco Velázquez,0,161044,0,,,14
+31/2021-A,Laboral,Laudo,Aimé Karolina Ontiveros Tapia,0,159511,0,Laudo,2026-05-29,17
+53/2021-A,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,155425,0,,,6
+167/2026,Mercantil,TRÁMITE,Jorge Ubaldo Valadez Velázquez,26796,147621,0,,,2
+2505/2017-C,Laboral,Demanda,Edgar Franco Velázquez,146000,146000,0,,,19
+95/2019-A,Laboral,Amparo,Julio César Espinoza González,1200,140663,0,Laudo,2026-04-22,26
+L-94/2025,Laboral,CONCLUIDO,Edgar Franco Velázquez,0,139201,0,,,25
+126/2018-S,Laboral,Amparo,Eduardo Daniel González Vázquez,0,137494,0,Laudo,2026-03-19,41
+40/2017-S,Laboral,Amparo,Julio César Espinoza González,0,133546,0,Laudo,2025-01-24,79
+275/2023-PO,Laboral,Amparo,Julio César Espinoza González,0,129443,0,,,20
+91/2019-A,Laboral,Amparo,Aimé Karolina Ontiveros Tapia,0,125760,0,Ampara,2025-11-25,21
+70/2017-S,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,125123,0,,,3
+99/2025-PO,Laboral,CONCLUIDO,Tania Samantha Larios Salgado,0,120000,0,,,22
+22/2023-PO,Laboral,Amparo,Didier Ivan Gonzalez Rosas,0,119628,0,Laudo,2026-03-27,41
+21/2021-A,Laboral,Contestación,Aimé Karolina Ontiveros Tapia,0,119553,0,,,5
+86/2023,Laboral,Amparo,Tania Samantha Larios Salgado,64743,112789,0,Sentencia definitiva,2024-04-02,34
+122/2018-A,Laboral,Pruebas,Jonathan Tlacaelel Plascencia López,1873,112400,0,,,2
+L-310/2025-PO,Laboral,CONCLUIDO,Aimé Karolina Ontiveros Tapia,0,110000,0,,,14
+3037/2021,Laboral,Amparo,Julio César Espinoza González,0,98123,0,Laudo,2026-04-15,40
+1475/2023,Administrativa,Sentencia,Daniela Ontiveros Vargas,96118,96118,0,Sentencia definitiva,2026-03-19,11
+71/2015-A,Laboral,Amparo,Julio César Espinoza González,10655,93350,0,Laudo,2026-02-10,47
+16/2021-S,Laboral,Pruebas,Aimé Karolina Ontiveros Tapia,0,92795,0,,,19
+24/2021-S,Laboral,Laudo,Aimé Karolina Ontiveros Tapia,90000,90000,0,,,42
+L-316/2025-PO,Laboral,CONCLUIDO,Edgar Franco Velázquez,0,90000,0,Laudo,2025-10-07,12
+79/2018-A,Laboral,Laudo,Julio César Espinoza González,0,87590,0,,,43
+26/2015-S,Laboral,Amparo,Edgar Franco Velázquez,0,86042,0,Laudo,2026-02-06,29
+1840/2015,Laboral,Amparo,Aimé Karolina Ontiveros Tapia,0,84140,0,Laudo,2019-08-13,15
+57/2018-A,Laboral,Laudo,Jonathan Tlacaelel Plascencia López,0,83500,0,Laudo,2025-09-04,19
+59/2019-A,Laboral,Demanda,Didier Ivan Gonzalez Rosas,0,82251,0,,,3
+L-302/2025 Físico,Laboral,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,80000,0,,,8
+64/2019-S,Laboral,Amparo,Eduardo Daniel González Vázquez,0,73930,0,Laudo,2025-09-09,16
+69/2016-A,Laboral,Laudo,Jonathan Tlacaelel Plascencia López,0,73630,0,Laudo,2025-01-08,27
+52/2017-S,Laboral,Pruebas,Julio César Espinoza González,0,72806,0,,,46
+115/2018-A,Laboral,Pruebas,Julio César Espinoza González,0,72470,0,,,15
+22/2019-S,Laboral,CONCLUIDO,Julio César Espinoza González,66600,66600,0,,,9
+37/2018-A,Laboral,Pruebas,Aimé Karolina Ontiveros Tapia,23831,65110,0,Interlocutoria,2018-10-15,5
+L-120/2025-PO,Laboral,CONCLUIDO,Julio César Espinoza González,0,65000,0,,,11
+14/2018-S,Laboral,Laudo,Aimé Karolina Ontiveros Tapia,0,64734,0,,,6
+438/2024-PO,Laboral,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,63185,0,,,14
+L-41/2025-PO,Laboral,Amparo,Eduardo Daniel González Vázquez,0,63000,0,Laudo,2025-06-11,8
+94/2019-S,Laboral,Laudo,Tania Samantha Larios Salgado,0,62394,0,Laudo,2022-09-27,14
+82/2019-S,Laboral,Demanda,Aimé Karolina Ontiveros Tapia,0,61361,0,,,3
+3024/2025,Administrativa,Demanda,Marlene Alejandra Rivera Ornelas,0,58762,0,Interlocutoria,2025-10-22,8
+83/2019-S,Laboral,Pruebas,Edgar Franco Velázquez,0,58615,0,,,8
+165/2016,Administrativa,Pruebas,Daniela Ontiveros Vargas,0,57825,0,Sentencia definitiva,2022-11-15,33
+22/2012-S,Laboral,Laudo,Tania Samantha Larios Salgado,0,57529,0,Interlocutoria,2020-12-06,29
+45/2015-A,Laboral,Amparo,Eduardo Daniel González Vázquez,0,57419,0,Ampara,2019-07-02,8
+114/2018-S,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,57056,0,,,4
+602/2009-G,Laboral,Pruebas,Edgar Franco Velázquez,57000,57000,0,Laudo,2021-04-08,35
+66/2014-S,Laboral,Amparo,Edgar Franco Velázquez,0,54856,0,Ampara,2023-01-05,39
+55/2017-A,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,54655,0,,,2
+49/2017-A,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,52922,0,,,2
+52/2018-S,Laboral,Laudo,Jonathan Tlacaelel Plascencia López,0,50000,0,,,56
+27/2022,Laboral,Laudo,Tania Samantha Larios Salgado,0,48187,0,Interlocutoria,2025-01-23,3
+24/2022-S,Laboral,Amparo,Aimé Karolina Ontiveros Tapia,48000,48000,0,Laudo,2025-07-09,29
+1147/2015,Laboral,Laudo,Julio César Espinoza González,0,47957,0,Laudo,2025-01-20,5
+L-384/2024 FISICO,Laboral,Amparo,Eduardo Daniel González Vázquez,0,46902,0,Sentencia definitiva,2025-11-20,25
+14/2021-S,Laboral,Contestación,Aimé Karolina Ontiveros Tapia,0,45072,0,,,5
+L-401/2024,Laboral,CONCLUIDO,Eduardo Daniel González Vázquez,45000,45000,0,Laudo,2025-02-14,19
+518/2015,Laboral,Amparo,Julio César Espinoza González,0,44440,0,Laudo,2021-07-14,7
+55/2016-A,Laboral,Laudo,Jonathan Tlacaelel Plascencia López,0,43720,0,Interlocutoria,2018-11-16,16
+L-24/2025-PO,Laboral,Contestación,Tania Samantha Larios Salgado,0,43449,0,,,8
+L-326/2025-PE,Laboral,Contestación,Jonathan Tlacaelel Plascencia López,0,42012,0,,,3
+117/2018-A,Laboral,Pruebas,Edgar Franco Velázquez,40000,40000,0,,,5
+113/2018-A,Laboral,Pruebas,Jonathan Tlacaelel Plascencia López,0,38121,0,,,31
+47/2021-A,Laboral,Demanda,Tania Samantha Larios Salgado,0,37927,0,,,5
+L-05/2026 LINEA,Laboral,Demanda,Edgar Franco Velázquez,13541,36488,0,,,1
+130/2015,Laboral,Amparo,Tania Samantha Larios Salgado,0,34900,0,Laudo,2025-04-04,9
+1602/2016,Laboral,Laudo,Jonathan Tlacaelel Plascencia López,0,32865,0,Laudo,2025-11-11,14
+3619/2022,Administrativa,Pruebas,Daniela Ontiveros Vargas,30305,30305,0,Sentencia definitiva,2023-09-07,9
+18/2022,Laboral,Laudo,Edgar Franco Velázquez,30000,30000,0,,,21
+47/2012-S,Laboral,Amparo,Eduardo Daniel González Vázquez,0,26727,0,Laudo,2025-11-25,65
+56/2017-S,Laboral,Amparo,Aimé Karolina Ontiveros Tapia,0,26507,0,Laudo,2022-08-04,20
+112/2018-S,Laboral,Laudo,Julio César Espinoza González,24000,24000,0,,,8
+61/2019-A,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,23822,0,Interlocutoria,2025-01-24,8
+L-368/2025-PO,Laboral,CONCLUIDO,Julio César Espinoza González,0,23000,0,,,19
+61/2016-A,Laboral,Amparo,Edgar Franco Velázquez,0,22480,0,Laudo,2025-08-05,42
+61/2018-A,Laboral,Amparo,Edgar Franco Velázquez,0,22260,0,Laudo,2026-04-22,40
+L-84/2026-PO,Laboral,Demanda,Tania Samantha Larios Salgado,0,20338,0,,,5
+1750/2014,Laboral,Amparo,Aimé Karolina Ontiveros Tapia,0,20234,0,Laudo,2023-07-12,38
+475/2015,Laboral,Laudo,Didier Ivan Gonzalez Rosas,0,18164,0,Laudo,2026-01-13,17
+20/2018-S,Laboral,Demanda,Aimé Karolina Ontiveros Tapia,0,17503,0,,,7
+12/2016-S,Laboral,Pruebas,Eduardo Daniel González Vázquez,0,17196,0,,,22
+81/2026,Civil,TRÁMITE,Marlene Alejandra Rivera Ornelas,17140,17140,0,,,1
+68/2021-S,Laboral,Pruebas,Edgar Franco Velázquez,1350,17061,0,,,20
+74/2018-S,Laboral,Demanda,Didier Ivan Gonzalez Rosas,0,15492,0,,,2
+511/2026,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,13491,0,,,3
+134/2024-PO,Laboral,Contestación,Tania Samantha Larios Salgado,13449,13449,0,,,31
+1913/2025,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,13011,0,Sobreseimiento,2025-12-02,39
+80/2021-S,Laboral,Demanda,Julio César Espinoza González,0,12218,0,,,8
+L-331/2025-PO,Laboral,Contestación,Eduardo Daniel González Vázquez,0,12055,0,,,8
+38/2017-S,Laboral,Amparo,Julio César Espinoza González,0,11700,0,Laudo,2026-05-13,55
+89/2018-A,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,11321,0,,,4
+39/2018-A,Laboral,Amparo,Edgar Franco Velázquez,0,11150,0,Laudo,2023-10-16,26
+492/2024,Civil,TRÁMITE,Eduardo Daniel González Vázquez,0,10374,0,Interlocutoria,2019-09-24,64
+48/2021-S,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,10133,0,,,5
+68/2016-S,Laboral,Amparo,Jonathan Tlacaelel Plascencia López,0,9869,0,Laudo,2024-04-30,17
+27/2018-A,Laboral,Laudo,Julio César Espinoza González,9733,9733,0,Laudo,2024-08-30,13
+10/2018-S,Laboral,Pruebas,Julio César Espinoza González,0,8772,0,Interlocutoria,2018-08-27,23
+93/2018-A,Laboral,Demanda,Alicia Isabel Gutiérrez Gutiérrez,0,8000,0,,,5
+366/2023-PO,Laboral,Amparo,Edgar Franco Velázquez,0,6947,0,Laudo,2023-05-26,21
+81/2019-A,Laboral,Pruebas,Edgar Franco Velázquez,6000,6000,0,,,28
+1540/2013,Laboral,Laudo,Tania Samantha Larios Salgado,0,5933,0,Laudo,2018-05-03,15
+679/2026,Laboral,TRÁMITE,Francisco Javier Carvajal Padilla,5866,5866,0,,,12
+41/2018-A,Laboral,CONCLUIDO,Aimé Karolina Ontiveros Tapia,0,5626,0,,,9
+44/2016-S,Laboral,Amparo,Aimé Karolina Ontiveros Tapia,0,5245,0,Laudo,2026-05-21,37
+349/2026,Administrativa,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,5145,0,Sobreseimiento,2026-03-27,8
+320/2025,Administrativa,CONCLUIDO,Daniela Ontiveros Vargas,0,5000,0,Ampara,2024-03-13,13
+1537/2013,Laboral,Laudo,Tania Samantha Larios Salgado,0,4889,0,Laudo,2024-05-07,29
+18/2021-C,Laboral,Demanda,Jonathan Tlacaelel Plascencia López,0,4286,0,,,3
+41/2020-A,Laboral,Pruebas,Julio César Espinoza González,0,3984,0,,,49
+10/2015-S,Laboral,CONCLUIDO,Jonathan Tlacaelel Plascencia López,0,3523,0,Laudo,2022-05-03,34
+74/2022/10-S,Laboral,Laudo,Edgar Franco Velázquez,2900,2900,0,,,15
+64/2014-S,Laboral,Laudo,Eduardo Daniel González Vázquez,0,2865,0,Laudo,2018-08-09,29
+25/2018-A,Laboral,CONCLUIDO,Tania Samantha Larios Salgado,0,2840,0,,,8
+366/2010-D,Laboral,Amparo,Edgar Franco Velázquez,0,2700,0,Sobreseimiento,2019-02-26,19
+233/2024-PO,Laboral,Amparo,Didier Ivan Gonzalez Rosas,0,2568,0,Sentencia definitiva,2028-09-26,24
+46/2019-S,Laboral,Pruebas,Edgar Franco Velázquez,2538,2538,0,,,32
+31/2025-PO,Laboral,Amparo,Eduardo Daniel González Vázquez,0,1977,0,Laudo,2025-05-12,37
+77/2018-A,Laboral,Demanda,Julio César Espinoza González,1750,1750,0,,,1
+1/2020-A,Laboral,Pruebas,Eduardo Daniel González Vázquez,1643,1643,0,,,16
+1430/2014,Laboral,Laudo,Julio César Espinoza González,1560,1560,0,Ampara,2022-03-28,12
+63/2018-A,Laboral,Pruebas,Edgar Franco Velázquez,0,1520,0,,,12
+58/2018-S,Laboral,Pruebas,Julio César Espinoza González,0,1385,0,Interlocutoria,2019-01-21,41
+976/2020,Laboral,Amparo,Tania Samantha Larios Salgado,0,1231,0,Laudo,2025-06-13,11
+84/2018-S,Laboral,Laudo,Eduardo Daniel González Vázquez,0,1042,0,,,9
+1648/2013,Laboral,Laudo,Tania Samantha Larios Salgado,0,975,0,Ampara,2018-05-11,9
+L-186/2026,Laboral,Contestación,Eduardo Daniel González Vázquez,0,900,0,,,6
+L-210/2026-PO,Laboral,Demanda,Eduardo Daniel González Vázquez,0,900,0,,,1
+L-203/2026-PO,Laboral,Demanda,Eduardo Daniel González Vázquez,0,900,0,,,1
+1702/2017,Laboral,Laudo,Jonathan Tlacaelel Plascencia López,0,765,0,Laudo,2024-11-12,12
+L-119/2026FISICO,Laboral,Contestación,Eduardo Daniel González Vázquez,0,352,0,,,6
+41/2024-PO,Laboral,Pruebas,Eduardo Daniel González Vázquez,0,325,0,Laudo,2025-01-15,17
+17/2023-PO,Laboral,Pruebas,Edgar Franco Velázquez,0,300,0,,,19
+L-6/2025 LINEA,Laboral,Contestación,Julio César Espinoza González,0,220,0,,,2
+51/2019-A,Laboral,Demanda,Jonathan Tlacaelel Plascencia López,187,187,0,,,3
+5/2020-A,Laboral,Laudo,Julio César Espinoza González,0,180,0,,,23
+17/2024,Laboral,TRÁMITE,Tania Samantha Larios Salgado,0,113,0,Laudo,2026-06-05,28
+837/2025,Laboral,TRÁMITE,Edgar Franco Velázquez,0,113,0,Laudo,2026-06-09,7
+476/2006,Laboral,Laudo,Eduardo Daniel González Vázquez,0,0,0,Laudo,2011-07-12,16
+1637/09,Laboral,Laudo,Aimé Karolina Ontiveros Tapia,0,0,0,Laudo,2024-02-01,59
+528/2011,Laboral,Pruebas,Eduardo Daniel González Vázquez,0,0,0,Laudo,2018-09-27,66
+26/2011-S,Laboral,Pruebas,Jonathan Tlacaelel Plascencia López,0,0,0,Interlocutoria,2012-04-19,6
+50/2011-S,Laboral,Laudo,Tania Samantha Larios Salgado,0,0,0,Ampara,2021-11-11,16
+60/2011-S,Laboral,Laudo,Jonathan Tlacaelel Plascencia López,0,0,0,Interlocutoria,2012-11-01,14
+56/2011-S,Laboral,Amparo,Edgar Franco Velázquez,0,0,0,Ampara,2025-11-18,40
+2262/2011-D,Laboral,Laudo,Edgar Franco Velázquez,0,0,0,Laudo,2023-05-02,42
+51/2012-S,Laboral,Amparo,Eduardo Daniel González Vázquez,0,0,0,Laudo,2021-12-17,5
+2671/2012,Laboral,Laudo,Eduardo Daniel González Vázquez,0,0,0,Laudo,2017-10-16,40
+40/2013-S,Laboral,Laudo,Julio César Espinoza González,0,0,0,Ampara,2019-09-25,63
+41/2013-A,Laboral,Pruebas,Edgar Franco Velázquez,0,0,0,Interlocutoria,2018-08-22,19
+2543/2011,Laboral,Pruebas,Eduardo Daniel González Vázquez,0,0,0,Interlocutoria,2026-02-06,20
+47/2013-A,Laboral,Pruebas,Jonathan Tlacaelel Plascencia López,0,0,0,Interlocutoria,2018-04-02,16
+1549/2013,Laboral,Laudo,Tania Samantha Larios Salgado,0,0,0,Laudo,2016-08-31,16
+53/2014-A,Laboral,Laudo,Eduardo Daniel González Vázquez,0,0,0,Interlocutoria,2015-08-26,8
+60/2014-S,Laboral,Pruebas,Jonathan Tlacaelel Plascencia López,0,0,0,Interlocutoria,2015-01-20,6
+912/2014,Laboral,Amparo,Tania Samantha Larios Salgado,0,0,0,Laudo,2026-02-06,21
+7/2015-A,Laboral,Laudo,Edgar Franco Velázquez,0,0,0,Laudo,2019-01-09,38
+14/2015-S,Laboral,Pruebas,Jonathan Tlacaelel Plascencia López,0,0,0,Interlocutoria,2015-11-05,6
+17/2015-A,Laboral,Laudo,Eduardo Daniel González Vázquez,0,0,0,Laudo,2017-03-29,12
+11/2015-A,Laboral,Laudo,Tania Samantha Larios Salgado,0,0,0,Laudo,2025-08-22,37
+21/2015-A,Laboral,Laudo,Edgar Franco Velázquez,0,0,0,Interlocutoria,2015-10-21,13
+35/2015-A,Laboral,CONCLUIDO,Aimé Karolina Ontiveros Tapia,0,0,0,Laudo,2019-10-04,16
+43/2007-A,Laboral,Laudo,Julio César Espinoza González,0,0,0,Interlocutoria,2021-06-10,23
+44/2015-S,Laboral,Amparo,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2023-04-27,38
+79/2015-A,Laboral,CONCLUIDO,Tania Samantha Larios Salgado,0,0,0,Laudo,2018-02-26,16
+92/2015-S,Laboral,Laudo,Julio César Espinoza González,0,0,0,Interlocutoria,2017-08-19,8
+8/2016-S,Laboral,Pruebas,Tania Samantha Larios Salgado,0,0,0,Interlocutoria,2017-09-04,11
+18/2016-S,Laboral,Laudo,Tania Samantha Larios Salgado,0,0,0,Laudo,2026-06-10,21
+22/2016-S,Laboral,Amparo,Alicia Isabel Gutiérrez Gutiérrez,0,0,0,Ampara,2023-01-17,27
+24/2016-S,Laboral,Amparo,Alicia Isabel Gutiérrez Gutiérrez,0,0,0,Laudo,2024-10-17,26
+41/2016-A,Laboral,CONCLUIDO,Jonathan Tlacaelel Plascencia López,0,0,0,Interlocutoria,2018-02-26,19
+47/2016-A,Laboral,Demanda,Edgar Franco Velázquez,0,0,0,Interlocutoria,2017-12-06,9
+62/2016-S,Laboral,Laudo,Tania Samantha Larios Salgado,0,0,0,Interlocutoria,2017-10-04,18
+70/2016-S,Laboral,Pruebas,Jonathan Tlacaelel Plascencia López,0,0,0,Interlocutoria,2018-02-13,11
+73/2016-A,Laboral,CONCLUIDO,Julio César Espinoza González,0,0,0,Interlocutoria,2017-12-05,39
+504/2016-F,Laboral,Demanda,Tania Samantha Larios Salgado,0,0,0,Interlocutoria,2018-07-13,17
+56/2016-S,Laboral,Laudo,Tania Samantha Larios Salgado,0,0,0,Interlocutoria,2017-11-21,19
+17/2017-A,Laboral,Laudo,Didier Ivan Gonzalez Rosas,0,0,0,Interlocutoria,2018-02-26,10
+27/2017-A,Laboral,Pruebas,Jonathan Tlacaelel Plascencia López,0,0,0,Interlocutoria,2018-11-12,29
+30/2017-S,Laboral,Amparo,Aimé Karolina Ontiveros Tapia,0,0,0,Laudo,2020-02-13,27
+18/2017-S,Laboral,Laudo,Tania Samantha Larios Salgado,0,0,0,Ampara,2020-01-27,31
+36/2017-S,Laboral,Amparo,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2024-07-08,14
+50/2017-S,Laboral,Pruebas,Eduardo Daniel González Vázquez,0,0,0,Interlocutoria,2018-04-02,11
+19/2017,Laboral,Laudo,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2023-08-15,15
+18/2018-S,Laboral,Amparo,Edgar Franco Velázquez,0,0,0,Laudo,2026-06-10,18
+11/2018-A,Laboral,Laudo,Aimé Karolina Ontiveros Tapia,0,0,0,Interlocutoria,2018-11-05,61
+50/2018-S,Laboral,Amparo,Eduardo Daniel González Vázquez,0,0,0,Laudo,2025-12-10,36
+66/2018-S,Laboral,Laudo,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2025-09-01,11
+698/2018-F,Laboral,Pruebas,Edgar Franco Velázquez,0,0,0,Interlocutoria,2018-11-27,3
+70/2018-S,Laboral,Amparo,Eduardo Daniel González Vázquez,0,0,0,Laudo,2026-03-05,33
+96/2018-S,Laboral,Laudo,Julio César Espinoza González,0,0,0,Laudo,2025-10-30,19
+116/2018-A,Laboral,Amparo,Julio César Espinoza González,0,0,0,Laudo,2024-10-31,15
+4/2019-S,Laboral,Amparo,Tania Samantha Larios Salgado,0,0,0,Laudo,2025-11-25,14
+5/2019-A,Laboral,Amparo,Edgar Franco Velázquez,0,0,0,Laudo,2025-11-25,19
+31/2019-A,Laboral,Contestación,Didier Ivan Gonzalez Rosas,0,0,0,Interlocutoria,2020-08-07,4
+29/2019-A,Laboral,Laudo,Tania Samantha Larios Salgado,0,0,0,Laudo,2026-06-10,35
+1805/2018,Laboral,Pruebas,Edgar Franco Velázquez,0,0,0,Interlocutoria,2023-06-23,10
+67/2019-A,Laboral,Amparo,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2026-06-10,17
+75/2019-A,Laboral,Demanda,Eduardo Daniel González Vázquez,0,0,0,Ampara,2026-06-17,19
+85/2019-A,Laboral,Pruebas,Tania Samantha Larios Salgado,0,0,0,Interlocutoria,2025-07-09,35
+99/2019-A,Laboral,Pruebas,Aimé Karolina Ontiveros Tapia,0,0,0,Interlocutoria,2020-10-20,5
+492/2018,Laboral,Laudo,Julio César Espinoza González,0,0,0,Laudo,2025-12-02,39
+1386/2014,Laboral,Pruebas,Eduardo Daniel González Vázquez,0,0,0,Interlocutoria,2024-10-31,15
+45/2020-A,Laboral,Pruebas,Eduardo Daniel González Vázquez,0,0,0,Interlocutoria,2026-05-29,15
+10/2021-S,Laboral,Pruebas,Eduardo Daniel González Vázquez,0,0,0,Interlocutoria,2026-01-21,13
+252/2021-F,Laboral,Contestación,Aimé Karolina Ontiveros Tapia,0,0,0,Interlocutoria,2023-10-10,11
+139/2021-D,Laboral,Contestación,Edgar Franco Velázquez,0,0,0,Interlocutoria,2023-09-08,10
+65/2021-A,Laboral,Pruebas,Edgar Franco Velázquez,0,0,0,Interlocutoria,2024-02-09,24
+61/2021,Laboral,Amparo,Julio César Espinoza González,0,0,0,Laudo,2025-06-24,19
+93/2021-A,Laboral,Amparo,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2026-03-06,24
+2983/2020,Laboral,Pruebas,Julio César Espinoza González,0,0,0,Interlocutoria,2025-10-03,12
+2618/2020,Laboral,Amparo,Julio César Espinoza González,0,0,0,Laudo,2025-01-23,23
+1499/2020-12B,Laboral,Pruebas,Julio César Espinoza González,0,0,0,Interlocutoria,2023-07-14,8
+43/2022-A,Laboral,Laudo,Tania Samantha Larios Salgado,0,0,0,Interlocutoria,2023-07-03,18
+50/2022-S,Laboral,Laudo,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2026-05-29,54
+48/2022-S,Laboral,Amparo,Aimé Karolina Ontiveros Tapia,0,0,0,Laudo,2026-05-18,11
+45/2022-A,Laboral,Laudo,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2026-03-26,20
+1807/2021-E,Laboral,Contestación,Tania Samantha Larios Salgado,0,0,0,Interlocutoria,2026-02-19,12
+68/2022-S,Laboral,Pruebas,Julio César Espinoza González,0,0,0,Interlocutoria,2023-06-13,18
+91/2022-S,Laboral,Amparo,Eduardo Daniel González Vázquez,0,0,0,Laudo,2026-03-06,33
+311/2023,Laboral,CONCLUIDO,Edgar Franco Velázquez,0,0,0,Laudo,2025-10-22,50
+613/2012,Agraria,Amparo,Daniela Ontiveros Vargas,0,0,15674896987,Interlocutoria,2025-05-06,94
+33/2023,Agraria,Amparo,Daniela Ontiveros Vargas,0,0,0,Laudo,2026-03-11,21
+1767/2019,Administrativa,Sentencia,Daniela Ontiveros Vargas,0,0,0,Sentencia definitiva,2024-01-09,20
+3325/2019,Administrativa,Sentencia,Daniela Ontiveros Vargas,0,0,0,Sentencia definitiva,2026-02-09,28
+3519/2019,Administrativa,Pruebas,Daniela Ontiveros Vargas,0,0,0,Interlocutoria,2024-10-16,13
+3520/2019,Administrativa,Sentencia,Daniela Ontiveros Vargas,0,0,0,Sentencia definitiva,2025-09-25,25
+240/2021,Administrativa,Alegatos,Daniela Ontiveros Vargas,0,0,0,Sobreseimiento,2025-05-21,21
+3004/2021,Administrativa,Alegatos,Daniela Ontiveros Vargas,0,0,0,Ampara,2023-05-03,13
+3005/2021,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Sobreseimiento,2021-08-27,7
+3006/2021,Administrativa,Sentencia,Daniela Ontiveros Vargas,0,0,0,Sentencia definitiva,2026-04-14,20
+4025/2021,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Sentencia definitiva,2023-06-22,7
+4027/2021,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Interlocutoria,2023-09-28,11
+396/2023,Laboral,TRÁMITE,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2023-05-12,6
+188/2024,Administrativa,CONCLUIDO,Daniela Ontiveros Vargas,0,0,0,Sobreseimiento,2026-03-03,17
+1257/2024,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Interlocutoria,2026-01-12,10
+3060/2022,Administrativa,Alegatos,Daniela Ontiveros Vargas,0,0,0,Sentencia definitiva,2023-10-17,4
+648/2023-PO,Laboral,Sentencia,Julio César Espinoza González,0,0,0,Laudo,2023-10-19,24
+1200/2024,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Interlocutoria,2024-03-12,13
+249/2024,Administrativa,Apelación,Marlene Alejandra Rivera Ornelas,0,0,0,Sobreseimiento,2026-05-14,49
+864/2023,Laboral,CONCLUIDO,Eduardo Daniel González Vázquez,0,0,0,Laudo,2026-04-24,28
+865/2023,Laboral,CONCLUIDO,Eduardo Daniel González Vázquez,0,0,0,Laudo,2026-04-20,17
+768/2024,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Sentencia definitiva,2025-05-22,38
+907/2024,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Sobreseimiento,2025-09-11,24
+110/2023,Laboral,Amparo,Didier Ivan Gonzalez Rosas,0,0,0,Ampara,2026-05-27,41
+49/2022-A,Laboral,Pruebas,Julio César Espinoza González,0,0,0,Laudo,2026-05-06,26
+37/2024,Laboral,TRÁMITE,Edgar Franco Velázquez,0,0,0,Ampara,2025-10-06,50
+402/2024,Civil,CONCLUIDO,Miriam Jaqueline Becerra Farfán,0,0,0,Sobreseimiento,2026-05-12,42
+2/2024,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Sentencia definitiva,2025-02-04,7
+74/2021-S,Laboral,Laudo,Didier Ivan Gonzalez Rosas,0,0,0,Laudo,2026-03-04,14
+181/2024,Laboral,TRÁMITE,Julio César Espinoza González,0,0,0,Laudo,2026-01-14,14
+27/2024,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Sobreseimiento,2024-11-26,14
+2106/2025,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Sobreseimiento,2024-11-26,13
+54/2024-PE,Laboral,Sentencia,Aimé Karolina Ontiveros Tapia,0,0,0,Sentencia definitiva,2025-01-09,28
+2815/2022,Laboral,Amparo,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2025-10-22,20
+2906/2022,Laboral,Laudo,Tania Samantha Larios Salgado,0,0,0,Interlocutoria,2024-05-07,13
+230/2024-IX-A,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Sobreseimiento,2024-07-01,33
+306/2024,Laboral,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,0,0,Laudo,2026-01-21,19
+344/2024,Laboral,CONCLUIDO,Tania Samantha Larios Salgado,0,0,0,Ampara,2025-10-14,11
+825/2024,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Interlocutoria,2025-05-28,15
+443/2024,Laboral,CONCLUIDO,Eduardo Daniel González Vázquez,0,0,0,Laudo,2026-04-27,16
+524/2024,Laboral,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,0,0,Laudo,2025-12-11,13
+449/2024,Administrativa,CONCLUIDO,Jorge Ubaldo Valadez Velázquez,0,0,0,Ampara,2026-02-20,20
+563/2024,Laboral,TRÁMITE,Aimé Karolina Ontiveros Tapia,0,0,0,Ampara,2025-11-18,11
+365/2024,Administrativa,TRÁMITE,Eduardo Daniel González Vázquez,0,0,0,Interlocutoria,2025-04-21,51
+557/2024,Laboral,TRÁMITE,Eduardo Daniel González Vázquez,0,0,0,Laudo,2024-07-08,10
+2708/2024,Administrativa,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,0,0,Sentencia definitiva,2026-01-15,21
+238/2024-PO,Laboral,Amparo,Julio César Espinoza González,0,0,0,Sentencia definitiva,2024-12-05,15
+69/2024-P0,Laboral,Amparo,Aimé Karolina Ontiveros Tapia,0,0,0,Sentencia definitiva,2025-10-09,37
+158/2025,Laboral,CONCLUIDO,Julio César Espinoza González,0,0,0,Laudo,2026-02-26,9
+9/2025,Laboral,TRÁMITE,Julio César Espinoza González,0,0,0,Ampara,2026-03-24,10
+329/2024,Civil,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Interlocutoria,2024-11-15,42
+190/2024-PO,Laboral,Pruebas,Eduardo Daniel González Vázquez,0,0,0,Laudo,2024-10-07,12
+969/2024,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Sobreseimiento,2026-04-13,16
+51/2025,Laboral,TRÁMITE,Julio César Espinoza González,0,0,0,Ampara,2026-04-07,13
+264/2024-PO,Laboral,Sentencia,Jonathan Tlacaelel Plascencia López,0,0,0,Sentencia definitiva,2026-06-05,17
+842/2024,Laboral,TRÁMITE,Didier Ivan Gonzalez Rosas,0,0,0,Ampara,2026-05-19,11
+67/2025,Laboral,TRÁMITE,Eduardo Daniel González Vázquez,0,0,0,Laudo,2026-06-16,8
+821/2024,Laboral,TRÁMITE,Julio César Espinoza González,0,0,0,Ampara,2025-10-24,10
+53/2025,Laboral,TRÁMITE,Eduardo Daniel González Vázquez,0,0,0,Sobreseimiento,2025-07-01,9
+1579/2024,Laboral,TRÁMITE,Jonathan Tlacaelel Plascencia López,0,0,0,Ampara,2025-06-23,14
+920/2024,Laboral,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,0,0,Niega amparo,2026-04-13,11
+66/2025,Laboral,TRÁMITE,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2026-06-17,11
+1422/2024-V,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Ampara,2025-12-08,9
+760/2024,Civil (no especificada),TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Interlocutoria,2025-08-07,10
+146/2025,Laboral,TRÁMITE,Didier Ivan Gonzalez Rosas,0,0,0,Laudo,2025-04-04,11
+47/2025,Administrativa,CONCLUIDO,Jorge Ubaldo Valadez Velázquez,0,0,0,Sobreseimiento,2026-02-11,21
+357/2025,Laboral,CONCLUIDO,Julio César Espinoza González,0,0,0,Laudo,2026-02-26,8
+1216/2024,Civil,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Sobreseimiento,2026-03-05,5
+138/2025-III,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Sobreseimiento,2026-03-04,11
+1554/2024,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Sobreseimiento,2025-07-03,20
+123/2025,Laboral,CONCLUIDO,Edgar Franco Velázquez,0,0,0,Ampara,2025-11-03,18
+15/2025,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Ampara,2025-02-24,7
+840/2024,Laboral,CONCLUIDO,Jorge Ubaldo Valadez Velázquez,0,0,0,Ampara,2025-12-09,16
+222/2024-PO,Laboral,Sentencia,Aimé Karolina Ontiveros Tapia,0,0,0,Sentencia definitiva,2026-04-28,19
+57/2025,Administrativa,CONCLUIDO,Jorge Ubaldo Valadez Velázquez,0,0,0,Ampara,2026-02-18,8
+250/2025,Laboral,CONCLUIDO,Alicia Isabel Gutiérrez Gutiérrez,0,0,0,Sobreseimiento,2026-03-12,21
+79/2025,Administrativa,TRÁMITE,Eduardo Daniel González Vázquez,0,0,0,Sentencia definitiva,2026-01-21,26
+409/2025,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Ampara,2025-10-30,10
+304/2025,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Sobreseimiento,2025-10-14,14
+427/2025,Civil,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Interlocutoria,2026-05-29,78
+510/2025,Laboral,TRÁMITE,Julio César Espinoza González,0,0,0,Laudo,2025-05-15,8
+514/2025,Laboral,TRÁMITE,Eduardo Daniel González Vázquez,0,0,0,Laudo,2025-05-15,7
+887/2025,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Ampara,2026-01-27,40
+650/2025,Laboral,TRÁMITE,Edgar Franco Velázquez,0,0,0,Sentencia definitiva,2026-05-20,36
+988/2025,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Ampara,2025-07-02,14
+1009/2025-5,Administrativa,CONCLUIDO,Jorge Ubaldo Valadez Velázquez,0,0,0,Sobreseimiento,2026-02-05,38
+613/2025,Laboral,TRÁMITE,Jonathan Tlacaelel Plascencia López,0,0,0,Laudo,2026-06-01,15
+1122/2025-III,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Interlocutoria,2025-08-05,48
+L-132/2025-Físico,Laboral,Amparo,Didier Ivan Gonzalez Rosas,0,0,0,Laudo,2025-06-23,15
+2013/2025,Administrativa,Demanda,Daniela Ontiveros Vargas,0,0,0,Sobreseimiento,2026-04-08,6
+L-210/2025-PO,Laboral,CONCLUIDO,Edgar Franco Velázquez,0,0,0,Laudo,2025-07-03,20
+211/2025,Laboral,TRÁMITE,Jonathan Tlacaelel Plascencia López,0,0,0,Sobreseimiento,2026-04-15,47
+1537/2025,Administrativa,CONCLUIDO,Miriam Jaqueline Becerra Farfán,0,0,0,Sobreseimiento,2025-12-19,5
+1561/2025,Administrativa,CONCLUIDO,Daniela Ontiveros Vargas,0,0,0,Sobreseimiento,2025-09-11,8
+348/2025,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Interlocutoria,2025-08-08,4
+835/2025,Laboral,TRÁMITE,Edgar Franco Velázquez,0,0,0,Laudo,2025-08-14,7
+909/2025,Laboral,TRÁMITE,Tania Samantha Larios Salgado,0,0,0,Laudo,2025-09-03,6
+2054/2025,Laboral,CONCLUIDO,Eduardo Daniel González Vázquez,0,0,0,Ampara,2025-10-08,7
+217/2025,Laboral,CONCLUIDO,Edgar Franco Velázquez,0,0,0,Sobreseimiento,2026-03-31,5
+1806/2025-VII,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Sobreseimiento,2026-04-17,22
+L-286/2025-PO,Laboral,Contestación,Eduardo Daniel González Vázquez,0,0,0,Laudo,2025-10-07,5
+30/2025,Administrativa,TRÁMITE,Daniela Ontiveros Vargas,0,0,0,Sobreseimiento,2025-09-10,2
+1025/2025,Laboral,TRÁMITE,Tania Samantha Larios Salgado,0,0,0,Laudo,2025-10-02,3
+1471/2025-I,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Sobreseimiento,2026-06-16,21
+1658/2025-VIII,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Sobreseimiento,2025-10-28,21
+2944/2025,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,150922201,Sobreseimiento,2026-02-27,35
+2952/2025,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Interlocutoria,2026-01-21,11
+2963/2025,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Sentencia definitiva,2026-03-23,10
+2979/2025,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Interlocutoria,2026-05-22,14
+877/2025,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Interlocutoria,2025-10-24,7
+3074/2025,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Sentencia definitiva,2026-05-25,11
+1983/2025-III,Administrativa,CONCLUIDO,Miriam Jaqueline Becerra Farfán,0,0,0,Ampara,2026-02-25,14
+2466/2025-VI,Laboral,TRÁMITE,Tania Samantha Larios Salgado,0,0,0,Ampara,2025-12-19,11
+1185/2025,Laboral,TRÁMITE,Julio César Espinoza González,0,0,0,Laudo,2025-11-07,3
+1137/2025-I,Penal,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Sentencia definitiva,2026-01-12,22
+2546/2025,Laboral,CONCLUIDO,Eduardo Daniel González Vázquez,0,0,0,Ampara,2026-02-09,19
+1239/2025,Laboral,TRÁMITE,Didier Ivan Gonzalez Rosas,0,0,0,Laudo,2026-02-13,9
+3402/2025,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Interlocutoria,2026-04-15,11
+1485/2025,Administrativa,TRÁMITE,Miriam Jaqueline Becerra Farfán,0,0,0,Ampara,2025-11-19,6
+2665/2025-VI,Laboral,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,0,0,Sentencia definitiva,2025-11-24,11
+1207/2025,Laboral,TRÁMITE,Tania Samantha Larios Salgado,0,0,0,Sobreseimiento,2025-12-12,7
+2041/2025,Administrativa,CONCLUIDO,Marlene Alejandra Rivera Ornelas,0,0,0,Sobreseimiento,2026-01-20,9
+252/2025,Laboral,TRÁMITE,Edgar Franco Velázquez,0,0,0,Sobreseimiento,2025-12-04,4
+2388/2025,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Interlocutoria,2026-02-18,34
+413/2026,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Interlocutoria,2026-05-15,11
+412/2026,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Interlocutoria,2026-05-15,7
+136/2026,Laboral,TRÁMITE,Edgar Franco Velázquez,0,0,0,Laudo,2026-02-11,4
+89/2026,Laboral,TRÁMITE,Eduardo Daniel González Vázquez,0,0,0,Interlocutoria,2026-05-11,11
+96/2026,Laboral,TRÁMITE,Julio César Espinoza González,0,0,0,Laudo,2026-06-16,7
+2337/2025,Administrativa,CONCLUIDO,Miriam Jaqueline Becerra Farfán,0,0,0,Sobreseimiento,2026-02-19,7
+11/2025,Laboral,TRÁMITE,Eduardo Daniel González Vázquez,0,0,0,Interlocutoria,0206-01-30,6
+2977/2025,Laboral,CONCLUIDO,Julio César Espinoza González,0,0,0,Sobreseimiento,2026-04-14,18
+476/2026,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Sentencia definitiva,2026-04-23,12
+475/2026,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Interlocutoria,2026-05-22,6
+60/2026,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Ampara,2026-06-02,3
+170/2026,Laboral,CONCLUIDO,Eduardo Daniel González Vázquez,0,0,0,Sobreseimiento,2026-06-12,9
+77/2026,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Interlocutoria,2026-04-15,10
+33/2026,Laboral,TRÁMITE,Edgar Franco Velázquez,0,0,0,Sobreseimiento,2026-03-05,4
+90/2026,Civil,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,0,0,Sobreseimiento,2026-03-13,8
+139/2026,Administrativa,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,0,0,Ampara,2026-04-13,7
+296/2026-IV,Administrativa,CONCLUIDO,Jorge Ubaldo Valadez Velázquez,0,0,0,Ampara,2026-04-13,5
+43/2026,Laboral,TRÁMITE,Edgar Franco Velázquez,0,0,0,Interlocutoria,2026-02-25,2
+677/2026,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Interlocutoria,2026-04-15,8
+325/2026,Laboral,TRÁMITE,Edgar Franco Velázquez,0,0,0,Laudo,2026-03-20,5
+173/2026,Laboral,TRÁMITE,Julio César Espinoza González,0,0,0,Laudo,2026-03-24,4
+560/2026,Laboral,TRÁMITE,Eduardo Daniel González Vázquez,0,0,0,Interlocutoria,2026-05-20,19
+431/2026,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Sobreseimiento,2026-04-15,6
+367/2026,Administrativa,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,0,0,Sobreseimiento,2026-03-26,5
+499/2026,Laboral,TRÁMITE,Aimé Karolina Ontiveros Tapia,0,0,0,Sobreseimiento,2026-06-16,14
+517/2026,Administrativa,CONCLUIDO,Didier Ivan Gonzalez Rosas,0,0,0,Sobreseimiento,2026-05-08,6
+95/2026,Laboral,TRÁMITE,Eduardo Daniel González Vázquez,0,0,0,Interlocutoria,2026-03-24,3
+394/2026,Administrativa,CONCLUIDO,Marlene Alejandra Rivera Ornelas,0,0,0,Sobreseimiento,2026-04-22,6
+477/2026,Laboral,TRÁMITE,Julio César Espinoza González,0,0,0,Laudo,2026-05-12,4
+627/2026,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Interlocutoria,2026-05-11,8
+754/2026,Administrativa,CONCLUIDO,Jorge Ubaldo Valadez Velázquez,0,0,0,Sobreseimiento,2026-06-01,8
+698/2026,Administrativa,TRÁMITE,Marlene Alejandra Rivera Ornelas,0,0,0,Interlocutoria,2026-06-15,12
+855/2026,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Sobreseimiento,2026-05-28,7
+833/2026,Administrativa,TRÁMITE,Jorge Ubaldo Valadez Velázquez,0,0,0,Interlocutoria,2026-06-04,7

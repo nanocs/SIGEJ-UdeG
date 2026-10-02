@@ -1,0 +1,374 @@
+{
+ "q1_activos": {
+  "valor": 659,
+  "total": 749,
+  "pct": 88.0
+ },
+ "q2_materias": {
+  "Laboral": 615,
+  "Civil": 132,
+  "Penal": 1,
+  "(s/d)": 1
+ },
+ "q3_dependencias": {
+  "CUCSH": 44,
+  "CUCS": 39,
+  "CUCEA": 28,
+  "CUCEI": 25,
+  "Escuela Politécnica de Guadalajara": 24,
+  "Escuela Preparatoria No. 12": 20,
+  "Operadora Auditorio Metropolitano": 19,
+  "CUCOSTA": 16,
+  "Coordinación General de Extensión y Difusión Cultural": 16,
+  "Escuela Preparatoria de Jalisco": 15
+ },
+ "q4_alto_riesgo": {
+  "conteo": 40,
+  "niveles": {
+   "Crítico": 2,
+   "Medio": 140,
+   "Alto": 38,
+   "Bajo": 569
+  },
+  "top": [
+   {
+    "exp": "27/2018-A",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria No. 11",
+    "nivel": "Crítico",
+    "score": 82,
+    "drivers": "monto $9,733, etapa Laudo, resolución desfavorable, reinstalación/indemnización, antigüedad 8 años"
+   },
+   {
+    "exp": "44/2003-S",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria 11 y 7",
+    "nivel": "Crítico",
+    "score": 81,
+    "drivers": "monto $76,333, en amparo, resolución desfavorable, reinstalación/indemnización, antigüedad 23 años"
+   },
+   {
+    "exp": "71/2015-A",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria No. 2",
+    "nivel": "Alto",
+    "score": 74,
+    "drivers": "monto $10,655, en amparo, resolución desfavorable, reinstalación/indemnización, antigüedad 11 años"
+   },
+   {
+    "exp": "95/2019-A",
+    "materia": "Laboral",
+    "dependencia": "Coordinación General Administrativa",
+    "nivel": "Alto",
+    "score": 74,
+    "drivers": "monto $1,200, en amparo, resolución desfavorable, reinstalación/indemnización, antigüedad 7 años"
+   },
+   {
+    "exp": "86/2023",
+    "materia": "Laboral",
+    "dependencia": "Operadora del Sistema Universitario de Radio, Televisión y Cinematografía",
+    "nivel": "Alto",
+    "score": 70,
+    "drivers": "monto $64,743, en amparo, resolución desfavorable, reinstalación/indemnización"
+   },
+   {
+    "exp": "36/2008-S",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria No. 14",
+    "nivel": "Alto",
+    "score": 67,
+    "drivers": "etapa Laudo, resolución desfavorable, reinstalación/indemnización, antigüedad 18 años"
+   },
+   {
+    "exp": "57/2018-A",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria Regional de Colotlán",
+    "nivel": "Alto",
+    "score": 67,
+    "drivers": "etapa Laudo, resolución desfavorable, reinstalación/indemnización, antigüedad 8 años"
+   },
+   {
+    "exp": "29/2019-A",
+    "materia": "Laboral",
+    "dependencia": "Escuela Politécnica de Guadalajara",
+    "nivel": "Alto",
+    "score": 67,
+    "drivers": "etapa Laudo, resolución desfavorable, reinstalación/indemnización, antigüedad 7 años"
+   },
+   {
+    "exp": "45/2017-A",
+    "materia": "Laboral",
+    "dependencia": "CUCEA",
+    "nivel": "Alto",
+    "score": 65,
+    "drivers": "monto $413,858, resolución desfavorable, reinstalación/indemnización"
+   },
+   {
+    "exp": "24/2021-S",
+    "materia": "Laboral",
+    "dependencia": "Coordinación General De Tecnologías De Información",
+    "nivel": "Alto",
+    "score": 65,
+    "drivers": "monto $90,000, etapa Laudo, reinstalación/indemnización, antigüedad 5 años"
+   },
+   {
+    "exp": "24/2010-S",
+    "materia": "Laboral",
+    "dependencia": "CUCBA",
+    "nivel": "Alto",
+    "score": 63,
+    "drivers": "monto $14,507, resolución desfavorable, reinstalación/indemnización, antigüedad 16 años"
+   },
+   {
+    "exp": "2/2019-S",
+    "materia": "Laboral",
+    "dependencia": "CUCEA",
+    "nivel": "Alto",
+    "score": 63,
+    "drivers": "monto $502,112, en amparo, reinstalación/indemnización, antigüedad 7 años"
+   },
+   {
+    "exp": "3091/2019",
+    "materia": "Laboral",
+    "dependencia": "Sistema Corporativo Proulex Comlex",
+    "nivel": "Alto",
+    "score": 62,
+    "drivers": "monto $12, en amparo, resolución desfavorable, antigüedad 7 años"
+   },
+   {
+    "exp": "112/2018-S",
+    "materia": "Laboral",
+    "dependencia": "CUCSH",
+    "nivel": "Alto",
+    "score": 60,
+    "drivers": "monto $24,000, etapa Laudo, reinstalación/indemnización, antigüedad 8 años"
+   },
+   {
+    "exp": "1840/2015",
+    "materia": "Laboral",
+    "dependencia": "Hotel Montecarlo",
+    "nivel": "Alto",
+    "score": 59,
+    "drivers": "en amparo, resolución desfavorable, reinstalación/indemnización, antigüedad 11 años"
+   }
+  ]
+ },
+ "q5_pasivo": {
+  "piso_parcial": 2866755.35,
+  "exp_con_monto": 42,
+  "total": 749
+ },
+ "q6_abogados": {
+  "Eduardo Daniel González Vázquez": 110,
+  "Edgar Franco Velázquez": 95,
+  "Julio César Espinoza González": 86,
+  "Jonathan Tlacaelel Plascencia López": 79,
+  "Aimé Karolina Ontiveros Tapia": 77,
+  "Didier Ivan Gonzalez Rosas": 77,
+  "Tania Samantha Larios Salgado": 76,
+  "Jorge Ubaldo Valadez Velázquez": 47,
+  "Daniela Ontiveros Vargas": 45,
+  "Marlene Alejandra Rivera Ornelas": 31,
+  "Alicia Isabel Gutiérrez Gutiérrez": 7,
+  "Miriam Jaqueline Becerra Farfán": 6,
+  "Fanny Janeth Aceves Bravo": 6,
+  "Jessica Nuño Villarruel": 3,
+  "Francisco Javier Carvajal Padilla": 2,
+  "Norma Leticia Cervantes Pantoja": 2
+ },
+ "q7_tasa_exito": {
+  "pct": 51.2,
+  "fav": 66,
+  "desf": 63
+ },
+ "q8_atencion": {
+  "conteo": 148,
+  "top": [
+   {
+    "exp": "27/2018-A",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria No. 11",
+    "abogado": "Julio César Espinoza González",
+    "estado": "Laudo",
+    "nivel": "Crítico",
+    "score": 82
+   },
+   {
+    "exp": "44/2003-S",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria 11 y 7",
+    "abogado": "Edgar Franco Velázquez",
+    "estado": "Amparo",
+    "nivel": "Crítico",
+    "score": 81
+   },
+   {
+    "exp": "36/2008-S",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria No. 14",
+    "abogado": "Julio César Espinoza González",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 67
+   },
+   {
+    "exp": "57/2018-A",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria Regional de Colotlán",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 67
+   },
+   {
+    "exp": "29/2019-A",
+    "materia": "Laboral",
+    "dependencia": "Escuela Politécnica de Guadalajara",
+    "abogado": "Tania Samantha Larios Salgado",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 67
+   },
+   {
+    "exp": "24/2021-S",
+    "materia": "Laboral",
+    "dependencia": "Coordinación General De Tecnologías De Información",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 65
+   },
+   {
+    "exp": "112/2018-S",
+    "materia": "Laboral",
+    "dependencia": "CUCSH",
+    "abogado": "Julio César Espinoza González",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 60
+   },
+   {
+    "exp": "1475/2023",
+    "materia": "Civil",
+    "dependencia": "Coordinación General de Investigación, Posgrado y Vinculación",
+    "abogado": "Daniela Ontiveros Vargas",
+    "estado": "Sentencia",
+    "nivel": "Alto",
+    "score": 58
+   },
+   {
+    "exp": "50/2022-S",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria Regional de San Juan de los Lagos",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 57
+   },
+   {
+    "exp": "50/2011-S",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria No. 5",
+    "abogado": "Tania Samantha Larios Salgado",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 55
+   },
+   {
+    "exp": "22/2012-S",
+    "materia": "Laboral",
+    "dependencia": "CUCEA",
+    "abogado": "Tania Samantha Larios Salgado",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 55
+   },
+   {
+    "exp": "292/2013",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria No. 2",
+    "abogado": "Eduardo Daniel González Vázquez",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 55
+   },
+   {
+    "exp": "1535/2013",
+    "materia": "Laboral",
+    "dependencia": "CUCBA",
+    "abogado": "Didier Ivan Gonzalez Rosas",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 55
+   },
+   {
+    "exp": "1540/2013",
+    "materia": "Laboral",
+    "dependencia": "CUCBA",
+    "abogado": "Tania Samantha Larios Salgado",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 55
+   },
+   {
+    "exp": "18/2016-S",
+    "materia": "Laboral",
+    "dependencia": "Escuela Vocacional y CUCSH",
+    "abogado": "Tania Samantha Larios Salgado",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 55
+   },
+   {
+    "exp": "1702/2017",
+    "materia": "Laboral",
+    "dependencia": "CUCS",
+    "abogado": "Jonathan Tlacaelel Plascencia López",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 55
+   },
+   {
+    "exp": "31/2021-A",
+    "materia": "Laboral",
+    "dependencia": "Rectoria General",
+    "abogado": "Aimé Karolina Ontiveros Tapia",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 55
+   },
+   {
+    "exp": "74/2021-S",
+    "materia": "Laboral",
+    "dependencia": "Escuela Preparatoria Vocacional",
+    "abogado": "Didier Ivan Gonzalez Rosas",
+    "estado": "Laudo",
+    "nivel": "Alto",
+    "score": 55
+   },
+   {
+    "exp": "18/2022",
+    "materia": "Laboral",
+    "dependencia": "Orquesta Higinio Ruvalcaba",
+    "abogado": "Edgar Franco Velázquez",
+    "estado": "Laudo",
+    "nivel": "Medio",
+    "score": 51
+   },
+   {
+    "exp": "74/2022/10-S",
+    "materia": "Laboral",
+    "dependencia": "Operadora del Sistema Universitario de Radio, Televisión y Cinematografía",
+    "abogado": "Edgar Franco Velázquez",
+    "estado": "Laudo",
+    "nivel": "Medio",
+    "score": 47
+   }
+  ]
+ },
+ "meta": {
+  "universo": 821,
+  "base": 749,
+  "corte": "2026-06-18"
+ }
+}

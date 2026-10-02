@@ -1,0 +1,809 @@
+# -*- coding: utf-8 -*-
+# Módulo de Normatividad Universitaria — Coordinación de Normatividad Universitaria · OAG UdeG.
+# Base: Arts. 224-227 del Reglamento Interior de la Administración General UdeG (texto a confirmar en fuente oficial).
+# Arranca vacío (catálogos). Acceso: equipo jurídico. Sin backend (prototipo cliente).
+import json
+B="/Users/edithroque/Documents/CLAUDE/"
+
+TIPOS=["Ley Orgánica","Estatuto General","Estatuto orgánico","Reglamento","Acuerdo","Circular","Lineamiento","Manual","Política institucional","Protocolo","Convocatoria","Reglas de operación","Criterio interpretativo"]
+ACCIONES=["Crear / Expedir","Modificar / Reformar","Derogar","Abrogar","Interpretar / Integrar"]
+FLUJOS={
+ "Proyecto normativo":["Solicitud","Registro","Turno","Análisis preliminar","Revisión de competencia","Diagnóstico normativo","Elaboración de proyecto","Revisión técnica","Observaciones","Validación","Opinión jurídica","Remisión a autoridad competente","Dictaminación por órgano colegiado","Aprobación","Publicación","Difusión","Archivo","Seguimiento"],
+ "Consulta / interpretación":["Solicitud","Registro","Turno","Análisis normativo","Elaboración de opinión / criterio","Validación","Respuesta institucional","Archivo"],
+}
+ESTADOS_NORMA=["Vigente","Reformado","Derogado","Abrogado","En proyecto"]
+JERARQUIA=["Ley Orgánica","Estatuto General","Estatutos orgánicos","Reglamentos","Acuerdos del CGU","Acuerdos / Circulares administrativos","Lineamientos / Manuales / Protocolos"]
+MATERIAS=["Gobierno y organización","Académica","Administrativa","Personal","Estudiantil","Patrimonial","Transparencia y datos","Responsabilidades","Electoral universitaria","Financiera y presupuestal","Derecho comparado"]
+AUTORIDADES=["Consejo General Universitario","Rectoría General","Secretaría General","Consejo de Centro Universitario","Consejo Divisional","Consejo Universitario de Educación Media Superior","Comisión Permanente del CGU","Oficina de la Abogacía General"]
+DEPS=["Rectoría General","Secretaría General","Oficina de la Abogacía General","Contraloría General","Coordinación General Académica","Coordinación General Administrativa","CUAAD","CUCBA","CUCEA","CUCEI","CUCS","CUCSH","CUValles","CUNorte","CUSur","CUCiénega","CUCosta","CUCSur","CULagos","CUTonalá","SEMS","UDG Virtual"]
+RIESGOS_CAT=["Constitucional","Legal","Competencial","Administrativo","Presupuestal","Laboral","Derechos humanos","Transparencia","Datos personales","Auditoría","Nulidad","Reputacional"]
+NIVELES3=["Bajo","Medio","Alto"]
+SUJETOS=["Alumno","Académico","Funcionario","Personal administrativo","Autoridad universitaria","Integrante de órgano colegiado"]
+FALTAS=["Falta a la normatividad universitaria","Falta vinculada con recursos públicos","Violencia de género","Acoso","Hostigamiento","Conflicto de interés","Incumplimiento de obligaciones","Conducta contraria a la ética universitaria","Responsabilidad patrimonial","Daño a bienes universitarios","Incumplimiento de acuerdos colegiados"]
+RESP_ETAPAS=["Queja / Denuncia","Investigación","Substanciación","Resolución","Recurso","Cumplimiento de sanción"]
+RESP_REGL=["Reglamento de Responsabilidades Vinculadas con Faltas a la Normatividad Universitaria","Reglamento de Responsabilidades Vinculadas con Recursos Públicos","Reglamento del Régimen Interior de la Comisión de Responsabilidades y Sanciones"]
+BIEN_TIPO=["Bien mueble","Bien inmueble"]
+BIEN_ACCION=["Baja administrativa","Enajenación","Donación","Permuta","Comodato","Regularización"]
+SESION_TIPO=["Ordinaria","Extraordinaria","Mixta"]
+COMISIONES=["Educación","Hacienda","Normatividad","Condonaciones y Becas","Responsabilidades y Sanciones","Electoral","Revalidación de Estudios","Ingreso y Promoción del Personal Académico"]
+LEYES_EXT=["Constitución Política de los Estados Unidos Mexicanos","Constitución Política del Estado de Jalisco","Ley General de Educación Superior","Ley General de Educación","Ley General de Transparencia y Acceso a la Información Pública","Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados","Ley General de Responsabilidades Administrativas","Ley General del Sistema Nacional Anticorrupción","Ley de Disciplina Financiera de las Entidades Federativas y los Municipios","Ley de Fiscalización y Rendición de Cuentas de la Federación","Ley Federal del Trabajo","Ley de Amparo","Legislación municipal aplicable"]
+REPOS=[["Portal de Normatividad UdeG","https://www.udg.mx/es/normatividad"],["Normatividad · Secretaría General","https://secgral.udg.mx/normatividad"],["Sesiones del H. Consejo General Universitario","http://www.hcgu.udg.mx/sesioneshcgu"]]
+ART=("Arts. 224 a 227 del Reglamento Interior de la Administración General de la UdeG — Coordinación de Normatividad Universitaria, "
+ "que integra la Unidad de Estatutos y Reglamentos, la Unidad de Proyectos de Normatividad Administrativa y la Unidad de Apoyo a Órganos Colegiados. "
+ "Ámbito (síntesis funcional, a confirmar el texto literal en la fuente oficial): coordinar, registrar, revisar, elaborar, modificar, interpretar, integrar, consultar, aprobar, publicar y dar seguimiento "
+ "a la normatividad universitaria, así como asesorar a los órganos colegiados, a los procedimientos de responsabilidades y a la desincorporación de bienes. "
+ "⚠ El texto exacto de los artículos debe verificarse en la fuente oficial antes de cualquier uso formal.")
+
+DATA={"corte":"2026-06-18","tipos":TIPOS,"acciones":ACCIONES,"flujos":FLUJOS,"estados_norma":ESTADOS_NORMA,"jerarquia":JERARQUIA,
+ "materias":MATERIAS,"autoridades":AUTORIDADES,"deps":DEPS,"riesgos_cat":RIESGOS_CAT,"niveles3":NIVELES3,"sujetos":SUJETOS,"faltas":FALTAS,
+ "resp_etapas":RESP_ETAPAS,"resp_regl":RESP_REGL,"bien_tipo":BIEN_TIPO,"bien_accion":BIEN_ACCION,"sesion_tipo":SESION_TIPO,"comisiones":COMISIONES,
+ "leyes_ext":LEYES_EXT,"repos":REPOS,"art":ART}
+DATAJ=json.dumps(DATA,ensure_ascii=False)
+
+NAV='''<div class="navbar"><a href="SIGEJ_inicio.html">🏠 Inicio</a><a href="archivo_SIGEJ.html">🗄️ Archivo</a><a href="seguimientos_SIGEJ.html">🧭 Seguimientos</a><a href="red_universitaria_SIGEJ.html">🌐 Enlace con la Red</a><a href="gestion_SIGEJ.html">🗂️ Gestión</a><a href="centro_ejecutivo_SIGEJ.html">🧭 Centro Ejecutivo</a><a href="dashboard_SIGEJ.html">📊 Dashboard</a><a href="instrumentos_SIGEJ.html">📜 Instrumentos</a><a href="patrimonio_SIGEJ.html">🧩 Patrimonio Intangible</a><a href="internacional_SIGEJ.html">🌎 Asuntos Internacionales</a><a href="normatividad_SIGEJ.html" class="act">📖 Normatividad</a><a href="contencioso_SIGEJ.html">⚔️ Asuntos Contenciosos</a><a href="buscador_SIGEJ.html">🔍 Buscador</a><a href="transparencia_general_SIGEJ.html">📊 Transparencia General</a><a href="oficialia_SIGEJ.html">📨 Oficialía</a><a href="helpdesk_SIGEJ.html">🛠️ Help Desk</a><a href="administracion_SIGEJ.html">🗂️ Administración</a><a href="chat_SIGEJ.html">💬 Chat</a><a href="notificaciones_SIGEJ.html">📬 Notificaciones</a></div>'''
+
+SNIP=r"""<script>
+/* SIGEJ — Control de acceso por perfil (capa de interfaz, sin backend) */
+(function(){
+ var SOLO=['SIGEJ_inicio','buscador_SIGEJ'];var JEFE=['SIGEJ_inicio','dashboard_SIGEJ','instrumentos_SIGEJ','patrimonio_SIGEJ','internacional_SIGEJ','normatividad_SIGEJ','contencioso_SIGEJ','buscador_SIGEJ','transparencia_general_SIGEJ','oficialia_SIGEJ','helpdesk_SIGEJ','administracion_SIGEJ','chat_SIGEJ','notificaciones_SIGEJ','alertas_centro_SIGEJ','recepcion_SIGEJ','biblioteca_SIGEJ','cumplimiento_SIGEJ','laboral_SIGEJ'];var ABOG=['SIGEJ_inicio','dashboard_SIGEJ','instrumentos_SIGEJ','patrimonio_SIGEJ','internacional_SIGEJ','normatividad_SIGEJ','contencioso_SIGEJ','buscador_SIGEJ','oficialia_SIGEJ','helpdesk_SIGEJ','chat_SIGEJ','notificaciones_SIGEJ','alertas_centro_SIGEJ','recepcion_SIGEJ','biblioteca_SIGEJ','cumplimiento_SIGEJ','laboral_SIGEJ'];var PERMS={'Administrador':null,'Abogado General':null,'Coordinador Jurídico':null,'Coordinador de Enlace con la Red':null,'Coordinador de Normatividad':null,'Secretaría General':SOLO,'Director':SOLO,'Coordinador General':SOLO,'Jefe de Unidad de lo Contencioso':JEFE,'Jefe de Unidad de Atención y Servicios Legales':JEFE,'Jefe de Unidad de Patrimonio Intangible':JEFE,'Jefe de Unidad de Asuntos Internacionales':JEFE,'Jefe de Unidad de Instrumentos Jurídicos':JEFE,'Jefe de Unidad de Capacitación, Investigación y Difusión':JEFE,'Jefe de Unidad de Estatutos y Reglamentos':JEFE,'Jefe de Unidad de Normatividad Administrativa':JEFE,'Jefe de Unidad de Apoyo a Órganos Colegiados':JEFE,'Jefe del Área Contable':JEFE,'Jefe del Área de Personal':JEFE,'Jefe del Área de Sistemas':JEFE,'Jefe de Oficialía de Partes':JEFE,'Jefe de Mensajería':JEFE,'Abogado':ABOG,'Analista':ABOG,'Asistente':ABOG,'Sistemas':null};
+ var ROLES=Object.keys(PERMS);
+ var perfil=localStorage.getItem('sigej_perfil');
+ var pageKey=(location.pathname.split('/').pop()||'SIGEJ_inicio.html').replace('.html','')||'SIGEJ_inicio';
+ function allowed(p){return PERMS[p]===null?null:PERMS[p];}
+ function overlay(html){var d=document.createElement('div');d.style.cssText='position:fixed;inset:0;background:rgba(8,20,38,.78);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;font-family:Segoe UI,system-ui,sans-serif';d.innerHTML='<div style="background:#fff;border-radius:16px;max-width:440px;width:100%;padding:26px;box-shadow:0 12px 40px rgba(0,0,0,.4)">'+html+'</div>';document.body.appendChild(d);return d;}
+ function pick(){
+  var __G=[['Nivel 100 · Administración',['Administrador']],['Nivel 90 · Dirección superior',['Abogado General']],['Nivel 80 · Coordinaciones',['Coordinador Jurídico','Coordinador de Enlace con la Red','Coordinador de Normatividad']],['Nivel 70 · Secretaría y Dirección',['Secretaría General','Director','Coordinador General']],['Nivel 50 · Jefaturas de Unidad y Área',['Jefe de Unidad de lo Contencioso','Jefe de Unidad de Atención y Servicios Legales','Jefe de Unidad de Patrimonio Intangible','Jefe de Unidad de Asuntos Internacionales','Jefe de Unidad de Instrumentos Jurídicos','Jefe de Unidad de Capacitación, Investigación y Difusión','Jefe de Unidad de Estatutos y Reglamentos','Jefe de Unidad de Normatividad Administrativa','Jefe de Unidad de Apoyo a Órganos Colegiados','Jefe del Área Contable','Jefe del Área de Personal','Jefe del Área de Sistemas','Jefe de Oficialía de Partes','Jefe de Mensajería']],['Nivel 30 · Operativo jurídico',['Abogado','Analista']],['Nivel 10 · Apoyo',['Asistente']],['Nivel 1 · Sistemas',['Sistemas']]];var __u={};var opt=__G.map(function(g){var o=g[1].filter(function(r){return PERMS.hasOwnProperty(r);}).map(function(r){__u[r]=1;return '<option>'+r+'</option>';}).join('');return o?'<optgroup label="'+g[0]+'">'+o+'</optgroup>':'';}).join('');var __r=ROLES.filter(function(r){return !__u[r];}).map(function(r){return '<option>'+r+'</option>';}).join('');if(__r)opt+='<optgroup label="Otros">'+__r+'</optgroup>';
+  var d=overlay('<h2 style="margin:0 0 4px;color:#00254a;font-size:19px">⚖️ SIGEJ-UdeG</h2><div style="color:#64748b;font-size:13px;margin-bottom:16px">Selecciona tu perfil para personalizar el acceso.</div><label style="font-size:12px;color:#64748b;font-weight:600">Perfil</label><select id="__perf" style="width:100%;padding:10px;border:1px solid #e2e8f0;border-radius:8px;font-size:14px;margin:4px 0 16px">'+opt+'</select><button id="__ok" style="width:100%;padding:11px;border:none;border-radius:9px;background:#1f9d6b;color:#fff;font-weight:600;font-size:14px;cursor:pointer">Entrar</button><div style="font-size:10.5px;color:#94a3b8;margin-top:12px">Control de interfaz (prototipo): personaliza la vista, no sustituye autenticación. La seguridad real (MFA, backend) es fase de implementación.</div>');
+  d.querySelector('#__ok').onclick=function(){localStorage.setItem('sigej_perfil',d.querySelector('#__perf').value);location.reload();};
+ }
+ function badge(){
+  var b=document.createElement('div');b.style.cssText='position:fixed;right:12px;bottom:12px;z-index:9000;background:#00254a;color:#fff;border-radius:20px;padding:7px 13px;font-size:12px;box-shadow:0 3px 12px rgba(0,0,0,.3);font-family:Segoe UI,system-ui,sans-serif';
+  var __HD=['Administrador','Sistemas','Jefe del Área de Sistemas'];var __ver=__HD.indexOf(perfil)>=0;b.innerHTML='👤 '+(__ver?perfil:'Sesión activa')+' <span style="opacity:.6">·</span> <span id="__chg" style="cursor:pointer;text-decoration:underline">salir</span>';
+  document.body.appendChild(b);
+  b.querySelector('#__chg').onclick=function(){localStorage.removeItem('sigej_perfil');localStorage.removeItem('sigej_sesion');location.replace('acceso_SIGEJ.html');};
+ }
+ function apply(){
+  var allow=allowed(perfil);
+  document.querySelectorAll('.navbar a').forEach(function(a){var k=(a.getAttribute('href')||'').replace('.html','');if(k==='SIGEJ_inicio'||!k)return;if(allow&&allow.indexOf(k)<0)a.style.display='none';});
+  if(allow&&allow.indexOf(pageKey)<0&&pageKey!=='SIGEJ_inicio'){
+   overlay('<h2 style="margin:0 0 6px;color:#c0392b">Acceso restringido</h2><div style="color:#475569;font-size:13px;margin-bottom:16px">El perfil <b>'+perfil+'</b> no tiene acceso a este módulo.</div><a href="SIGEJ_inicio.html" style="display:inline-block;padding:10px 16px;background:#0a4d8c;color:#fff;border-radius:8px;text-decoration:none;font-weight:600">← Volver al inicio</a> <button onclick="localStorage.removeItem(\'sigej_perfil\');location.reload()" style="margin-left:8px;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#fff;cursor:pointer">Cambiar perfil</button>');
+   return;
+  }
+  if(perfil==='Consulta'){
+   document.querySelectorAll('button').forEach(function(b){var t=(b.textContent||'')+ (b.title||'');if(/guardar|registrar|eliminar|adjuntar|avanzar|agregar|enviar/i.test(t)){b.disabled=true;b.style.opacity=.4;b.title='Perfil Consulta: solo lectura';}});
+  }
+ }
+ if(!perfil){if(!/[?&]embed=1/.test(location.search)){location.replace('acceso_SIGEJ.html');}return;}else{apply();badge();if(['Abogado General','Sistemas','Secretaría General','Director','Coordinador General'].indexOf(perfil)>=0){setTimeout(function(){document.querySelectorAll('button,.lk,.del').forEach(function(b){var t=(b.textContent||'')+(b.title||'');if(/guardar|registrar|crear|captur|recibir|turnar|elimina|borrar|baja|adjuntar|generar|autoriz|pagar|aplicar|asignar|cargar demo|resolver|escalar|aprobar|publicar|solicitar|despach|＋/i.test(t)){b.disabled=true;b.style.opacity=.45;b.title='Perfil de solo lectura / consulta';}});},450);}}
+})();
+</script><script>
+/* SIGEJ — Bitácora de auditoría (registro de interfaz, sin backend) */
+(function(){try{
+ var perfil=localStorage.getItem('sigej_perfil')||'(sin perfil)';
+ var page=(location.pathname.split('/').pop()||'inicio').replace('.html','').replace('SIGEJ','').replace(/_/g,' ').trim()||'Inicio';
+ function blog(tipo,accion){try{var L=JSON.parse(localStorage.getItem('sigej_bitacora')||'[]');L.push({ts:new Date().toISOString().slice(0,19).replace('T',' '),perfil:perfil,modulo:page,tipo:tipo,accion:String(accion||'').slice(0,90)});if(L.length>3000)L=L.slice(-3000);localStorage.setItem('sigej_bitacora',JSON.stringify(L));}catch(e){}}
+ window.__bitlog=blog;blog('Acceso','Ingreso al módulo');
+ var RX=/guardar|registrar|exportar|eliminar|adjuntar|avanzar|agregar|word|csv|descargar/i;
+ document.addEventListener('click',function(ev){try{var el=ev.target&&ev.target.closest&&ev.target.closest('button,.lk,.del');if(!el)return;var txt=(el.textContent||'').trim().replace(/\s+/g,' ');if(RX.test(txt)&&txt.length<70)blog('Acción',txt);}catch(e){}},true);
+}catch(e){}})();
+</script><script>(function(){
+ function norm(s){return (s||'').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ');}
+ function dedup(dl){var seen={};[].slice.call(dl.querySelectorAll('option')).forEach(function(o){var k=norm(o.value||o.textContent);if(!k){return;}if(seen[k]){o.remove();}else{seen[k]=1;}});}
+ function run(){[].slice.call(document.querySelectorAll('datalist')).forEach(dedup);}
+ if(document.readyState!=='loading'){run();}else{document.addEventListener('DOMContentLoaded',run);}
+ setTimeout(run,800);
+ try{var t;function sched(){clearTimeout(t);t=setTimeout(run,250);}
+  var mo=new MutationObserver(function(muts){for(var i=0;i<muts.length;i++){var n=muts[i].target;while(n&&n.tagName!=='DATALIST'){n=n.parentElement;}if(n){sched();break;}}});
+  mo.observe(document.documentElement,{childList:true,subtree:true});}catch(e){}
+})();</script><script>(function(){
+ var CONSULT=['buscador_SIGEJ','transparencia_general_SIGEJ','chat_SIGEJ','notificaciones_SIGEJ','SIGEJ_inicio','dashboard_SIGEJ','centro_ejecutivo_SIGEJ','bitacora_SIGEJ','reportes_SIGEJ','comando_SIGEJ','seguimiento_SIGEJ'];
+ var pk=(location.pathname.split('/').pop()||'').replace('.html','');
+ if(CONSULT.indexOf(pk)>=0)return;
+ var dirty=false;
+ function isSearch(el){if(el.id&&el.id.indexOf('__')===0)return true;var s=((el.id||'')+' '+(el.name||'')+' '+(el.placeholder||'')+' '+(el.className||'')).toLowerCase();return /buscar|search|filtro|filtrar|query|consulta/.test(s);}
+ document.addEventListener('input',function(e){var el=e.target;if(!el||!/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName))return;if((el.type||'')==='search'||isSearch(el))return;if(((el.value||'')+'').length>0)dirty=true;},true);
+ function clean(){dirty=false;}
+ document.addEventListener('click',function(e){var t=e.target;if(!t)return;var n=t;for(var k=0;k<3&&n;k++){var x=((n.textContent||'')+' '+(n.title||'')).toLowerCase();if(/guardar|registrar|dar de alta|\bcrear\b|aceptar|\benviar\b|turnar|recibir|actualizar|aplicar/.test(x)){setTimeout(clean,60);break;}n=n.parentElement;}},true);
+ document.addEventListener('submit',clean,true);
+ window.addEventListener('beforeunload',function(e){if(dirty){e.preventDefault();e.returnValue='Tienes cambios de captura sin guardar. Si sales de la página se perderán.';return e.returnValue;}});
+})();</script><script>(function(){
+ if(/[?&]embed=1/.test(location.search))return;
+ var pk=(location.pathname.split('/').pop()||'x').replace('.html','')||'x';
+ var ISHOME=(pk==='SIGEJ_inicio');
+ function ready(fn){if(document.readyState!=='loading')fn();else document.addEventListener('DOMContentLoaded',fn);}
+ ready(function(){setTimeout(init,650);});
+ function findNew(){
+  var els=[].slice.call(document.querySelectorAll('button,a,.lk,[role=button]'));
+  for(var i=0;i<els.length;i++){var e=els[i];if(e.id==='__uxnew'||e.id==='__uxhelp')continue;
+   var t=((e.textContent||'')+' '+(e.title||'')).toLowerCase();
+   if(/nuev|registrar|captur|\balta\b|dar de alta|añadir|levantar|＋/.test(t)&&e.offsetParent!==null)return e;}
+  var inp=document.querySelector('form input,form textarea,form select,input[type=text],textarea');
+  return (inp&&inp.offsetParent!==null)?inp:null;
+ }
+ function init(){
+  if(!localStorage.getItem('sigej_perfil'))return;
+  if(document.getElementById('__uxfab'))return;
+  var hasNew=findNew();
+  var bar=document.createElement('div');bar.id='__uxfab';
+  bar.style.cssText='position:fixed;left:14px;bottom:14px;z-index:9000;display:flex;flex-direction:column;gap:8px;align-items:flex-start;font-family:Segoe UI,system-ui,sans-serif';
+  var help=document.createElement('button');help.type='button';help.id='__uxhelp';help.textContent='❔ Ayuda';
+  help.style.cssText='border:none;border-radius:20px;padding:7px 13px;font-size:12px;background:#0a4d8c;color:#fff;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.25)';
+  help.onclick=function(){tour();};
+  bar.appendChild(help);
+  if(!ISHOME&&hasNew){var fab=document.createElement('button');fab.type='button';fab.id='__uxnew';fab.textContent='＋ Nuevo';
+   fab.style.cssText='border:none;border-radius:24px;padding:12px 20px;font-size:15px;font-weight:700;background:#1aa39a;color:#fff;cursor:pointer;box-shadow:0 5px 18px rgba(26,163,154,.45)';
+   fab.onclick=goNew;bar.appendChild(fab);}
+  document.body.appendChild(bar);
+  if(!ISHOME&&!localStorage.getItem('sigej_tour_'+pk))tour();
+ }
+ function goNew(){var e=findNew();if(!e){toast('Esta página es de consulta: no tiene captura.');return;}
+  e.scrollIntoView({behavior:'smooth',block:'center'});
+  var o=e.style.boxShadow;e.style.transition='box-shadow .3s';e.style.boxShadow='0 0 0 4px rgba(26,163,154,.65)';
+  setTimeout(function(){try{e.focus();}catch(_){}},420);setTimeout(function(){e.style.boxShadow=o;},1900);}
+ function toast(m){var d=document.createElement('div');d.textContent=m;d.style.cssText='position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:#00254a;color:#fff;padding:10px 16px;border-radius:10px;font:13px Segoe UI,system-ui;z-index:99998;box-shadow:0 4px 16px rgba(0,0,0,.3)';document.body.appendChild(d);setTimeout(function(){d.remove();},2600);}
+ function tour(){
+  var STEPS=[['📝 Captura y consulta','Da de alta o busca registros con los botones y formularios de esta página. El botón verde «＋ Nuevo» (abajo a la izquierda) te lleva directo a la captura.'],
+   ['📎 Expediente electrónico','Adjunta archivos por categoría a cada registro. El botón «🔎 OCR» puede leer el documento y autocompletar campos.'],
+   ['🔗 Todo conectado','Cada registro queda con trazabilidad y aparece en el buscador de Transparencia General. Lo que entra por Oficialía de Partes se vuelve antecedente en su módulo.']];
+  var i=0;var ov=document.createElement('div');
+  ov.style.cssText='position:fixed;inset:0;background:rgba(8,20,38,.72);z-index:99990;display:flex;align-items:center;justify-content:center;padding:20px;font-family:Segoe UI,system-ui,sans-serif';
+  function close(){try{localStorage.setItem('sigej_tour_'+pk,'1');}catch(_){}ov.remove();}
+  function draw(){var s=STEPS[i];
+   ov.innerHTML='<div style="background:#fff;border-radius:16px;max-width:430px;width:100%;padding:24px;box-shadow:0 12px 40px rgba(0,0,0,.4)">'+
+   '<div style="font-size:11px;color:#94a3b8;letter-spacing:.5px;margin-bottom:6px">GUÍA RÁPIDA · PASO '+(i+1)+' DE 3</div>'+
+   '<h2 style="margin:0 0 8px;color:#00254a;font-size:19px">'+s[0]+'</h2>'+
+   '<div style="color:#475569;font-size:13.5px;line-height:1.6">'+s[1]+'</div>'+
+   '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px">'+
+   '<button id="__tskip" style="background:none;border:none;color:#94a3b8;font-size:12px;cursor:pointer;text-decoration:underline">No volver a mostrar</button>'+
+   '<div><button id="__tprev" style="padding:9px 14px;border:1px solid #e2e8f0;border-radius:8px;background:#fff;cursor:pointer;margin-right:6px;'+(i===0?'display:none':'')+'">Atrás</button>'+
+   '<button id="__tnext" style="padding:9px 18px;border:none;border-radius:8px;background:#1aa39a;color:#fff;font-weight:700;cursor:pointer">'+(i===2?'Entendido ✓':'Siguiente →')+'</button></div></div></div>';
+   ov.querySelector('#__tnext').onclick=function(){if(i<2){i++;draw();}else close();};
+   var pv=ov.querySelector('#__tprev');if(pv)pv.onclick=function(){if(i>0){i--;draw();}};
+   ov.querySelector('#__tskip').onclick=close;}
+  draw();document.body.appendChild(ov);
+ }
+})();</script><script>
+/* OCR universal por reglas · rellena formularios de captura desde texto pegado (SIGEJ). El OCR de imagen es fase backend. */
+(function(){try{
+if(/[?&]embed=1/.test(location.search))return;
+var pk=(location.pathname.split('/').pop()||'x').replace('.html','')||'x';
+if(/^(index|acceso_SIGEJ|seguimiento_SIGEJ)$/.test(pk))return;
+if(!document.body)return;
+function hasForm(){return document.querySelector('input[type=date]')||document.querySelectorAll('.f').length>2||document.querySelector('textarea');}
+var b=document.createElement('div');b.textContent='🔎 OCR';
+b.style.cssText='position:fixed;left:16px;bottom:16px;background:#7a5a1f;color:#fff;padding:9px 14px;border-radius:22px;font:600 12.5px system-ui,sans-serif;cursor:pointer;z-index:99996;box-shadow:0 4px 14px rgba(0,0,0,.25)';
+document.body.appendChild(b);
+function upd(){b.style.display=hasForm()?'block':'none';}upd();setTimeout(upd,1200);
+b.onclick=function(){
+ var t=prompt('Pega el TEXTO del documento escaneado/PDF. Se extraen datos por reglas (folio, fecha, monto, correo, teléfono, CURP/RFC, asunto…) y se llenan los campos vacíos del formulario. (El OCR de imagen real es fase backend.)','');
+ if(t===null||!t.trim())return;
+ var folio=(t.match(/\b\d{1,6}\s*\/\s*\d{2,4}(?:-[A-Za-z]+)?\b/)||[''])[0].replace(/\s/g,'');
+ var fecha=(t.match(/\b\d{4}-\d{2}-\d{2}\b/)||[''])[0];
+ if(!fecha){var md=t.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/);if(md)fecha=md[3]+'-'+('0'+md[2]).slice(-2)+'-'+('0'+md[1]).slice(-2);}
+ var monto=((t.match(/\$\s?[\d,]+(?:\.\d{2})?/)||[''])[0]||'').replace(/[^\d.]/g,'');
+ var correo=(t.match(/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/)||[''])[0];
+ var tel=(t.match(/\b(?:\+?52[\s-]?)?(?:\(?\d{2,3}\)?[\s-]?)?\d{3}[\s-]?\d{4}\b/)||[''])[0];
+ var curp=(t.match(/\b[A-Z]{4}\d{6}[HM][A-Z]{5}[A-Z0-9]{2}\b/i)||[''])[0];
+ var rfc=(t.match(/\b[A-ZÑ&]{3,4}\d{6}[A-Z0-9]{3}\b/i)||[''])[0];
+ var STOPKW='asunto|objeto|nombre|contacto|firmante|responsable|solicitante|prestador|correo|e-?mail|tel|celular|extensi|monto|importe|valor|costo|fecha|vigencia|apertura|folio|oficio|expediente|clave|rfc|curp|dependencia|contraparte|instituci|entidad|remite|cargo|puesto|domicilio|direcci';
+ function grab(label){var re=new RegExp('(?:'+label+')\\s*:?\\s*([^\\r\\n]{3,180}?)(?=\\s*(?:'+STOPKW+')\\s*:|[\\r\\n]|$)','i');var m=t.match(re);return m?m[1].trim().replace(/[·,;:.\s]+$/,''):'';}
+ var asunto=grab('asunto|objeto');
+ var nombre=grab('nombre|firmante|solicitante|prestador');
+ var dep=grab('dependencia|contraparte|instituci[oó]n|entidad|remite');
+ var map=[['folio|oficio|no\\.|n[uú]mero|expediente|clave',folio],['fecha|vigencia|apertura|inicio|t[eé]rmino|venc|recep',fecha],['monto|importe|valor|costo|precio|cuant',monto],['correo|e-?mail|\\bmail\\b',correo],['tel|celular|extensi',tel],['curp',curp],['rfc',rfc],['nombre|contacto|firmante|responsable|solicitante|prestador',nombre],['dependencia|contraparte|instituci|entidad|remite|solicitant',dep],['objeto|asunto|descripci|observaci|\\btema\\b|hechos|concepto|resumen',asunto]];
+ var campos=document.querySelectorAll('input:not([type=hidden]):not([type=file]):not([type=checkbox]):not([type=radio]),textarea');var n=0;
+ for(var i=0;i<campos.length;i++){var c=campos[i];if(c.value&&c.value.trim())continue;var lab='';var fdiv=c.closest('.f');if(fdiv){var l=fdiv.querySelector('label');if(l)lab=l.textContent;}var desc=((c.id||'')+' '+(c.placeholder||'')+' '+lab).toLowerCase();
+   for(var k=0;k<map.length;k++){if(!map[k][1])continue;if(new RegExp(map[k][0]).test(desc)){if(c.type==='date'&&!/^\d{4}-\d{2}-\d{2}$/.test(map[k][1]))continue;c.value=map[k][1];c.dispatchEvent(new Event('input',{bubbles:true}));n++;break;}}}
+ alert('OCR por reglas — extraído: '+[folio&&'folio '+folio,fecha&&'fecha '+fecha,monto&&'monto '+monto,correo&&'correo',tel&&'tel',asunto&&'asunto'].filter(Boolean).join(' · ')+'. Se llenaron '+n+' campo(s) vacío(s). Revisa y completa lo demás. (OCR de imagen real = fase backend.)');
+ if(window.__bitlog)__bitlog('OCR','Extracción por reglas y llenado de formulario ('+n+' campos)');
+};
+}catch(e){}})();
+</script>
+<script>
+/* Seguimiento universal · notas de abogados y auxiliares por modulo (SIGEJ) */
+(function(){try{
+if(/[?&]embed=1/.test(location.search))return;
+var pk=(location.pathname.split('/').pop()||'x').replace('.html','')||'x';
+if(/^(index|acceso_SIGEJ|seguimiento_SIGEJ|solicitud_convenios_SIGEJ)$/.test(pk))return;
+if(!document.body)return;
+function AA(){try{return JSON.parse(localStorage.getItem('sigej_seguimiento')||'{}');}catch(e){return {};}}
+function NN(){var a=AA();return a[pk]||[];}
+function ec(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+var b=document.createElement('div');b.textContent='📝 Seguimiento';
+b.style.cssText='position:fixed;right:16px;bottom:16px;background:#0a4d8c;color:#fff;padding:9px 14px;border-radius:22px;font:600 12.5px system-ui,sans-serif;cursor:pointer;z-index:99997;box-shadow:0 4px 14px rgba(0,0,0,.25)';
+var p=document.createElement('div');
+p.style.cssText='position:fixed;right:16px;bottom:58px;width:340px;max-width:92vw;max-height:70vh;background:#fff;border:1px solid #cbd5e1;border-radius:12px;box-shadow:0 12px 34px rgba(0,0,0,.28);z-index:99998;display:none;flex-direction:column;overflow:hidden';
+p.innerHTML='<div style="background:#0a4d8c;color:#fff;padding:9px 12px;font:700 13px system-ui,sans-serif;display:flex;justify-content:space-between;align-items:center"><span>📝 Seguimiento del módulo</span><span id="__sgx" style="cursor:pointer;font-size:16px">✕</span></div><div id="__sgl" style="overflow:auto;padding:8px 11px;font:12px system-ui,sans-serif;color:#334155;flex:1;min-height:80px"></div><div style="padding:8px 10px;border-top:1px solid #e2e8f0"><textarea id="__sgt" rows="2" placeholder="Escribe una nota de seguimiento…" style="width:100%;box-sizing:border-box;font:12.5px system-ui,sans-serif;padding:7px;border:1px solid #cbd5e1;border-radius:8px;resize:vertical"></textarea><button id="__sga" style="margin-top:6px;background:#1f9d6b;color:#fff;border:none;border-radius:8px;padding:7px 12px;font:600 12px system-ui,sans-serif;cursor:pointer">＋ Agregar nota</button></div>';
+document.body.appendChild(b);document.body.appendChild(p);
+function draw(){var n=NN();document.getElementById('__sgl').innerHTML=n.length?n.slice().reverse().map(function(x){return '<div style="border-bottom:1px solid #eef2f7;padding:5px 0"><b style="color:#0a4d8c">'+ec(x.perfil)+'</b> <span style="color:#94a3b8;font-size:10.5px">'+ec(x.ts)+'</span><br>'+ec(x.texto).replace(/\n/g,'<br>')+'</div>';}).join(''):'<div style="color:#94a3b8">Sin notas de seguimiento aún. Escribe la primera.</div>';}
+b.onclick=function(){var o=p.style.display!=='none';p.style.display=o?'none':'flex';if(!o)draw();};
+document.getElementById('__sgx').onclick=function(){p.style.display='none';};
+document.getElementById('__sga').onclick=function(){var t=(document.getElementById('__sgt').value||'').trim();if(!t)return;var a=AA();a[pk]=a[pk]||[];a[pk].push({ts:new Date().toISOString().slice(0,16).replace('T',' '),perfil:localStorage.getItem('sigej_perfil')||'(perfil)',texto:t});localStorage.setItem('sigej_seguimiento',JSON.stringify(a));document.getElementById('__sgt').value='';draw();if(window.__bitlog)__bitlog('Seguimiento','Nota de seguimiento');};
+}catch(e){}})();
+</script>
+<script>
+/* SIGEJ · Panel universal "Normativa aplicable" (asistente jurídico normativo por pantalla) */
+(function(){try{
+if(/[?&]embed=1/.test(location.search))return;
+var pk=(location.pathname.split('/').pop()||'x').replace('.html','')||'x';
+if(/^(index|acceso_SIGEJ|SIGEJ_inicio)$/.test(pk))return;if(!document.body)return;
+function J(k){try{return JSON.parse(localStorage.getItem(k)||'null');}catch(e){return null;}}
+function ec(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+var DEF=[
+ {amb:'Interna',cat:'Contratos',nombre:'Normatividad de Contratos',url:'https://secgral.udg.mx/normatividad/contratos',mods:['instrumentos_SIGEJ']},
+ {amb:'Interna',cat:'Contratos',nombre:'Empresa Universitaria',url:'https://secgral.udg.mx/normatividad/contratos/empresa-universitaria',mods:['instrumentos_SIGEJ','patrimonio_SIGEJ']},
+ {amb:'Interna',cat:'Acuerdos',nombre:'Acuerdos de Rectoría General',url:'https://secgral.udg.mx/acuerdos/rectoria-general',mods:[]},
+ {amb:'Interna',cat:'Acuerdos',nombre:'Acuerdos Comisión de Hacienda',url:'https://secgral.udg.mx/acuerdos/comision-de-hacienda',mods:['instrumentos_SIGEJ','administracion_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Comisión de Hacienda',url:'https://secgral.udg.mx/circulares/comision-de-hacienda',mods:['administracion_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Comisión de Responsabilidades y Sanciones',url:'https://secgral.udg.mx/circulares/comision-de-responsabilidades-y-sanciones',mods:['contencioso_SIGEJ','resp_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Rectoría General',url:'https://secgral.udg.mx/circulares/rectoria-general',mods:[]},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Secretaría General',url:'https://secgral.udg.mx/circulares/secretaria-general',mods:['oficialia_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Anuales',url:'https://secgral.udg.mx/circulares-anuales',mods:[]},
+ {amb:'Interna',cat:'Normatividad',nombre:'Normatividad General',url:'https://secgral.udg.mx/normatividad/general',mods:['normatividad_SIGEJ','instrumentos_SIGEJ','contencioso_SIGEJ']},
+ {amb:'Interna',cat:'Normatividad',nombre:'Normatividad Específica',url:'https://secgral.udg.mx/normatividad/especifica',mods:['normatividad_SIGEJ']},
+ {amb:'Interna',cat:'Órganos colegiados',nombre:'Sesiones del CGU',url:'http://www.hcgu.udg.mx/sesioneshcgu',mods:['normatividad_SIGEJ']},
+ {amb:'Interna',cat:'Órganos colegiados',nombre:'Dictámenes del CGU',url:'http://www.hcgu.udg.mx/dictamenes',mods:['normatividad_SIGEJ','instrumentos_SIGEJ']},
+ {amb:'Interna',cat:'Órganos colegiados',nombre:'Sesiones de Comisiones',url:'http://www.hcgu.udg.mx/sesiones-de-comisiones',mods:['normatividad_SIGEJ']},
+ {amb:'Externa',cat:'Federal',nombre:'Legislación Federal (Diputados)',url:'https://www.diputados.gob.mx/LeyesBiblio/index.htm',mods:['instrumentos_SIGEJ','contencioso_SIGEJ','internacional_SIGEJ','patrimonio_SIGEJ']},
+ {amb:'Externa',cat:'Federal',nombre:'Reglamentos Federales',url:'https://www.diputados.gob.mx/LeyesBiblio/regla.htm',mods:['instrumentos_SIGEJ','contencioso_SIGEJ']},
+ {amb:'Externa',cat:'Estatal',nombre:'Legislación de Jalisco',url:'https://congresoweb.congresojal.gob.mx/BibliotecaVirtual/LeyesEstatales.cfm',mods:['contencioso_SIGEJ','instrumentos_SIGEJ','oficialia_SIGEJ']},
+ {amb:'Externa',cat:'NOM',nombre:'Normas Oficiales Mexicanas',url:'https://platiica.economia.gob.mx/normalizacion/normas-oficiales-mexicanas/',mods:['patrimonio_SIGEJ','internacional_SIGEJ']}
+];
+function REPO(){var r=J('sigej_repo_normativo');return Array.isArray(r)&&r.length?r:DEF;}
+var base=pk;
+var rel=REPO().filter(function(x){return (x.mods||[]).indexOf(base)>=0;});
+var gen=REPO().filter(function(x){return !(x.mods||[]).length&&x.amb==='Interna';});
+var b=document.createElement('div');b.textContent='📖 Normativa';
+b.style.cssText='position:fixed;right:16px;bottom:100px;background:#5a2e8c;color:#fff;padding:9px 14px;border-radius:22px;font:600 12.5px system-ui,sans-serif;cursor:pointer;z-index:99994;box-shadow:0 4px 14px rgba(0,0,0,.25)';
+var p=document.createElement('div');
+p.style.cssText='position:fixed;right:16px;bottom:146px;width:360px;max-width:94vw;max-height:74vh;background:#fff;border:1px solid #cbd5e1;border-radius:12px;box-shadow:0 12px 34px rgba(0,0,0,.3);z-index:99995;display:none;flex-direction:column;overflow:hidden';
+document.body.appendChild(b);document.body.appendChild(p);
+function link(x){return '<a href="'+ec(x.url)+'" target="_blank" rel="noopener" style="display:flex;gap:7px;align-items:center;padding:7px 9px;border:1px solid #eef2f7;border-radius:8px;margin-bottom:5px;text-decoration:none;color:#0a2f4f;font:12px system-ui,sans-serif"><span>'+(x.amb==='Interna'?'🏛️':'🌐')+'</span><span>'+ec(x.nombre)+'</span><span style="margin-left:auto;font-size:10px;color:#94a3b8">↗</span></a>';}
+function render(){p.innerHTML='<div style="background:#5a2e8c;color:#fff;padding:9px 12px;font:700 13px system-ui,sans-serif;display:flex;justify-content:space-between;align-items:center"><span>📖 Normativa aplicable</span><span id="__nx" style="cursor:pointer;font-size:16px">✕</span></div><div style="overflow:auto;padding:10px 12px;flex:1">'+
+ (rel.length?'<div style="font:600 11px system-ui,sans-serif;color:#5a2e8c;margin-bottom:5px">RELACIONADA CON ESTE MÓDULO</div>'+rel.map(link).join(''):'<div style="font:12px system-ui,sans-serif;color:#94a3b8;margin-bottom:6px">Sin normas mapeadas específicamente a este módulo.</div>')+
+ '<div style="font:600 11px system-ui,sans-serif;color:#5a2e8c;margin:8px 0 5px">NORMATIVIDAD INSTITUCIONAL</div>'+gen.slice(0,5).map(link).join('')+
+ '<a href="cumplimiento_SIGEJ.html" style="display:block;text-align:center;margin-top:8px;background:#0a4d8c;color:#fff;border-radius:8px;padding:8px;text-decoration:none;font:600 12px system-ui,sans-serif">⚖️ Abrir Motor de Cumplimiento</a>'+
+ '<div style="font:10.5px system-ui,sans-serif;color:#64748b;margin-top:8px">Repositorio administrado por la Coordinación de Normatividad. Términos y plazos conforme a la ley aplicable.</div></div>';
+ p.querySelector('#__nx').onclick=function(){p.style.display='none';};}
+b.onclick=function(){var o=p.style.display!=='none';if(o){p.style.display='none';}else{render();p.style.display='flex';}};
+}catch(e){}})();
+</script>
+<script>
+/* SIGEJ · PWA + RWD (responsive, Mobile First) + modo oscuro — capa universal */
+(function(){try{
+var isEmbed=/[?&]embed=1/.test(location.search);
+/* --- PWA: manifest + meta + service worker (instalable en iOS/iPadOS/Android sin tienda) --- */
+if(!isEmbed){
+ function meta(n,c){var m=document.createElement('meta');m.name=n;m.content=c;document.head.appendChild(m);}
+ if(!document.querySelector('link[rel="manifest"]')){var l=document.createElement('link');l.rel='manifest';l.href='sigej.webmanifest';document.head.appendChild(l);}
+ meta('theme-color','#00254a');meta('mobile-web-app-capable','yes');meta('apple-mobile-web-app-capable','yes');meta('apple-mobile-web-app-status-bar-style','black-translucent');meta('apple-mobile-web-app-title','SIGEJ');
+ var al=document.createElement('link');al.rel='apple-touch-icon';al.href='sigej_icon.svg';document.head.appendChild(al);
+ if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sigej_sw.js').catch(function(){});});}
+}
+/* --- RWD: endurecimiento responsivo universal (no altera la maqueta de escritorio) --- */
+var css=document.createElement('style');css.setAttribute('data-sigej','rwd');
+css.textContent=[
+ 'img,video,canvas{max-width:100%;height:auto}',
+ 'html{-webkit-text-size-adjust:100%}',
+ '@media (max-width:768px){',
+ '  .navbar{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}',
+ '  .navbar a{white-space:nowrap}',
+ '  button,.tb,.tab,.ootb,.navbar a{min-height:40px}',
+ '  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}',
+ '  .kpis,.cards,.apps{grid-template-columns:1fr!important}',
+ '  .grid[style*="1fr 1fr"],.grid[style*="1.3fr"],.grid[style*="1.4fr"]{grid-template-columns:1fr!important}',
+ '  .panel{width:100%!important}',
+ '}',
+ '@media (max-width:480px){ header h1{font-size:16px!important} .wrap{padding-left:10px!important;padding-right:10px!important} }',
+ /* modo oscuro global por inversión controlada (se re-invierte multimedia para no dañar imágenes/QR/iframes) */
+ 'html.sigej-dark{filter:invert(0.92) hue-rotate(180deg);background:#0e1626}',
+ 'html.sigej-dark img,html.sigej-dark canvas,html.sigej-dark iframe,html.sigej-dark video,html.sigej-dark svg,html.sigej-dark .cov,html.sigej-dark .fichacov,html.sigej-dark .acuse .q img{filter:invert(1) hue-rotate(180deg)}',
+ '#sigejDark{position:fixed;left:16px;bottom:16px;z-index:99990;background:#0a4d8c;color:#fff;border:none;border-radius:50%;width:42px;height:42px;font-size:18px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}'
+].join('\n');
+document.head.appendChild(css);
+if(localStorage.getItem('sigej_dark')==='1')document.documentElement.classList.add('sigej-dark');
+if(!isEmbed){
+ var db=document.createElement('button');db.id='sigejDark';db.type='button';db.title='Modo claro / oscuro';db.textContent=localStorage.getItem('sigej_dark')==='1'?'☀️':'🌙';
+ db.onclick=function(){var on=document.documentElement.classList.toggle('sigej-dark');localStorage.setItem('sigej_dark',on?'1':'0');db.textContent=on?'☀️':'🌙';};
+ if(document.body)document.body.appendChild(db);
+}
+}catch(e){}})();
+</script>
+<script>
+/* ALTA PROTEGIDA universal · SIGEJ — alta inmutable con sello de captura, seguimiento, trámites/procesos y plazo normativo.
+   Inmutabilidad y firma real (WORM/hash/firma-e) son fase backend; aquí se garantiza en la interfaz: no hay borrado, solo anulación con motivo y bitácora. */
+(function(){try{
+if(/[?&]embed=1/.test(location.search))return;
+var pk=(location.pathname.split('/').pop()||'x').replace('.html','')||'x';
+if(/^(index|acceso_SIGEJ|seguimiento_SIGEJ|solicitud_convenios_SIGEJ|alertas_centro_SIGEJ|SIGEJ_inicio)$/.test(pk))return;
+if(!document.body)return;
+var PF=localStorage.getItem('sigej_perfil')||'(perfil)';
+var RO=['Secretaría General','Director','Coordinador General','Consulta'];
+var puedeCapturar=RO.indexOf(PF)<0;
+function J(k){try{return JSON.parse(localStorage.getItem(k)||'[]');}catch(e){return [];}}
+function Sv(k,v){localStorage.setItem(k,JSON.stringify(v));}
+function ec(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function nowT(){return new Date().toISOString().slice(0,16).replace('T',' ');}
+function today(){return new Date().toISOString().slice(0,10);}
+function addDays(iso,n,base){var t=new Date(iso+'T00:00:00');if(base==='naturales'){t.setDate(t.getDate()+(n||0));return t.toISOString().slice(0,10);}var c=0;while(c<(n||0)){t.setDate(t.getDate()+1);var w=t.getDay();if(w!==0&&w!==6)c++;}return t.toISOString().slice(0,10);}
+/* catálogo SLA — lo administra Help Desk en el Centro de Alertas; si no existe, se siembra por defecto (operacional, editable) */
+function seedCat(){if(J('sigej_sla_catalogo').length)return;Sv('sigej_sla_catalogo',[
+ {id:'sla1',tipo:'Respuesta a oficio urgente',dias:1,base:'habiles',ambito:'Interno',fundamento:'Plazo interno de la Oficina (configurable por Help Desk)',rec:[0],activo:true},
+ {id:'sla2',tipo:'Respuesta a oficio ordinario',dias:5,base:'habiles',ambito:'Interno',fundamento:'Plazo interno de la Oficina (configurable por Help Desk)',rec:[2,0],activo:true},
+ {id:'sla3',tipo:'Requerimiento de autoridad',dias:3,base:'habiles',ambito:'Federal',fundamento:'Conforme al término señalado en el requerimiento y la ley aplicable (capturar fundamento)',rec:[1,0],activo:true},
+ {id:'sla4',tipo:'Contestacion / tramite administrativo',dias:10,base:'habiles',ambito:'Estatal',fundamento:'Ley del Procedimiento Administrativo del Estado de Jalisco y sus Municipios (capturar artículo aplicable)',rec:[3,1,0],activo:true},
+ {id:'sla5',tipo:'Solicitud de informacion / transparencia',dias:8,base:'habiles',ambito:'Estatal',fundamento:'Ley de Transparencia y Acceso a la Información Pública del Estado de Jalisco (capturar artículo)',rec:[3,1],activo:true},
+ {id:'sla6',tipo:'Requisicion de papeleria',dias:5,base:'naturales',ambito:'Interno',fundamento:'Plazo interno (configurable)',rec:[1],activo:true},
+ {id:'sla7',tipo:'Viaticos / comprobacion',dias:10,base:'naturales',ambito:'Interno',fundamento:'Normatividad de la UdeG en materia de viáticos (capturar fundamento)',rec:[3,1],activo:true}
+]);}
+seedCat();
+function ALL(){return J('sigej_altas');}
+function mine(){return ALL().filter(function(x){return x.modulo===pk;});}
+function blog(t,a){try{var L=J('sigej_bitacora');L.push({ts:new Date().toISOString().slice(0,19).replace('T',' '),perfil:PF,modulo:pk,tipo:t,accion:String(a||'').slice(0,90)});if(L.length>3000)L=L.slice(-3000);Sv('sigej_bitacora',L);}catch(e){}if(window.__bitlog){try{window.__bitlog(t,a);}catch(e){}}}
+var b=document.createElement('div');b.textContent='➕ Alta protegida';
+b.style.cssText='position:fixed;right:16px;bottom:58px;background:#1a6d64;color:#fff;padding:9px 14px;border-radius:22px;font:600 12.5px system-ui,sans-serif;cursor:pointer;z-index:99995;box-shadow:0 4px 14px rgba(0,0,0,.25)';
+var p=document.createElement('div');
+p.style.cssText='position:fixed;right:16px;bottom:104px;width:390px;max-width:94vw;max-height:78vh;background:#fff;border:1px solid #cbd5e1;border-radius:12px;box-shadow:0 12px 34px rgba(0,0,0,.3);z-index:99996;display:none;flex-direction:column;overflow:hidden';
+document.body.appendChild(b);document.body.appendChild(p);
+function catOpts(){var c=J('sigej_sla_catalogo').filter(function(x){return x.activo!==false;});return '<option value="">— Sin plazo —</option>'+c.map(function(x){return '<option value="'+x.id+'">'+ec(x.tipo)+' · '+x.dias+' d '+x.base+' ('+ec(x.ambito)+')</option>';}).join('');}
+function head(){return '<div style="background:#1a6d64;color:#fff;padding:9px 12px;font:700 13px system-ui,sans-serif;display:flex;justify-content:space-between;align-items:center"><span>➕ Alta protegida · '+ec(pk)+'</span><span id="__alx" style="cursor:pointer;font-size:16px">✕</span></div>';}
+function form(){if(!puedeCapturar)return '<div style="padding:12px;color:#8a6d1a;background:#fff8e6;font:12px system-ui,sans-serif">Tu perfil es de solo lectura/consulta: puedes ver las altas, no capturar.</div>';
+ return '<div style="padding:10px 12px;border-bottom:1px solid #e2e8f0;font:12px system-ui,sans-serif">'+
+ '<div style="display:flex;gap:6px;flex-wrap:wrap"><select id="__altipo" style="flex:1;min-width:150px;padding:7px;border:1px solid #cbd5e1;border-radius:8px"><option>Documento nuevo</option><option>Expediente nuevo</option><option>Trámite nuevo</option><option>Proceso nuevo</option></select>'+
+ '<select id="__alplazo" style="flex:1;min-width:150px;padding:7px;border:1px solid #cbd5e1;border-radius:8px">'+catOpts()+'</select></div>'+
+ '<input id="__altit" placeholder="Título / identificación *" style="width:100%;box-sizing:border-box;margin-top:6px;padding:7px;border:1px solid #cbd5e1;border-radius:8px">'+
+ '<textarea id="__aldet" rows="2" placeholder="Detalle / descripción" style="width:100%;box-sizing:border-box;margin-top:6px;padding:7px;border:1px solid #cbd5e1;border-radius:8px;resize:vertical"></textarea>'+
+ '<button id="__alsave" style="margin-top:6px;background:#1f9d6b;color:#fff;border:none;border-radius:8px;padding:8px 12px;font:600 12px system-ui,sans-serif;cursor:pointer">💾 Guardar (con sello de captura)</button> <span id="__almsg" style="font:11px system-ui,sans-serif;margin-left:6px"></span></div>';}
+function plazoBadge(a){if(!a.fechaLimite)return '';var d=Math.round((new Date(a.fechaLimite+'T00:00:00')-new Date(today()+'T00:00:00'))/864e5);var col=d<0?'#c0392b':(d<=2?'#e08e0b':'#128c4a');var txt=d<0?('vencido hace '+(-d)+' d'):(d===0?'vence hoy':'vence en '+d+' d');return '<span style="background:'+col+';color:#fff;border-radius:10px;padding:1px 7px;font-size:9.5px">⏰ '+txt+'</span>';}
+function draw(){var rows=mine().slice().reverse();
+ p.querySelector('#__allist').innerHTML=rows.length?rows.map(function(a){var an=a.anulado;
+  return '<div style="border-bottom:1px solid #eef2f7;padding:7px 0'+(an?';opacity:.6':'')+'">'+
+   '<div><b style="color:#0a4d8c">'+ec(a.folio)+'</b> · '+ec(a.tipo)+' '+(an?'<span style="background:#fdeaea;color:#c0392b;border-radius:10px;padding:1px 7px;font-size:9.5px">ANULADA</span>':plazoBadge(a))+'</div>'+
+   '<div style="font-size:12px;color:#334155">'+ec(a.titulo)+'</div>'+
+   '<div style="font-size:10px;color:#94a3b8">🖊️ '+ec(a.capturadoPor)+' · '+ec(a.fechaCaptura)+(a.fechaLimite?' · límite '+a.fechaLimite:'')+((a.seguimiento||[]).length?' · 🧭 '+a.seguimiento.length:'')+((a.subprocesos||[]).length?' · ➕ '+a.subprocesos.length:'')+'</div>'+
+   (an?'<div style="font-size:10px;color:#c0392b">Anulada por '+ec(an.por)+' · '+ec(an.ts)+' — '+ec(an.motivo)+'</div>':
+     (puedeCapturar?'<div style="margin-top:4px;display:flex;gap:4px;flex-wrap:wrap"><button onclick="window.__alSeg(\''+a.id+'\')" style="font-size:10.5px;border:1px solid #cfe0f5;background:#eef6ff;color:#0a4d8c;border-radius:7px;padding:3px 7px;cursor:pointer">🧭 Seguimiento</button><button onclick="window.__alSub(\''+a.id+'\')" style="font-size:10.5px;border:1px solid #cfe0f5;background:#eef6ff;color:#0a4d8c;border-radius:7px;padding:3px 7px;cursor:pointer">➕ Trámite/Proceso</button><button onclick="window.__alTraza(\''+a.id+'\')" style="font-size:10.5px;border:1px solid #e2e8f0;background:#f8fafc;color:#334155;border-radius:7px;padding:3px 7px;cursor:pointer">🧾 Traza</button><button onclick="window.__alAnu(\''+a.id+'\')" style="font-size:10.5px;border:1px solid #e7a0a0;background:#fdeaea;color:#c0392b;border-radius:7px;padding:3px 7px;cursor:pointer">🚫 Anular</button></div>':''))+
+  '</div>';
+ }).join(''):'<div style="color:#94a3b8;font:12px system-ui,sans-serif;padding:6px">Sin altas en este módulo. Captura la primera (queda con sello y no podrá borrarse).</div>';}
+function render(){p.innerHTML=head()+form()+'<div id="__allist" style="overflow:auto;padding:8px 12px;font:12px system-ui,sans-serif;flex:1;min-height:90px"></div><div style="padding:7px 12px;border-top:1px solid #e2e8f0;font:10.5px system-ui,sans-serif;color:#64748b">🔒 Registro inmutable: una vez guardado no se borra; solo se anula con motivo. Todo queda en la bitácora de auditoría.</div>';
+ p.querySelector('#__alx').onclick=function(){p.style.display='none';};
+ var sv=p.querySelector('#__alsave');if(sv)sv.onclick=save;draw();}
+function save(){var tit=(p.querySelector('#__altit').value||'').trim();if(!tit){p.querySelector('#__almsg').style.color='#c0392b';p.querySelector('#__almsg').textContent='Falta el título.';return;}
+ var tipo=p.querySelector('#__altipo').value;var plz=p.querySelector('#__alplazo').value;var det=(p.querySelector('#__aldet').value||'').trim();
+ var A=ALL();var y=new Date().getFullYear();var folio='ALT-'+y+'-'+String(A.length+1).padStart(4,'0');
+ var fl='',pt='',pb='';if(plz){var c=J('sigej_sla_catalogo').filter(function(x){return x.id===plz;})[0];if(c){pt=c.tipo;pb=c.base;fl=addDays(today(),c.dias,c.base);}}
+ var rec={id:'AL-'+Date.now().toString(36),folio:folio,tipo:tipo,modulo:pk,titulo:tit,detalle:det,plazoTipo:pt,plazoBase:pb,fechaLimite:fl,estado:'Abierto',capturadoPor:PF,fechaCaptura:nowT(),hist:[{ts:nowT(),usuario:PF,accion:'Alta ('+tipo+')'}],seguimiento:[],subprocesos:[],anulado:null};
+ A.push(rec);Sv('sigej_altas',A);blog('Acción','Alta protegida '+folio+' · '+tipo+' · '+tit);
+ p.querySelector('#__altit').value='';p.querySelector('#__aldet').value='';p.querySelector('#__almsg').style.color='#128c4a';p.querySelector('#__almsg').textContent='✓ '+folio+' guardada con sello.';draw();}
+window.__alSeg=function(id){var t=prompt('Nota de seguimiento:','');if(t===null||!t.trim())return;var A=ALL();A.forEach(function(a){if(a.id===id){(a.seguimiento=a.seguimiento||[]).push({ts:nowT(),usuario:PF,texto:t.trim()});(a.hist=a.hist||[]).push({ts:nowT(),usuario:PF,accion:'Seguimiento'});}});Sv('sigej_altas',A);blog('Seguimiento','Seguimiento en alta '+id);draw();};
+window.__alSub=function(id){var k=prompt('Nuevo (escribe: Trámite  o  Proceso):','Trámite');if(k===null)return;var tp=/proceso/i.test(k)?'Proceso':'Trámite';var t=prompt('Descripción del '+tp+':','');if(t===null||!t.trim())return;var A=ALL();A.forEach(function(a){if(a.id===id){(a.subprocesos=a.subprocesos||[]).push({ts:nowT(),usuario:PF,tipo:tp,texto:t.trim()});(a.hist=a.hist||[]).push({ts:nowT(),usuario:PF,accion:'Agrega '+tp});}});Sv('sigej_altas',A);blog('Acción','Nuevo '+tp+' en alta '+id);draw();};
+window.__alAnu=function(id){var m=prompt('Motivo de ANULACIÓN (la información NO se borra; queda anulada y en bitácora):','');if(m===null||!m.trim())return;var A=ALL();A.forEach(function(a){if(a.id===id){a.anulado={motivo:m.trim(),por:PF,ts:nowT()};a.estado='Anulado';(a.hist=a.hist||[]).push({ts:nowT(),usuario:PF,accion:'Anulación: '+m.trim()});}});Sv('sigej_altas',A);blog('Acción','Anula alta '+id);draw();};
+window.__alTraza=function(id){var a=ALL().filter(function(x){return x.id===id;})[0];if(!a)return;var h=(a.hist||[]).map(function(x){return '• '+x.ts+' — '+x.usuario+': '+x.accion;}).join('\n');var sg=(a.seguimiento||[]).map(function(x){return '• '+x.ts+' — '+x.usuario+': '+x.texto;}).join('\n');var sp=(a.subprocesos||[]).map(function(x){return '• '+x.ts+' — '+x.usuario+' ['+x.tipo+']: '+x.texto;}).join('\n');alert('🧾 Trazabilidad · '+a.folio+'\nCaptura: '+a.capturadoPor+' · '+a.fechaCaptura+'\nPlazo: '+(a.plazoTipo||'—')+(a.fechaLimite?' (límite '+a.fechaLimite+')':'')+'\n\nHISTORIAL:\n'+(h||'—')+'\n\nSEGUIMIENTO:\n'+(sg||'—')+'\n\nTRÁMITES/PROCESOS:\n'+(sp||'—'));};
+b.onclick=function(){var o=p.style.display!=='none';if(o){p.style.display='none';}else{render();p.style.display='flex';}};
+}catch(e){}})();
+</script>"""
+
+TPL=r"""<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIGEJ-UdeG · Normatividad Universitaria</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--azul:#00254a;--azul2:#0a4d8c;--teal:#1aa39a;--gold:#d4a32c;--red:#c0392b;--amber:#e08e0b;--orange:#ea580c;--ok:#1f9d6b;--ink:#0a1f3c;--mut:#64748b;--card:#ffffff;--card2:#f8fafc;--line:#e2e8f0;--bg:#eef2f7;}
+*{box-sizing:border-box}body{margin:0;font-family:'Segoe UI',system-ui,sans-serif;background:radial-gradient(1200px 600px at 80% -10%,transparent,transparent),var(--bg);color:var(--ink)}
+header{padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;border-bottom:1px solid var(--line)}
+header h1{margin:0;font-size:18px}header .s{opacity:.8;font-size:12px;margin-top:3px}
+.navbar{background:#06182c;display:flex;flex-wrap:wrap;gap:2px;padding:0 16px}
+.navbar a{color:#475569;text-decoration:none;padding:9px 12px;font-size:12.5px;border-bottom:3px solid transparent}
+.navbar a:hover{color:#fff}.navbar a.act{color:#fff;border-bottom-color:var(--gold);font-weight:600}
+.live{display:inline-flex;align-items:center;gap:6px;background:rgba(31,157,107,.15);color:#7ee0b4;border:1px solid rgba(31,157,107,.4);border-radius:20px;padding:5px 12px;font-size:12px}
+.dot{width:8px;height:8px;border-radius:50%;background:#2ee08a;animation:p 1.5s infinite}@keyframes p{50%{opacity:.3}}
+.tabbar{display:flex;flex-wrap:wrap;gap:6px;padding:14px 24px 0;max-width:1440px;margin:auto}
+.tb{background:var(--card);color:#475569;border:1px solid var(--line);border-bottom:none;border-radius:11px 11px 0 0;padding:10px 14px;font-size:12.5px;font-weight:600;cursor:pointer}
+.tb:hover{color:#fff}.tb.on{background:var(--azul2);color:#fff;border-color:var(--azul2)}
+.wrap{padding:14px 24px 36px;max-width:1440px;margin:auto}
+.tab{display:none}.tab.on{display:block}
+.h{font-size:14px;color:#0a4d8c;font-weight:700;margin:16px 0 10px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.kpi{background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:13px;padding:14px}
+.kpi .n{font-size:24px;font-weight:800}.kpi .l{font-size:11px;color:var(--mut);margin-top:2px}
+.kpi.g .n{color:#7ee0b4}.kpi.r .n{color:#ff9b8d}.kpi.y .n{color:#ffce82}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px}
+.card h3{margin:0 0 10px;font-size:13px;color:#0a4d8c}.card.s2{grid-column:span 2}
+canvas{max-height:250px}
+table{width:100%;border-collapse:collapse;font-size:12px}th,td{padding:7px 8px;text-align:left;border-bottom:1px solid var(--line)}th{color:var(--mut)}
+.rb{font-size:10px;padding:2px 8px;border-radius:9px;font-weight:600}
+.rb-Crítico{background:rgba(192,57,43,.25);color:#ff9b8d}.rb-Alto{background:rgba(234,88,12,.22);color:#ffb38f}.rb-Medio{background:rgba(224,142,11,.2);color:#ffce82}.rb-Bajo{background:rgba(31,157,107,.2);color:#8fe0d8}.rb-Indeterminado{background:rgba(143,166,196,.18);color:var(--mut)}
+.f{display:inline-flex;flex-direction:column;gap:3px;margin:0 8px 9px 0}.f label{font-size:11px;color:var(--mut);font-weight:600}
+.f input,.f select,.f textarea{padding:7px 8px;border:1px solid var(--line);border-radius:6px;font-size:12.5px;background:#f1f5fb;color:var(--ink);min-width:150px}
+.f textarea{min-width:320px;min-height:46px}
+button{padding:8px 13px;border:none;border-radius:8px;cursor:pointer;font-size:12.5px;font-weight:600;color:#fff}
+.b1{background:var(--azul2)}.b3{background:var(--ok)}.bw{background:#2b579a}.bd{background:#33507a}.mini{padding:4px 9px;font-size:11px}
+.comp{background:#f1f5fb;border:1px solid var(--line);border-radius:10px;padding:11px;margin:8px 0;font-size:12px}.comp b{color:#0a4d8c}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}.bar input,.bar select{padding:6px 8px;border:1px solid var(--line);border-radius:6px;font-size:12px;background:#f1f5fb;color:var(--ink)}
+.it{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px;margin-bottom:9px;cursor:pointer}.it:hover{border-color:var(--teal)}
+.it .t{font-weight:700;color:#0a4d8c;font-size:13px}.it .m{font-size:11px;color:var(--mut);margin-top:3px}
+.pipe{display:flex;gap:3px;overflow-x:auto;padding:6px 0}
+.st{flex:0 0 auto;min-width:108px;background:var(--card2);border:1px solid var(--line);border-top:3px solid #33507a;border-radius:7px;padding:6px;font-size:9.5px;color:#0a4d8c}
+.st.done{border-top-color:#1f9d6b}.st.cur{border-top-color:#0a4d8c;box-shadow:0 0 0 2px #0a4d8c}
+.chip{display:inline-block;background:#f1f5fb;border:1px solid var(--line);border-radius:9px;padding:2px 8px;font-size:10px;color:#475569;margin:1px}
+.heat{width:100%;border-collapse:collapse;font-size:11.5px}.heat td,.heat th{padding:6px;text-align:center;border:2px solid var(--bg)}.heat th{color:var(--mut)}.heat td.lab{text-align:left;color:#0a4d8c}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:8px}.cmp .col{background:#f1f5fb;border:1px solid var(--line);border-radius:8px;padding:8px;font-size:11.5px;white-space:pre-wrap}
+.drawer{position:fixed;inset:0;background:rgba(4,12,24,.72);display:none;align-items:center;justify-content:center;z-index:9000;padding:18px}
+.drawer.on{display:flex}.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;max-width:960px;width:100%;max-height:88vh;overflow:auto;padding:20px}
+.panel .x{float:right;cursor:pointer;color:var(--mut);font-size:20px}
+.warn{background:rgba(212,163,44,.12);border:1px solid rgba(212,163,44,.4);border-radius:9px;padding:9px 12px;font-size:11.5px;color:#e8cf95;margin:8px 0}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:26px;text-align:center;color:var(--mut);font-size:13px}
+a.dl{color:#7ee0b4}.lk{color:#7ee0b4;cursor:pointer}
+footer{padding:14px 24px;color:#64748b;font-size:11px;text-align:center}
+/* HDR-UNIF · encabezado institucional unificado SIGEJ-UdeG */
+header{background:linear-gradient(120deg,#00254a 0%,#0a4d8c 100%)!important;color:#fff!important;border-bottom:none!important;padding:14px 24px!important}
+header h1{margin:0!important;font-size:18px!important;font-weight:700!important;color:#fff!important;letter-spacing:.2px}
+header h1 a{color:#fff}
+header .s,header .sub{opacity:.85!important;font-size:12px!important;margin-top:3px!important;color:#e6eefb!important}
+header .badge{background:rgba(255,255,255,.15)!important;border:1px solid rgba(255,255,255,.3)!important;color:#fff!important}
+header .live{background:rgba(255,255,255,.14)!important;border:1px solid rgba(255,255,255,.32)!important;color:#eafff5!important}
+.navbar{background:#06182c!important;border-bottom:1px solid #14304f!important}
+/* LIGHT-UNIF · tema claro institucional — Manual VI (fondo blanco, tarjetas con sombra, pie naranja) */
+body{background:#eef2f7!important;color:#0a1f3c!important}
+.card,.kpi,.it,.panel{box-shadow:0 1px 3px rgba(2,40,90,.07)!important}
+.navbar a{color:#c2d2e8!important}.navbar a:hover,.navbar a.act{color:#fff!important}
+.warn{background:#fff8e6!important;border:1px solid #e7c66b!important;color:#8a6d1a!important}
+.kpi.g .n{color:#15803d!important}.kpi.r .n{color:#c0392b!important}.kpi.y .n{color:#b45309!important}
+.bd{background:#64748b!important;color:#fff!important}
+footer{background:#e8731c!important;color:#fff!important;border-top:3px solid #c75e10!important;margin-top:20px}
+</style></head><body>
+<header><div><h1>📖 SIGEJ-UdeG · Normatividad Universitaria — Coordinación de Normatividad Universitaria · OAG</h1>
+<div class="s">Técnica legislativa · estatutos y reglamentos · órganos colegiados (CGU) · responsabilidades universitarias · desincorporación de bienes · Arts. 224-227 RIAG-UdeG</div></div>
+<div style="text-align:right"><span class="live"><span class="dot"></span>En vivo · <span id="upd"></span></span> <button class="b1 mini" onclick="compute()">↻ Actualizar</button></div></header>
+__NAV__
+<div class="tabbar">
+ <button class="tb on" data-t="t1" onclick="tab('t1')">🛰️ Tablero (BI)</button>
+ <button class="tb" data-t="t2" onclick="tab('t2')">➕ Alta de expediente</button>
+ <button class="tb" data-t="t3" onclick="tab('t3')">📁 Expedientes normativos</button>
+ <button class="tb" data-t="t4" onclick="tab('t4')">📚 Repositorio normativo</button>
+ <button class="tb" data-t="t5" onclick="tab('t5')">🏛️ Órganos colegiados / CGU</button>
+ <button class="tb" data-t="t6" onclick="tab('t6')">⚖️ Responsabilidades</button>
+ <button class="tb" data-t="t7" onclick="tab('t7')">🏷️ Desincorporación de bienes</button>
+ <button class="tb" data-t="t8" onclick="tab('t8')">🔭 Observatorio legislativo</button>
+ <button class="tb" data-t="t9" onclick="tab('t9')">⚠️ Riesgo normativo</button>
+ <button class="tb" data-t="t10" onclick="tab('t10')">🏛️ Marco y fuentes</button>
+</div>
+<div class="wrap">
+ <section id="t1" class="tab on">
+  <div class="kpis" id="ceKpis"></div>
+  <div class="grid">
+   <div class="card"><h3>Proyectos por tipo de norma</h3><canvas id="cTipo"></canvas></div>
+   <div class="card"><h3>Por acción normativa</h3><canvas id="cAcc"></canvas></div>
+   <div class="card s2"><h3>Por etapa del trámite</h3><canvas id="cEst"></canvas></div>
+   <div class="card"><h3>Por materia</h3><canvas id="cMat"></canvas></div>
+   <div class="card"><h3>Carga por responsable jurídico</h3><canvas id="cResp"></canvas></div>
+   <div class="card s2"><h3>Dependencias con más solicitudes</h3><canvas id="cDep"></canvas></div>
+  </div>
+ </section>
+
+ <section id="t2" class="tab">
+  <div class="card"><h3>Alta de expediente normativo · técnica legislativa</h3>
+   <div class="f"><label>Tipo de norma</label><select id="i_tipo"></select></div>
+   <div class="f"><label>Acción normativa</label><select id="i_accion" onchange="accChange()"></select></div>
+   <div class="f"><label>Materia</label><select id="i_materia"></select></div>
+   <div class="f"><label>Autoridad solicitante</label><select id="i_aut"></select></div>
+   <div class="f"><label>Dependencia universitaria</label><select id="i_dep"></select></div>
+   <div class="f" style="display:flex"><label>Norma vigente afectada</label><input id="i_norma" style="min-width:280px"></div>
+   <div class="f" style="display:flex"><label>Objeto de la reforma</label><textarea id="i_objeto"></textarea></div>
+   <div class="f" style="display:flex"><label>Justificación / diagnóstico</label><textarea id="i_justif"></textarea></div>
+   <div class="f" style="display:flex"><label>Texto vigente</label><textarea id="i_vig"></textarea></div>
+   <div class="f" style="display:flex"><label>Texto propuesto</label><textarea id="i_prop"></textarea></div>
+   <div class="f"><label>Responsable jurídico</label><input id="i_resp"></div>
+   <div class="f"><label>Impacto constitucional</label><select id="i_ic"></select></div>
+   <div class="f"><label>Impacto administrativo</label><select id="i_ia"></select></div>
+   <div class="f"><label>Impacto presupuestal</label><select id="i_ip"></select></div>
+   <div class="f"><label>Impacto en DDHH</label><select id="i_idh"></select></div>
+   <div class="f"><label>Fecha de ingreso</label><input id="i_fecha" type="date"></div>
+   <div style="margin-top:6px"><button class="b3" onclick="saveExp()">＋ Registrar expediente</button> <span id="i_msg" style="font-size:12px;color:#7ee0b4;margin-left:8px"></span></div>
+  </div>
+  <div class="warn">⚠️ Captura local (prototipo). <b>IA jurídica</b> (detección de antinomias/lagunas/duplicidades, sugerencia de redacción, técnica legislativa, identificación de riesgos constitucionales, proyectos de dictamen), <b>OCR</b>, <b>búsqueda semántica</b> e <b>integración con los portales oficiales</b> (udg.mx/normatividad, secgral, hcgu) = fase de implementación con backend.</div>
+ </section>
+
+ <section id="t3" class="tab">
+  <div class="bar">
+   <input id="q" placeholder="Buscar (folio, norma, objeto, responsable)…" oninput="renderList()" style="min-width:240px">
+   <select id="fTipo" onchange="renderList()"><option value="">Todo tipo</option></select>
+   <select id="fEtapa" onchange="renderList()"><option value="">Toda etapa</option></select>
+   <select id="fRiesgo" onchange="renderList()"><option value="">Todo riesgo</option><option>Crítico</option><option>Alto</option><option>Medio</option><option>Bajo</option></select>
+   <button class="bd mini" onclick="exportCSV()">⬇ CSV</button><span id="listCnt" style="font-size:12px;color:#64748b"></span>
+  </div>
+  <div id="lista"></div>
+ </section>
+
+ <section id="t4" class="tab">
+  <div class="card"><h3>📚 Repositorio normativo institucional — base única consolidada</h3>
+   <div class="f"><label>Denominación de la norma</label><input id="r_nom" style="min-width:260px"></div>
+   <div class="f"><label>Jerarquía</label><select id="r_jer"></select></div>
+   <div class="f"><label>Materia</label><select id="r_mat"></select></div>
+   <div class="f"><label>Autoridad emisora</label><select id="r_aut"></select></div>
+   <div class="f"><label>Estado</label><select id="r_est"></select></div>
+   <div class="f"><label>Fecha de expedición</label><input id="r_fecha" type="date"></div>
+   <div class="f"><label>Dictamen / sesión CGU de origen</label><input id="r_dict"></div>
+   <div><button class="b3" onclick="saveRepo()">＋ Registrar norma</button></div>
+  </div>
+  <div class="bar" style="margin-top:12px"><input id="qr" placeholder="Buscar norma (palabra clave, materia, autoridad)…" oninput="renderRepo()" style="min-width:280px">
+   <select id="frJer" onchange="renderRepo()"><option value="">Toda jerarquía</option></select>
+   <select id="frEst" onchange="renderRepo()"><option value="">Todo estado</option></select></div>
+  <div id="repoList"></div>
+  <div class="warn">El <b>texto consolidado vigente</b>, la <b>búsqueda semántica</b>, los <b>árboles normativos</b> y la integración automática con los portales oficiales son fase backend. Aquí se construye el registro y la <b>historia de reformas</b> de cada norma.</div>
+ </section>
+
+ <section id="t5" class="tab">
+  <div class="kpis" id="orgKpis"></div>
+  <div class="card"><h3>🏛️ Sesiones y dictámenes de órganos colegiados (CGU / Consejos / Comisiones)</h3>
+   <div class="f"><label>Órgano</label><select id="o_org"></select></div>
+   <div class="f"><label>Tipo de sesión</label><select id="o_tipo"></select></div>
+   <div class="f"><label>Comisión</label><select id="o_com"></select></div>
+   <div class="f"><label>Fecha</label><input id="o_fecha" type="date"></div>
+   <div class="f" style="display:flex"><label>Dictamen / acuerdo</label><input id="o_dict" style="min-width:240px"></div>
+   <div class="f"><label>Sentido</label><select id="o_sent"><option>Aprobado</option><option>Aprobado con modificaciones</option><option>Devuelto</option><option>Rechazado</option><option>Pendiente</option></select></div>
+   <div class="f" style="display:flex"><label>Seguimiento del acuerdo</label><input id="o_seg" style="min-width:220px"></div>
+   <div><button class="b3" onclick="saveOrg()">＋ Registrar</button></div>
+  </div>
+  <div id="orgList" style="margin-top:12px"></div>
+ </section>
+
+ <section id="t6" class="tab">
+  <div class="kpis" id="respKpis"></div>
+  <div class="card"><h3>⚖️ Responsabilidades universitarias (faltas a la normatividad / recursos públicos)</h3>
+   <div class="f"><label>Sujeto</label><select id="p_suj"></select></div>
+   <div class="f"><label>Tipo de falta</label><select id="p_falta"></select></div>
+   <div class="f"><label>Etapa</label><select id="p_etapa"></select></div>
+   <div class="f"><label>Dependencia</label><select id="p_dep"></select></div>
+   <div class="f"><label>Fecha de inicio</label><input id="p_fecha" type="date"></div>
+   <div class="f" style="display:flex"><label>Síntesis</label><input id="p_nota" style="min-width:240px"></div>
+   <div><button class="b3" onclick="saveResp()">＋ Registrar expediente</button></div>
+  </div>
+  <div id="respList" style="margin-top:12px"></div>
+  <div class="warn">Marco: Reglamento de Responsabilidades Vinculadas con Faltas a la Normatividad Universitaria, Reglamento de Responsabilidades Vinculadas con Recursos Públicos y Régimen Interior de la Comisión de Responsabilidades y Sanciones. Complementa el módulo de <b>Responsabilidades (LGRA)</b> con el régimen disciplinario universitario interno.</div>
+ </section>
+
+ <section id="t7" class="tab">
+  <div class="kpis" id="bienKpis"></div>
+  <div class="card"><h3>🏷️ Desincorporación de bienes del patrimonio universitario</h3>
+   <div class="f"><label>Tipo de bien</label><select id="b_tipo"></select></div>
+   <div class="f"><label>Acción</label><select id="b_acc"></select></div>
+   <div class="f" style="display:flex"><label>Descripción del bien</label><input id="b_desc" style="min-width:240px"></div>
+   <div class="f"><label>Dependencia resguardante</label><select id="b_dep"></select></div>
+   <div class="f"><label>Valor / avalúo (MXN)</label><input id="b_valor" type="number" min="0"></div>
+   <div class="f"><label>Estado</label><select id="b_est"><option>Solicitud</option><option>Dictamen técnico</option><option>Avalúo</option><option>Autorización CGU</option><option>Publicación</option><option>Registro patrimonial</option><option>Concluido</option></select></div>
+   <div><button class="b3" onclick="saveBien()">＋ Registrar trámite</button></div>
+  </div>
+  <div id="bienList" style="margin-top:12px"></div>
+ </section>
+
+ <section id="t8" class="tab">
+  <div class="kpis" id="extKpis"></div>
+  <div class="card"><h3>🔭 Observatorio legislativo — reformas externas con impacto en la Universidad</h3>
+   <div class="f"><label>Ordenamiento externo</label><select id="x_ley"></select></div>
+   <div class="f" style="display:flex"><label>Reforma / criterio</label><input id="x_ref" style="min-width:260px"></div>
+   <div class="f"><label>Impacto</label><select id="x_imp"></select></div>
+   <div class="f" style="display:flex"><label>Norma interna afectada</label><input id="x_int" style="min-width:240px"></div>
+   <div class="f"><label>Acción requerida</label><select id="x_acc"><option>Monitoreo</option><option>Evaluar impacto</option><option>Proponer adecuación</option><option>Reforma urgente</option></select></div>
+   <div class="f"><label>Fecha</label><input id="x_fecha" type="date"></div>
+   <div><button class="b3" onclick="saveExt()">＋ Registrar</button></div>
+  </div>
+  <div id="extList" style="margin-top:12px"></div>
+ </section>
+
+ <section id="t9" class="tab">
+  <div class="h">🗺️ Matriz de riesgo normativo</div>
+  <div class="card"><table class="heat" id="riskHeat"></table>
+   <div style="font-size:11px;color:#64748b;margin-top:8px">12 categorías: constitucional, legal, competencial, administrativo, presupuestal, laboral, DDHH, transparencia, datos, auditoría, nulidad, reputacional. Registra riesgos por expediente desde su ficha.</div></div>
+  <div class="h">Expedientes por nivel de riesgo</div><div id="riskList"></div>
+ </section>
+
+ <section id="t10" class="tab">
+  <div class="card"><h3>🏛️ Fundamento — Arts. 224-227 RIAG-UdeG</h3><div id="artBox" style="font-size:12.5px;color:#c7d6ea;line-height:1.6"></div></div>
+  <div class="grid" style="margin-top:12px">
+   <div class="card"><h3>🔗 Fuentes oficiales (integración = backend)</h3><div id="reposBox"></div></div>
+   <div class="card"><h3>📕 Marco constitucional y legal externo</h3><div id="leyesBox" style="max-height:280px;overflow:auto"></div></div>
+   <div class="card s2"><h3>🤖 IA, motor de técnica legislativa y gemelo digital (hoja de ruta)</h3><div style="font-size:12px;color:#c7d6ea;line-height:1.7">🔹 <b>IA jurídica</b>: detección de antinomias, lagunas, duplicidades y normas tácitamente derogadas; sugerencia de redacción; matrices de constitucionalidad/legalidad/competencia/DDHH; proyectos de dictamen; líneas de tiempo normativas.<br>🔹 <b>Motor de técnica legislativa</b>: cuadros comparativos automáticos, exposición de motivos, análisis de impacto.<br>🔹 <b>Gemelo digital de la norma</b>: necesidad → proyecto → dictamen → comisión → CGU → aprobación → publicación → vigencia → interpretación → reforma → derogación → abrogación.<br>🔹 <b>Memoria legislativa</b> con OCR y búsqueda semántica.<br><span style="color:#e8cf95">Todo lo anterior es fase de implementación con backend e integraciones.</span></div></div>
+  </div>
+ </section>
+</div>
+<div class="drawer" id="drw"><div class="panel"><span class="x" onclick="closeDrw()">✕</span><div id="drwBody"></div></div></div>
+<input type="file" id="fileIn" style="display:none">
+<footer>Oficina de la Abogacía General · Coordinación de Enlace con la Red · abogral@udg.mx · (Lexa &amp; Veritas)</footer>
+<script>
+const D=__DATA__;const HOY=new Date(2026,5,18);let CH={};let FILEIDX=null;
+let A=JSON.parse(localStorage.getItem('sigej_normatividad')||'[]');
+let REPO=JSON.parse(localStorage.getItem('sigej_norma_repo')||'[]');
+let ORG=JSON.parse(localStorage.getItem('sigej_norma_org')||'[]');
+let RESP=JSON.parse(localStorage.getItem('sigej_norma_resp')||'[]');
+let BIEN=JSON.parse(localStorage.getItem('sigej_norma_bienes')||'[]');
+let EXT=JSON.parse(localStorage.getItem('sigej_norma_ext')||'[]');
+function S(k,v){localStorage.setItem(k,JSON.stringify(v));}
+function saveA(){S('sigej_normatividad',A);}
+function el(id){return document.getElementById(id);}
+function val(id){return (el(id).value||'').trim();}
+function pad(n){return (n<10?'0':'')+n;}
+function M(v){return '$'+Number(v||0).toLocaleString('es-MX');}
+function nowStr(){return new Date().toISOString().slice(0,19).replace('T',' ');}
+function hoyStr(){return HOY.toISOString().slice(0,10);}
+function nivel(s){return s>70?'Crítico':s>=50?'Alto':s>=28?'Medio':s>0?'Bajo':'Indeterminado';}
+function imv(x){return x==='Alto'?20:x==='Medio'?10:x==='Bajo'?3:0;}
+function scoreOf(e){let s=0;const ip=e.impacto||{};
+ s+=imv(ip.const)+imv(ip.admin)*0.6+imv(ip.presup)*0.6+imv(ip.ddhh);
+ const rs=(e.riesgos||[]);if(rs.some(r=>r.nivel==='Crítico'))s+=25;else if(rs.some(r=>r.nivel==='Alto'))s+=15;else if(rs.length)s+=6;
+ if(/Constituci|Ley Orgánica|Estatuto/.test(e.tipo||''))s+=8;
+ return Math.min(100,Math.round(s));}
+function tab(id){document.querySelectorAll('.tab').forEach(s=>s.classList.toggle('on',s.id===id));
+ document.querySelectorAll('.tb').forEach(b=>b.classList.toggle('on',b.getAttribute('data-t')===id));
+ if(id==='t1')setTimeout(compute,20);if(id==='t3')renderList();if(id==='t4')renderRepo();if(id==='t5')renderOrg();if(id==='t6')renderResp();if(id==='t7')renderBien();if(id==='t8')renderExt();if(id==='t9')renderRiesgo();if(id==='t10')renderMarco();}
+function rb(n){return '<span class="rb rb-'+n+'">'+n+'</span>';}
+/* catálogos */
+function fill(id,arr,ph){const e=el(id);if(!e||!arr)return;e.innerHTML=(ph?'<option value="">'+ph+'</option>':'')+arr.map(x=>'<option>'+x+'</option>').join('');}
+fill('i_tipo',D.tipos);fill('i_accion',D.acciones);fill('i_materia',D.materias);fill('i_aut',D.autoridades);fill('i_dep',D.deps);
+['i_ic','i_ia','i_ip','i_idh'].forEach(id=>fill(id,D.niveles3));
+fill('fTipo',D.tipos,'Todo tipo');
+fill('r_jer',D.jerarquia);fill('r_mat',D.materias);fill('r_aut',D.autoridades);fill('r_est',D.estados_norma);fill('frJer',D.jerarquia,'Toda jerarquía');fill('frEst',D.estados_norma,'Todo estado');
+fill('o_org',D.autoridades);fill('o_tipo',D.sesion_tipo);fill('o_com',['(sin comisión)'].concat(D.comisiones));
+fill('p_suj',D.sujetos);fill('p_falta',D.faltas);fill('p_etapa',D.resp_etapas);fill('p_dep',D.deps);
+fill('b_tipo',D.bien_tipo);fill('b_acc',D.bien_accion);fill('b_dep',D.deps);
+fill('x_ley',D.leyes_ext);fill('x_imp',D.niveles3);
+function accChange(){const a=val('i_accion');const fl=/Interpretar|Integrar/.test(a)?'Consulta / interpretación':'Proyecto normativo';el('i_msg').dataset.flujo=fl;}
+accChange();
+/* alta */
+function saveExp(){if(!val('i_norma')&&!val('i_objeto')){el('i_msg').style.color='#ff9b8d';el('i_msg').textContent='Indica la norma afectada o el objeto.';return;}
+ const fl=el('i_msg').dataset.flujo||'Proyecto normativo';const flujo=(D.flujos[fl]||D.flujos['Proyecto normativo']).slice();
+ const yr=(val('i_fecha')||'2026').slice(0,4);const folio='NORM-'+yr+'-'+String(A.length+1).padStart(3,'0');
+ const o={folio:folio,tipo:val('i_tipo'),accion:val('i_accion'),flujoTipo:fl,materia:val('i_materia'),aut:val('i_aut'),dep:val('i_dep'),
+  norma:val('i_norma'),objeto:val('i_objeto'),justif:val('i_justif'),vig:val('i_vig'),prop:val('i_prop'),resp:val('i_resp'),
+  impacto:{const:val('i_ic'),admin:val('i_ia'),presup:val('i_ip'),ddhh:val('i_idh')},
+  flujo:flujo,etapaIdx:0,estado:flujo[0],fecha:val('i_fecha'),riesgos:[],evidencias:[],
+  versiones:[{v:1,autor:localStorage.getItem('sigej_perfil')||'(perfil)',fecha:hoyStr(),nota:'Alta del expediente normativo'}],
+  bitacora:[{ts:nowStr(),accion:'Alta',usuario:localStorage.getItem('sigej_perfil')||'(perfil)'}]};
+ o.score=scoreOf(o);o.nivel=nivel(o.score);A.push(o);saveA();
+ if(window.__bitlog)__bitlog('Acción','Registrar expediente normativo '+folio);
+ ['i_norma','i_objeto','i_justif','i_vig','i_prop','i_resp','i_fecha'].forEach(id=>el(id).value='');
+ el('i_msg').style.color='#7ee0b4';el('i_msg').textContent='✓ '+folio+' registrado.';compute();}
+/* t1 BI */
+function cnt(arr,key){const o={};arr.forEach(e=>{const v=(typeof key==='function'?key(e):e[key])||'(s/d)';o[v]=(o[v]||0)+1;});return o;}
+const PAL=['#1aa39a','#0a4d8c','#d4a32c','#c0392b','#7e57c2','#2e7d32','#e07b39','#16a085','#5d6d7e','#9d174d'];
+function chart(id,type,labels,data,opts){if(!window.Chart)return;if(CH[id])CH[id].destroy();const ctx=el(id);if(!ctx)return;
+ CH[id]=new Chart(ctx,{type:type,data:{labels:labels,datasets:[{data:data,backgroundColor:opts&&opts.multi?PAL:(opts&&opts.color||'#1aa39a')}]},
+  options:{indexAxis:opts&&opts.horiz?'y':'x',plugins:{legend:{display:!!(opts&&opts.legend),position:'right',labels:{color:'#0a4d8c',font:{size:9}}}},
+   scales:type==='doughnut'?{}:{x:{ticks:{color:'#64748b',font:{size:9}},grid:{color:'#e2e8f0'}},y:{ticks:{color:'#64748b',font:{size:9}},grid:{color:'#e2e8f0'}}}}});}
+function compute(){A.forEach(e=>{e.score=scoreOf(e);e.nivel=nivel(e.score);});saveA();
+ const conc=A.filter(e=>/Archivo|Seguimiento|Publicación/.test(e.estado)).length;
+ const consultas=A.filter(e=>e.flujoTipo==='Consulta / interpretación').length;
+ const K=[['',A.length,'Expedientes normativos',''],['',A.length-conc,'En proceso','y'],['',conc,'Concluidos','g'],['',consultas,'Consultas / interpret.',''],
+  ['',REPO.length,'Normas en repositorio',''],['',ORG.length,'Dictámenes/sesiones',''],['',RESP.length,'Responsabilidades','y'],['',A.filter(e=>e.nivel==='Crítico'||e.nivel==='Alto').length,'Riesgo alto','r']];
+ el('ceKpis').innerHTML=K.map(k=>'<div class="kpi '+k[3]+'"><div class="n">'+k[1]+'</div><div class="l">'+k[2]+'</div></div>').join('');
+ if(A.length){const tp=cnt(A,'tipo');chart('cTipo','doughnut',Object.keys(tp),Object.values(tp),{multi:true,legend:true});
+  const ac=cnt(A,'accion');chart('cAcc','bar',Object.keys(ac),Object.values(ac),{horiz:true,color:'#1aa39a'});
+  const es=cnt(A,'estado');chart('cEst','bar',Object.keys(es),Object.values(es),{horiz:true,color:'#7e57c2'});
+  const ma=cnt(A,'materia');chart('cMat','doughnut',Object.keys(ma),Object.values(ma),{multi:true,legend:true});
+  const rp=cnt(A.filter(e=>e.resp),'resp');const re=Object.entries(rp).sort((a,b)=>b[1]-a[1]).slice(0,10);chart('cResp','bar',re.map(x=>x[0].split(' ').slice(0,2).join(' ')),re.map(x=>x[1]),{horiz:true,color:'#0a4d8c'});
+  const dp=cnt(A.filter(e=>e.dep),'dep');const de=Object.entries(dp).sort((a,b)=>b[1]-a[1]).slice(0,10);chart('cDep','bar',de.map(x=>x[0]),de.map(x=>x[1]),{color:'#d4a32c'});
+ } else {['cTipo','cAcc','cEst','cMat','cResp','cDep'].forEach(id=>{if(CH[id])CH[id].destroy();});}
+ const t=new Date();el('upd').textContent='actualizado '+pad(t.getHours())+':'+pad(t.getMinutes())+':'+pad(t.getSeconds());}
+/* t3 lista + ficha */
+function renderList(){const q=(val('q')||'').toLowerCase();const ft=val('fTipo'),fe=val('fEtapa'),fr=val('fRiesgo');
+ fill('fEtapa',Array.from(new Set(A.map(e=>e.estado))),'Toda etapa');if(fe)el('fEtapa').value=fe;
+ let arr=A.filter(e=>(!ft||e.tipo===ft)&&(!fe||e.estado===fe)&&(!fr||e.nivel===fr));
+ if(q)arr=arr.filter(e=>(e.folio+' '+(e.norma||'')+' '+(e.objeto||'')+' '+(e.resp||'')).toLowerCase().indexOf(q)>=0);
+ el('listCnt').textContent=arr.length+' de '+A.length;
+ const box=el('lista');
+ if(!A.length){box.innerHTML='<div class="empty">📭 Sin expedientes normativos.<br>Registra el primero en <b>➕ Alta de expediente</b>. El módulo arranca vacío para no contener datos no verificados.</div>';return;}
+ box.innerHTML=arr.map(e=>{const i=A.indexOf(e);
+  return '<div class="it" onclick="ficha('+i+')"><div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px"><span class="t">'+e.folio+' · '+e.tipo+'</span><span>'+rb(e.nivel)+' <span class="chip">'+e.estado+'</span></span></div><div class="m">'+e.accion+' · '+(e.norma||e.objeto||'').slice(0,60)+' · '+e.materia+(e.resp?' · '+e.resp:'')+'</div></div>';}).join('')||'<div class="empty" style="padding:14px">Sin coincidencias.</div>';}
+function pipe(e){return '<div class="pipe">'+e.flujo.map((s,k)=>'<div class="st '+(k<e.etapaIdx?'done':k===e.etapaIdx?'cur':'')+'">'+(k+1)+'. '+s+'</div>').join('')+'</div>';}
+function ficha(i){const e=A[i];const ip=e.impacto||{};
+ const ries=(e.riesgos||[]).length?'<table><tr><th>Categoría</th><th>Nivel</th><th>Nota</th></tr>'+(e.riesgos||[]).map((r,k)=>'<tr><td>'+r.cat+'</td><td>'+rb(r.nivel)+'</td><td>'+(r.nota||'')+' <span class="lk" onclick="delRiesgo('+i+','+k+')">✕</span></td></tr>').join('')+'</table>':'<div style="color:#64748b;font-size:12px">Sin riesgos registrados.</div>';
+ const ver=e.versiones.map(v=>'<div style="font-size:11.5px;color:#475569">v'+v.v+' · '+v.fecha+' · '+v.autor+' — '+v.nota+'</div>').join('');
+ const bit=e.bitacora.slice(-6).map(b=>'<div style="font-size:11.5px;color:#475569">'+b.ts+' · '+b.usuario+' — '+b.accion+'</div>').join('');
+ const cmp=(e.vig||e.prop)?'<div class="cmp"><div class="col"><b style="color:#0a4d8c">Texto vigente</b><br>'+(e.vig||'—')+'</div><div class="col"><b style="color:#7ee0b4">Texto propuesto</b><br>'+(e.prop||'—')+'</div></div>':'<div style="color:#64748b;font-size:12px">Sin textos capturados.</div>';
+ el('drwBody').innerHTML='<h2 style="margin:0 0 4px;color:#0a4d8c">'+e.folio+' · '+e.tipo+'</h2>'+
+  '<div style="margin:4px 0 10px">'+rb(e.nivel)+' <span class="chip">'+e.accion+'</span> <span class="chip">'+e.materia+'</span> <span class="chip">'+e.estado+'</span></div>'+
+  '<div class="comp"><b>Expediente normativo</b><br>Autoridad solicitante: <b>'+(e.aut||'—')+'</b> · Dependencia: '+(e.dep||'—')+'<br>Norma vigente afectada: '+(e.norma||'—')+'<br>Objeto: '+(e.objeto||'—')+'<br>Justificación/diagnóstico: '+(e.justif||'—')+'<br>Responsable jurídico: '+(e.resp||'—')+' · Ingreso: '+(e.fecha||'—')+'<br>Impactos → Constitucional: <b>'+(ip.const||'—')+'</b> · Administrativo: '+(ip.admin||'—')+' · Presupuestal: '+(ip.presup||'—')+' · DDHH: '+(ip.ddhh||'—')+'</div>'+
+  '<div class="comp"><b>📑 Cuadro comparativo (técnica legislativa)</b> <button class="bd mini" onclick="cuadroWord('+i+')">📄 Cuadro comparativo (Word)</button> <button class="bd mini" onclick="dictamenWord('+i+')">📄 Proyecto de dictamen (Word)</button><div style="margin-top:8px">'+cmp+'</div></div>'+
+  '<div class="comp"><b>🔄 Flujo del trámite (BPMN · '+e.flujoTipo+')</b>'+pipe(e)+'<div style="margin-top:6px"><button class="bd mini" onclick="retroEtapa('+i+')">← Etapa anterior</button> <button class="b3 mini" onclick="avanzaEtapa('+i+')">Avanzar etapa →</button></div></div>'+
+  '<div class="comp"><b>⚠️ Riesgos normativos</b> <button class="bd mini" onclick="addRiesgo('+i+')">＋ Agregar</button><div style="margin-top:6px">'+ries+'</div></div>'+
+  '<div class="comp"><b>🗂️ Versiones / trazabilidad</b><div style="margin-top:6px">'+ver+'</div><div style="margin-top:6px;border-top:1px solid var(--line);padding-top:6px">'+bit+'</div></div>'+
+  '<div class="comp" style="border-left:4px solid #0a4d8c"><b>📝 Seguimiento (notas del equipo)</b><div style="margin-top:4px">'+((e.seguimiento||[]).length?(e.seguimiento||[]).slice().reverse().map(function(s){return '<div style="font-size:11.5px;color:#334155;border-bottom:1px solid #eef2f7;padding:4px 0"><b style="color:#0a4d8c">'+(s.usuario||'')+'</b> <span style="color:#94a3b8;font-size:10px">'+(s.ts||'')+'</span><br>'+String(s.texto||'').replace(/</g,"&lt;")+'</div>';}).join(''):'<span style="color:#94a3b8;font-size:12px">Sin notas.</span>')+'</div><div style="margin-top:6px"><textarea id="nseg_'+i+'" rows="2" placeholder="Nota de seguimiento del expediente normativo…" style="width:100%;padding:7px;border:1px solid var(--line);border-radius:8px"></textarea><button class="b3 mini" style="margin-top:5px" onclick="addSegN('+i+')">＋ Agregar nota</button></div></div>'+
+  '<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><button class="bw" onclick="fichaWord('+i+')">📄 Ficha ejecutiva (Word)</button><button class="bd" onclick="closeDrw()">Cerrar</button> <button class="bd" style="background:#5a2330" onclick="delExp('+i+')">🗑 Eliminar</button></div>';
+ el('drw').classList.add('on');}
+function closeDrw(){el('drw').classList.remove('on');}
+el('drw').onclick=ev=>{if(ev.target.id==='drw')closeDrw();};
+function logIt(e,a){e.bitacora.push({ts:nowStr(),accion:a,usuario:localStorage.getItem('sigej_perfil')||'(perfil)'});}
+function addSegN(i){var e=A[i];var el2=document.getElementById('nseg_'+i);var t=el2?el2.value.trim():'';if(!t){alert('Escribe la nota.');return;}e.seguimiento=e.seguimiento||[];e.seguimiento.push({ts:nowStr(),usuario:localStorage.getItem('sigej_perfil')||'(perfil)',texto:t});saveA();ficha(i);}
+function logV(e,n){e.versiones.push({v:e.versiones.length+1,autor:localStorage.getItem('sigej_perfil')||'(perfil)',fecha:hoyStr(),nota:n});}
+function avanzaEtapa(i){const e=A[i];if(e.etapaIdx<e.flujo.length-1){e.etapaIdx++;e.estado=e.flujo[e.etapaIdx];logIt(e,'Avance → '+e.estado);logV(e,'Etapa: '+e.estado);saveA();ficha(i);compute();renderList();}}
+function retroEtapa(i){const e=A[i];if(e.etapaIdx>0){e.etapaIdx--;e.estado=e.flujo[e.etapaIdx];logIt(e,'Retroceso → '+e.estado);saveA();ficha(i);compute();}}
+function addRiesgo(i){const e=A[i];const cat=prompt('Categoría ('+D.riesgos_cat.slice(0,6).join('/')+'…):','Constitucional');if(!cat)return;const niv=prompt('Nivel (Crítico/Alto/Medio/Bajo):','Medio')||'Medio';const nota=prompt('Nota:','')||'';
+ e.riesgos.push({cat:cat,nivel:niv,nota:nota});logIt(e,'Riesgo: '+cat+' '+niv);e.score=scoreOf(e);e.nivel=nivel(e.score);saveA();ficha(i);compute();}
+function delRiesgo(i,k){A[i].riesgos.splice(k,1);A[i].score=scoreOf(A[i]);A[i].nivel=nivel(A[i].score);saveA();ficha(i);compute();}
+function delExp(i){if(!confirm('¿Eliminar '+A[i].folio+'?'))return;A.splice(i,1);saveA();closeDrw();compute();renderList();}
+function exportCSV(){const esc=v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"';
+ const cab=['folio','tipo','accion','materia','autoridad','dependencia','norma','estado','responsable','nivel'];
+ const rows=A.map(e=>[e.folio,e.tipo,e.accion,e.materia,e.aut,e.dep,e.norma,e.estado,e.resp,e.nivel].map(esc).join(','));
+ const b=new Blob(['﻿'+cab.join(',')+'\n'+rows.join('\n')],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='normatividad_universitaria.csv';a.click();}
+function dl(html,name){const b=new Blob(['﻿'+html],{type:'application/msword'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;a.click();}
+function W(body){return '<html xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"></head><body style="font-family:Calibri;margin:55px">'+body+'</body></html>';}
+function cuadroWord(i){const e=A[i];
+ const body='<div style="text-align:center"><b>UNIVERSIDAD DE GUADALAJARA</b><br>Oficina de la Abogacía General · Coordinación de Normatividad Universitaria</div>'+
+  '<h2>CUADRO COMPARATIVO — '+e.folio+'</h2><p style="font-size:11pt"><b>Norma:</b> '+(e.norma||e.tipo)+' · <b>Acción:</b> '+e.accion+'</p>'+
+  '<table border="1" cellpadding="6" style="border-collapse:collapse;width:100%;font-size:10pt"><tr><th style="background:#eee;width:50%">TEXTO VIGENTE</th><th style="background:#eee;width:50%">TEXTO PROPUESTO</th></tr><tr><td>'+(e.vig||'—').replace(/\n/g,'<br>')+'</td><td>'+(e.prop||'—').replace(/\n/g,'<br>')+'</td></tr></table>'+
+  '<p style="font-size:9pt;color:#666">Generado por el SIGEJ-UdeG (prototipo). Fundamento: Arts. 224-227 RIAG-UdeG (texto a confirmar).</p>';
+ dl(W(body),'Cuadro_comparativo_'+e.folio+'.doc');}
+function dictamenWord(i){const e=A[i];const ip=e.impacto||{};
+ const body='<div style="text-align:center"><b>UNIVERSIDAD DE GUADALAJARA</b><br>Coordinación de Normatividad Universitaria</div>'+
+  '<h2>PROYECTO DE DICTAMEN — '+e.folio+'</h2>'+
+  '<h3>I. Antecedentes</h3><p style="font-size:11pt">A solicitud de '+(e.aut||'la autoridad competente')+' ('+(e.dep||'')+'), se presenta proyecto para <b>'+e.accion+'</b> respecto de '+(e.norma||e.tipo)+'.</p>'+
+  '<h3>II. Objeto</h3><p style="font-size:11pt">'+(e.objeto||'—')+'</p>'+
+  '<h3>III. Justificación / diagnóstico normativo</h3><p style="font-size:11pt">'+(e.justif||'—')+'</p>'+
+  '<h3>IV. Análisis de impacto</h3><p style="font-size:11pt">Constitucional: '+(ip.const||'—')+' · Administrativo: '+(ip.admin||'—')+' · Presupuestal: '+(ip.presup||'—')+' · Derechos humanos: '+(ip.ddhh||'—')+'.</p>'+
+  '<h3>V. Resolutivo (proyecto)</h3><p style="font-size:11pt">Se propone aprobar el '+e.accion.toLowerCase()+' en los términos del texto propuesto que obra en el cuadro comparativo.</p>'+
+  '<p style="font-size:9pt;color:#666">Borrador generado por el SIGEJ-UdeG (prototipo). Revisar y validar. Arts. 224-227 RIAG-UdeG (texto a confirmar).</p>';
+ dl(W(body),'Proyecto_dictamen_'+e.folio+'.doc');}
+function fichaWord(i){const e=A[i];
+ const body='<div style="text-align:center"><b>UNIVERSIDAD DE GUADALAJARA</b><br>Coordinación de Normatividad Universitaria</div><h2>FICHA EJECUTIVA — '+e.folio+'</h2>'+
+  '<p style="font-size:11pt"><b>Tipo/acción:</b> '+e.tipo+' / '+e.accion+'<br><b>Materia:</b> '+e.materia+'<br><b>Autoridad:</b> '+(e.aut||'—')+' · <b>Dependencia:</b> '+(e.dep||'—')+'<br><b>Norma afectada:</b> '+(e.norma||'—')+'<br><b>Estado:</b> '+e.estado+' · <b>Riesgo:</b> '+e.nivel+'<br><b>Responsable:</b> '+(e.resp||'—')+'</p>';
+ dl(W(body),'Ficha_'+e.folio+'.doc');}
+/* t4 repositorio */
+function saveRepo(){const n=val('r_nom');if(!n){alert('Indica la denominación.');return;}
+ REPO.push({nom:n,jer:val('r_jer'),mat:val('r_mat'),aut:val('r_aut'),est:val('r_est'),fecha:val('r_fecha'),dict:val('r_dict'),reformas:[]});S('sigej_norma_repo',REPO);el('r_nom').value='';el('r_dict').value='';renderRepo();compute();}
+function renderRepo(){const q=(val('qr')||'').toLowerCase();const fj=val('frJer'),fe=val('frEst');
+ let arr=REPO.map((r,i)=>({r:r,i:i})).filter(x=>(!fj||x.r.jer===fj)&&(!fe||x.r.est===fe)&&(!q||(x.r.nom+' '+x.r.mat+' '+x.r.aut).toLowerCase().indexOf(q)>=0));
+ el('repoList').innerHTML=REPO.length?(arr.length?arr.map(x=>'<div class="it" onclick="repoFicha('+x.i+')"><div style="display:flex;justify-content:space-between"><span class="t">'+x.r.nom+'</span><span class="chip">'+x.r.est+'</span></div><div class="m">'+x.r.jer+' · '+x.r.mat+' · '+(x.r.aut||'—')+(x.r.fecha?' · '+x.r.fecha:'')+' · '+(x.r.reformas||[]).length+' reforma(s)</div></div>').join(''):'<div class="empty">Sin coincidencias.</div>'):'<div class="empty">📚 Repositorio vacío. Registra Ley Orgánica, Estatuto General, reglamentos, acuerdos y su historia de reformas.</div>';}
+function repoFicha(i){const r=REPO[i];const ref=(r.reformas||[]).map(x=>'<div style="font-size:11.5px;color:#475569">📌 '+x.fecha+' · '+x.nota+'</div>').join('')||'<div style="color:#64748b;font-size:12px">Sin reformas registradas.</div>';
+ el('drwBody').innerHTML='<h2 style="margin:0 0 6px;color:#0a4d8c">'+r.nom+'</h2><div style="margin-bottom:8px"><span class="chip">'+r.jer+'</span> <span class="chip">'+r.mat+'</span> <span class="chip">'+r.est+'</span></div>'+
+  '<div class="comp"><b>Datos</b><br>Autoridad emisora: '+(r.aut||'—')+'<br>Expedición: '+(r.fecha||'—')+'<br>Dictamen/sesión de origen: '+(r.dict||'—')+'</div>'+
+  '<div class="comp"><b>🕰️ Historia de reformas</b> <button class="bd mini" onclick="addReforma('+i+')">＋ Reforma</button><div style="margin-top:6px">'+ref+'</div></div>'+
+  '<div style="margin-top:10px"><button class="bd" onclick="closeDrw()">Cerrar</button> <button class="bd" style="background:#5a2330" onclick="delRepo('+i+')">🗑 Eliminar</button></div>';
+ el('drw').classList.add('on');}
+function addReforma(i){const f=prompt('Fecha de la reforma (AAAA-MM-DD):',hoyStr());if(!f)return;const nota=prompt('Descripción (artículos modificados, dictamen):','')||'';REPO[i].reformas.push({fecha:f,nota:nota});if(REPO[i].est==='Vigente')REPO[i].est='Reformado';S('sigej_norma_repo',REPO);repoFicha(i);renderRepo();}
+function delRepo(i){if(!confirm('¿Eliminar la norma del repositorio?'))return;REPO.splice(i,1);S('sigej_norma_repo',REPO);closeDrw();renderRepo();compute();}
+/* t5 órganos */
+function saveOrg(){const d=val('o_dict');if(!d){alert('Indica el dictamen/acuerdo.');return;}
+ ORG.push({org:val('o_org'),tipo:val('o_tipo'),com:val('o_com'),fecha:val('o_fecha'),dict:d,sent:val('o_sent'),seg:val('o_seg')});S('sigej_norma_org',ORG);el('o_dict').value='';el('o_seg').value='';renderOrg();compute();}
+function renderOrg(){const K=[['',ORG.length,'Sesiones/dictámenes',''],['',ORG.filter(x=>/Aprobado/.test(x.sent)).length,'Aprobados','g'],['',ORG.filter(x=>x.sent==='Pendiente').length,'Pendientes','y'],['',new Set(ORG.map(x=>x.org)).size,'Órganos','']];
+ el('orgKpis').innerHTML=K.map(k=>'<div class="kpi '+k[3]+'"><div class="n">'+k[1]+'</div><div class="l">'+k[2]+'</div></div>').join('');
+ el('orgList').innerHTML=ORG.length?'<table><tr><th>Órgano</th><th>Sesión</th><th>Comisión</th><th>Fecha</th><th>Dictamen/acuerdo</th><th>Sentido</th><th></th></tr>'+ORG.map((x,i)=>'<tr><td>'+x.org+'</td><td>'+x.tipo+'</td><td>'+(x.com||'—')+'</td><td>'+(x.fecha||'—')+'</td><td>'+x.dict+(x.seg?'<div style="font-size:10px;color:#64748b">Seguimiento: '+x.seg+'</div>':'')+'</td><td>'+x.sent+'</td><td><span class="lk" onclick="delOrg('+i+')">✕</span></td></tr>').join('')+'</table>':'<div class="empty">Sin sesiones registradas.</div>';}
+function delOrg(i){ORG.splice(i,1);S('sigej_norma_org',ORG);renderOrg();compute();}
+/* t6 responsabilidades */
+function saveResp(){RESP.push({suj:val('p_suj'),falta:val('p_falta'),etapa:val('p_etapa'),dep:val('p_dep'),fecha:val('p_fecha'),nota:val('p_nota')});S('sigej_norma_resp',RESP);el('p_nota').value='';renderResp();compute();}
+function renderResp(){const K=[['',RESP.length,'Expedientes',''],['',RESP.filter(x=>/Investigación|Substanciación/.test(x.etapa)).length,'En trámite','y'],['',RESP.filter(x=>x.etapa==='Resolución').length,'Resueltos','g'],['',RESP.filter(x=>/Violencia|Acoso|Hostigamiento/.test(x.falta)).length,'Violencia/acoso','r']];
+ el('respKpis').innerHTML=K.map(k=>'<div class="kpi '+k[3]+'"><div class="n">'+k[1]+'</div><div class="l">'+k[2]+'</div></div>').join('');
+ el('respList').innerHTML=RESP.length?'<table><tr><th>Sujeto</th><th>Falta</th><th>Etapa</th><th>Dependencia</th><th>Inicio</th><th>Síntesis</th><th></th></tr>'+RESP.map((x,i)=>'<tr><td>'+x.suj+'</td><td>'+x.falta+'</td><td>'+x.etapa+'</td><td>'+(x.dep||'—')+'</td><td>'+(x.fecha||'—')+'</td><td>'+(x.nota||'—')+'</td><td><span class="lk" onclick="delResp('+i+')">✕</span></td></tr>').join('')+'</table>':'<div class="empty">Sin expedientes de responsabilidad universitaria.</div>';}
+function delResp(i){RESP.splice(i,1);S('sigej_norma_resp',RESP);renderResp();compute();}
+/* t7 bienes */
+function saveBien(){const d=val('b_desc');if(!d){alert('Describe el bien.');return;}BIEN.push({tipo:val('b_tipo'),acc:val('b_acc'),desc:d,dep:val('b_dep'),valor:+val('b_valor')||0,est:val('b_est')});S('sigej_norma_bienes',BIEN);el('b_desc').value='';el('b_valor').value='';renderBien();}
+function renderBien(){const K=[['',BIEN.length,'Trámites',''],['',BIEN.filter(x=>x.est!=='Concluido').length,'En proceso','y'],['',M(BIEN.reduce((s,x)=>s+(+x.valor||0),0)),'Valor total',''],['',BIEN.filter(x=>x.tipo==='Bien inmueble').length,'Inmuebles','']];
+ el('bienKpis').innerHTML=K.map(k=>'<div class="kpi '+k[3]+'"><div class="n">'+k[1]+'</div><div class="l">'+k[2]+'</div></div>').join('');
+ el('bienList').innerHTML=BIEN.length?'<table><tr><th>Bien</th><th>Acción</th><th>Descripción</th><th>Dependencia</th><th>Avalúo</th><th>Estado</th><th></th></tr>'+BIEN.map((x,i)=>'<tr><td>'+x.tipo+'</td><td>'+x.acc+'</td><td>'+x.desc+'</td><td>'+(x.dep||'—')+'</td><td>'+M(x.valor)+'</td><td>'+x.est+'</td><td><span class="lk" onclick="delBien('+i+')">✕</span></td></tr>').join('')+'</table>':'<div class="empty">Sin trámites de desincorporación.</div>';}
+function delBien(i){BIEN.splice(i,1);S('sigej_norma_bienes',BIEN);renderBien();}
+/* t8 observatorio */
+function saveExt(){const r=val('x_ref');if(!r){alert('Indica la reforma/criterio.');return;}EXT.push({ley:val('x_ley'),ref:r,imp:val('x_imp'),int:val('x_int'),acc:val('x_acc'),fecha:val('x_fecha')});S('sigej_norma_ext',EXT);el('x_ref').value='';el('x_int').value='';renderExt();}
+function renderExt(){const K=[['',EXT.length,'Reformas externas',''],['',EXT.filter(x=>x.imp==='Alto').length,'Impacto alto','r'],['',EXT.filter(x=>/Reforma urgente|adecuación/.test(x.acc)).length,'Requieren acción','y'],['',new Set(EXT.map(x=>x.ley)).size,'Ordenamientos','']];
+ el('extKpis').innerHTML=K.map(k=>'<div class="kpi '+k[3]+'"><div class="n">'+k[1]+'</div><div class="l">'+k[2]+'</div></div>').join('');
+ el('extList').innerHTML=EXT.length?'<table><tr><th>Ordenamiento</th><th>Reforma/criterio</th><th>Impacto</th><th>Norma interna afectada</th><th>Acción</th><th></th></tr>'+EXT.map((x,i)=>'<tr><td>'+x.ley+'</td><td>'+x.ref+'</td><td>'+rb(x.imp==='Alto'?'Alto':x.imp==='Medio'?'Medio':'Bajo')+'</td><td>'+(x.int||'—')+'</td><td>'+x.acc+'</td><td><span class="lk" onclick="delExt('+i+')">✕</span></td></tr>').join('')+'</table>':'<div class="empty">Sin reformas externas registradas. Vincula reformas federales/estatales con la normativa interna afectada.</div>';}
+function delExt(i){EXT.splice(i,1);S('sigej_norma_ext',EXT);renderExt();}
+/* t9 riesgo */
+function renderRiesgo(){const niv=['Crítico','Alto','Medio','Bajo'];const cats=D.riesgos_cat;
+ const cell={};cats.forEach(c=>{cell[c]={};niv.forEach(n=>cell[c][n]=0);});let mx=1;
+ A.forEach(e=>(e.riesgos||[]).forEach(r=>{if(cell[r.cat]&&cell[r.cat][r.nivel]!==undefined){cell[r.cat][r.nivel]++;mx=Math.max(mx,cell[r.cat][r.nivel]);}}));
+ el('riskHeat').innerHTML='<tr><th class="lab">Categoría \\ Nivel</th>'+niv.map(n=>'<th>'+n+'</th>').join('')+'</tr>'+
+  cats.map(c=>'<tr><td class="lab">'+c+'</td>'+niv.map(n=>{const v=cell[c][n];const al=v/mx;const col=n==='Crítico'?'192,57,43':n==='Alto'?'234,88,12':n==='Medio'?'224,142,11':'31,157,107';return '<td style="background:rgba('+col+','+(v?0.15+al*0.7:0.05)+');color:#fff">'+v+'</td>';}).join('')+'</tr>').join('');
+ const ord=A.map((e,i)=>[e,i]).sort((a,b)=>b[0].score-a[0].score);
+ el('riskList').innerHTML=A.length?ord.map(([e,i])=>'<div class="it" onclick="ficha('+i+')"><div style="display:flex;justify-content:space-between"><span class="t">'+e.folio+' · '+e.tipo+'</span><span>'+rb(e.nivel)+' '+e.score+'/100</span></div><div class="m">'+e.accion+' · '+(e.norma||'').slice(0,50)+' · '+((e.riesgos||[]).length)+' riesgo(s)</div></div>').join(''):'<div class="empty">Sin expedientes.</div>';}
+/* t10 marco */
+function renderMarco(){el('artBox').textContent=D.art;
+ el('reposBox').innerHTML=D.repos.map(r=>'<div style="padding:6px 2px;border-bottom:1px solid var(--line);font-size:12px"><a class="dl" href="'+r[1]+'" target="_blank">'+r[0]+'</a></div>').join('');
+ el('leyesBox').innerHTML=D.leyes_ext.map(l=>'<div style="padding:5px 2px;border-bottom:1px solid var(--line);font-size:11.5px;color:#c7d6ea">📕 '+l+'</div>').join('');}
+/* init */
+window.addEventListener('storage',()=>{A=JSON.parse(localStorage.getItem('sigej_normatividad')||'[]');compute();});
+window.addEventListener('focus',compute);
+compute();
+</script>
+__SNIP__
+</body></html>"""
+html=TPL.replace("__DATA__",DATAJ).replace("__NAV__",NAV).replace("__SNIP__",SNIP)
+open(B+"normatividad_SIGEJ.html","w",encoding="utf-8").write(html)
+print("normatividad_SIGEJ.html OK -",len(html),"bytes | tipos",len(TIPOS),"| flujo proyecto",len(FLUJOS["Proyecto normativo"]),"etapas | riesgos",len(RIESGOS_CAT))

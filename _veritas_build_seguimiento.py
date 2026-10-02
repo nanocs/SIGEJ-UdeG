@@ -1,0 +1,193 @@
+# -*- coding: utf-8 -*-
+# Portal de Seguimiento para usuarios EXTERNOS (dependencias, contrapartes, proveedores, ciudadanía).
+# Público (sin login interno): consulta el estado de un trámite por folio. Lee los mismos índices (en producción = API pública de solo lectura).
+B="/Users/edithroque/Documents/CLAUDE/"
+TPL=r"""<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seguimiento de Trámites · Oficina de la Abogacía General · UdeG</title>
+<style>
+:root{--azul:#00254a;--azul2:#0a4d8c;--teal:#1aa39a;--ok:#1f9d6b;--amber:#e08e0b;--red:#c0392b;--ink:#0a1f3c;--mut:#64748b;--line:#e2e8f0;--bg:#eef2f7;}
+*{box-sizing:border-box}body{margin:0;font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(120deg,#00254a 0%,#0a4d8c 100%);color:#fff;padding:22px 24px;text-align:center}
+header h1{margin:0;font-size:22px}header .s{opacity:.9;font-size:13.5px;margin-top:6px}
+header .pub{display:inline-block;margin-top:10px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:5px 14px;font-size:12px}
+.wrap{max-width:820px;margin:auto;padding:22px 18px 40px}
+.sb{display:flex;gap:8px;margin-bottom:8px}.sb input{flex:1;padding:15px 18px;border:1px solid var(--line);border-radius:13px;font-size:16px;box-shadow:0 1px 3px rgba(2,40,90,.07)}
+.sb button{padding:15px 24px;border:none;border-radius:13px;background:var(--teal);color:#fff;font-weight:700;font-size:15px;cursor:pointer}
+.hint{font-size:12.5px;color:var(--mut);margin-bottom:16px;text-align:center}
+.ej{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:18px}.ej span{background:#e6f0fb;color:var(--azul2);border:1px solid #cfe0f5;border-radius:14px;padding:4px 11px;font-size:11.5px;cursor:pointer}
+.card{background:#fff;border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 2px 8px rgba(2,40,90,.08);border-left:6px solid var(--teal)}
+.card.ok{border-left-color:var(--ok)}.card.proc{border-left-color:var(--amber)}.card.rec{border-left-color:var(--azul2)}.card.can{border-left-color:var(--red)}
+.card .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center}
+.card .fol{font-size:17px;font-weight:800;color:var(--azul)}
+.semaf{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;padding:5px 12px;border-radius:20px}
+.semaf.ok{background:#e6f6ee;color:#15803d}.semaf.proc{background:#fef3e2;color:#b45309}.semaf.rec{background:#e6f0fb;color:#0a4d8c}.semaf.can{background:#fdeaea;color:#c0392b}
+.dot{width:9px;height:9px;border-radius:50%;background:currentColor}
+.meta{font-size:13px;color:#334155;margin-top:8px;line-height:1.6}
+.prog{margin-top:12px}.prog .lab{font-size:11.5px;color:var(--mut);display:flex;justify-content:space-between;margin-bottom:4px}
+.bar{height:12px;background:#eef2f7;border-radius:7px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--azul2));transition:.3s}
+.steps{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap}
+.step{flex:1;min-width:60px;text-align:center;font-size:9.5px;color:var(--mut);position:relative}
+.step .d{width:14px;height:14px;border-radius:50%;background:#dbe3ec;margin:0 auto 3px;border:2px solid #dbe3ec}
+.step.done .d{background:var(--ok);border-color:var(--ok)}.step.cur .d{background:#fff;border-color:var(--azul2);box-shadow:0 0 0 3px rgba(10,77,140,.2)}.step.cur{color:var(--azul2);font-weight:700}
+.nx{margin-top:10px;font-size:12.5px;color:#0a4d8c;background:#f0f6ff;border:1px solid #d6e6f9;border-radius:9px;padding:8px 11px}
+.empty{background:#fff;border:1px dashed #cbd5e1;border-radius:13px;padding:30px;text-align:center;color:var(--mut)}
+.note{font-size:11.5px;color:#8a6d1a;background:#fff8e6;border:1px solid #e7c66b;border-radius:9px;padding:9px 12px;margin:16px 0}
+footer{background:#e8731c;color:#fff;border-top:3px solid #c75e10;text-align:center;font-size:11.5px;padding:16px;margin-top:24px}
+.back{display:inline-block;margin-top:10px;color:#fff;font-size:12px;text-decoration:underline}
+</style></head><body>
+<header>
+ <h1>🔎 Seguimiento de Trámites</h1>
+ <div class="s">Oficina de la Abogacía General · Universidad de Guadalajara — consulta el estado de tu trámite</div>
+ <div class="pub">🌐 Portal público para usuarios externos · no requiere usuario ni contraseña</div>
+</header>
+<div class="wrap">
+ <div class="sb"><input id="q" placeholder="Ingresa tu número de folio, oficio o el nombre de tu dependencia…" onkeydown="if(event.key=='Enter')run()"><button onclick="run()">Consultar</button></div>
+ <div class="hint">Escribe el <b>folio</b> que te entregaron (en tu acuse) o el <b>nombre de tu dependencia / contraparte</b> para ver tus trámites.</div>
+ <div class="ej" id="ej"></div>
+ <div id="res"></div>
+ <div class="note">ℹ️ Este es un <b>portal de consulta</b> de solo lectura. La información se actualiza conforme la Oficina de la Abogacía General procesa tu trámite. En la versión institucional este portal se conecta a un <b>servicio público con verificación</b> (folio + código). Aquí se muestra una demostración con los trámites registrados en este equipo.</div>
+ <div style="text-align:center"><a class="back" href="SIGEJ_inicio.html" style="color:#0a4d8c">← Acceso interno (personal de la Oficina)</a></div>
+</div>
+<footer>Oficina de la Abogacía General · Coordinación de Enlace con la Red · abogral@udg.mx · (Lexa &amp; Veritas)</footer>
+<script>
+function J(k){try{return JSON.parse(localStorage.getItem(k)||'[]');}catch(e){return [];}}
+const norm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+/* Ciclos de vida (etapas) por tipo de trámite — para el indicador de avance */
+const LC_OFI=['Capturado','En revisión','Turnado','En trámite','En firma','Firmado','Enviado','En mensajería','Recibido','Acuse recibido','Concluido'];
+const LC_INS=['Solicitud','Elaboración','Revisión jurídica','Aprobación','Firma','Vigente'];
+const LC_UTI=['Registrada','En análisis','Respuesta','Notificada'];
+const LC_LOG=['Solicitada','Autorizada','Chofer asignado','Vehículo asignado','En traslado','Documento entregado','Comisión concluida'];
+const LC_PI=['Solicitud','Revisión','Integración','Trámite','Concesión','Archivo'];
+const LC_INT=['Solicitud','Revisión','Trámite','Resolución','Archivo'];
+const CONCL=/concluid|conclu|vigente|archiv|notificad|acuse recibid|resoluci|concesi|entregad|atendid/i;
+const CANCEL=/cancelad|rechazad|devuelt|desech/i;
+function idxOf(lc,est){const e=norm(est||'');let bi=-1;lc.forEach((s,i)=>{if(norm(s)===e||e.indexOf(norm(s))>=0||norm(s).indexOf(e)>=0)bi=i;});return bi;}
+function build(){const A=[];
+ function add(o){o.txt=norm([o.folio,o.tit,o.area,o.contra].join(' '));A.push(o);}
+ J('sigej_oficios').forEach(e=>{add({folio:e.folio,clase:'Oficio',tit:(e.tipo||'')+(e.asunto?' — '+e.asunto:''),area:e.area||'Oficialía de Partes',estado:e.estatus||'Capturado',fecha:e.fecha||'',lc:LC_OFI,contra:(e.ddest||e.dest||e.demi||'')});});
+ J('sigej_instrumentos').forEach(e=>{add({folio:e.folio,clase:'Convenio / Contrato',tit:(e.tipo||'')+(e.obj?' — '+e.obj:''),area:'Instrumentos Jurídicos',estado:e.estado||'Solicitud',fecha:(e.firma||e.ini||''),lc:LC_INS,contra:(e.contra||e.dep||'')});});
+ J('sigej_uti').forEach(e=>{add({folio:e.folio,clase:'Solicitud de transparencia',tit:(e.texto||'Solicitud de información').slice(0,60),area:'Transparencia (UTI)',estado:e.estado||'Registrada',fecha:(e.fecha||e.fsol||''),lc:LC_UTI,contra:(e.solicitante||'')});});
+ /* Logística/Comisiones, Viáticos y Help Desk son de uso INTERNO: NO se exponen en el portal externo. */
+ J('sigej_patrimonio').forEach(e=>{add({folio:e.folio,clase:'Propiedad intelectual',tit:(e.titulo||e.tipo||''),area:'Patrimonio Intangible',estado:e.estado||'Solicitud',fecha:(e.sol||''),lc:LC_PI,contra:(e.cu||e.dep||'')});});
+ J('sigej_internacional').forEach(e=>{add({folio:e.folio,clase:'Asunto internacional',tit:(e.titulo||''),area:'Asuntos Internacionales',estado:e.estado||'Solicitud',fecha:(e.ini||''),lc:LC_INT,contra:(e.dep||e.cu||'')});});
+ return A;}
+function semaf(o){if(CANCEL.test(o.estado))return {c:'can',t:'Cancelado / Devuelto',ic:'⛔'};if(CONCL.test(o.estado))return {c:'ok',t:'Concluido',ic:'✅'};
+ const i=idxOf(o.lc,o.estado);if(i<=0)return {c:'rec',t:'Recibido',ic:'📨'};return {c:'proc',t:'En proceso',ic:'⏳'};}
+function nextStep(o){const i=idxOf(o.lc,o.estado);if(CONCL.test(o.estado)||CANCEL.test(o.estado))return '';if(i>=0&&i<o.lc.length-1)return 'Siguiente etapa: <b>'+o.lc[i+1]+'</b>.';return '';}
+function card(o){const s=semaf(o);let i=idxOf(o.lc,o.estado);if(CONCL.test(o.estado))i=o.lc.length-1;if(i<0)i=0;const pct=Math.round(100*(CANCEL.test(o.estado)?0:(i+1)/o.lc.length));
+ const steps=o.lc.map((st,k)=>'<div class="step '+(k<i?'done':k===i?'cur':'')+'"><div class="d"></div>'+st.split(' ')[0]+'</div>').join('');
+ const nx=nextStep(o);
+ return '<div class="card '+s.c+'"><div class="top"><span class="fol">'+o.folio+'</span><span class="semaf '+s.c+'"><span class="dot"></span>'+s.ic+' '+s.t+'</span></div>'+
+  '<div class="meta"><b>'+o.clase+'</b> · '+(o.tit||'')+'<br>Área responsable: <b>'+o.area+'</b>'+(o.fecha?' · Ingresado: '+o.fecha:'')+' · Estado actual: <b>'+o.estado+'</b></div>'+
+  '<div class="prog"><div class="lab"><span>Avance del trámite</span><span>'+pct+'%</span></div><div class="bar"><i style="width:'+pct+'%"></i></div><div class="steps">'+steps+'</div></div>'+
+  (nx?'<div class="nx">➡️ '+nx+'</div>':(s.c==='ok'?'<div class="nx" style="background:#e6f6ee;border-color:#bfe6cf;color:#15803d">✔️ Tu trámite ha concluido. Si requieres el documento, acude a la Oficina con tu folio.</div>':''))+
+  '</div>';}
+function run(){const AUTH=window.__authFolio;const q=AUTH?norm(AUTH):norm(document.getElementById('q').value.trim());const A=build();
+ let r;if(AUTH){r=A.filter(o=>norm(o.folio)===q);}else if(!q){r=[];}else{r=A.filter(o=>o.txt.indexOf(q)>=0||norm(o.folio)===q);}
+ const box=document.getElementById('res');
+ if(!q){box.innerHTML='<div class="empty">Ingresa tu folio o el nombre de tu dependencia para ver el estado de tus trámites.</div>';return;}
+ if(!r.length){box.innerHTML='<div class="empty">No encontramos trámites con "<b>'+document.getElementById('q').value+'</b>".<br>Verifica tu folio o intenta con el nombre de tu dependencia. Si crees que es un error, contacta a la Oficina de la Abogacía General.</div>';return;}
+ box.innerHTML='<div style="font-size:13px;color:#64748b;margin-bottom:10px">'+r.length+' trámite(s) encontrado(s):</div>'+r.map(card).join('');}
+/* atajos de ejemplo según lo que haya en el equipo */
+(function(){
+ var pf=(new URLSearchParams(location.search)).get('folio');
+ if(pf){window.__authFolio=pf;var qi=document.getElementById('q');qi.value=pf;qi.readOnly=true;qi.style.background='#eef2f7';
+   document.getElementById('ej').innerHTML='<span style="background:#e6f6ee;color:#15803d;border:1px solid #bfe6cf;border-radius:12px;padding:4px 11px;font-size:11.5px">🔐 Acceso autorizado a tu trámite: '+pf+' — solo puedes consultar este folio.</span>';
+   run();return;}
+ const A=build();const ej=[...new Set(A.slice(0,30).map(o=>o.folio))].slice(0,5);
+ document.getElementById('ej').innerHTML=ej.length?'<span style="background:none;border:none;color:#64748b;cursor:default">Ejemplos:</span>'+ej.map(f=>'<span onclick="document.getElementById(\'q\').value=\''+f+'\';run()">'+f+'</span>').join(''):'';
+ document.getElementById('res').innerHTML='<div class="empty">Ingresa tu folio o el nombre de tu dependencia para ver el estado de tus trámites.</div>';})();
+</script>
+
+<script>
+/* SIGEJ · PWA + RWD (responsive, Mobile First) + modo oscuro — capa universal */
+(function(){try{
+var isEmbed=/[?&]embed=1/.test(location.search);
+/* --- PWA: manifest + meta + service worker (instalable en iOS/iPadOS/Android sin tienda) --- */
+if(!isEmbed){
+ function meta(n,c){var m=document.createElement('meta');m.name=n;m.content=c;document.head.appendChild(m);}
+ if(!document.querySelector('link[rel="manifest"]')){var l=document.createElement('link');l.rel='manifest';l.href='sigej.webmanifest';document.head.appendChild(l);}
+ meta('theme-color','#00254a');meta('mobile-web-app-capable','yes');meta('apple-mobile-web-app-capable','yes');meta('apple-mobile-web-app-status-bar-style','black-translucent');meta('apple-mobile-web-app-title','SIGEJ');
+ var al=document.createElement('link');al.rel='apple-touch-icon';al.href='sigej_icon.svg';document.head.appendChild(al);
+ if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sigej_sw.js').catch(function(){});});}
+}
+/* --- RWD: endurecimiento responsivo universal (no altera la maqueta de escritorio) --- */
+var css=document.createElement('style');css.setAttribute('data-sigej','rwd');
+css.textContent=[
+ 'img,video,canvas{max-width:100%;height:auto}',
+ 'html{-webkit-text-size-adjust:100%}',
+ '@media (max-width:768px){',
+ '  .navbar{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}',
+ '  .navbar a{white-space:nowrap}',
+ '  button,.tb,.tab,.ootb,.navbar a{min-height:40px}',
+ '  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}',
+ '  .kpis,.cards,.apps{grid-template-columns:1fr!important}',
+ '  .grid[style*="1fr 1fr"],.grid[style*="1.3fr"],.grid[style*="1.4fr"]{grid-template-columns:1fr!important}',
+ '  .panel{width:100%!important}',
+ '}',
+ '@media (max-width:480px){ header h1{font-size:16px!important} .wrap{padding-left:10px!important;padding-right:10px!important} }',
+ /* modo oscuro global por inversión controlada (se re-invierte multimedia para no dañar imágenes/QR/iframes) */
+ 'html.sigej-dark{filter:invert(0.92) hue-rotate(180deg);background:#0e1626}',
+ 'html.sigej-dark img,html.sigej-dark canvas,html.sigej-dark iframe,html.sigej-dark video,html.sigej-dark svg,html.sigej-dark .cov,html.sigej-dark .fichacov,html.sigej-dark .acuse .q img{filter:invert(1) hue-rotate(180deg)}',
+ '#sigejDark{position:fixed;left:16px;bottom:16px;z-index:99990;background:#0a4d8c;color:#fff;border:none;border-radius:50%;width:42px;height:42px;font-size:18px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}'
+].join('\n');
+document.head.appendChild(css);
+if(localStorage.getItem('sigej_dark')==='1')document.documentElement.classList.add('sigej-dark');
+if(!isEmbed){
+ var db=document.createElement('button');db.id='sigejDark';db.type='button';db.title='Modo claro / oscuro';db.textContent=localStorage.getItem('sigej_dark')==='1'?'☀️':'🌙';
+ db.onclick=function(){var on=document.documentElement.classList.toggle('sigej-dark');localStorage.setItem('sigej_dark',on?'1':'0');db.textContent=on?'☀️':'🌙';};
+ if(document.body)document.body.appendChild(db);
+}
+}catch(e){}})();
+</script>
+
+<script>
+/* SIGEJ · Panel universal "Normativa aplicable" (asistente jurídico normativo por pantalla) */
+(function(){try{
+if(/[?&]embed=1/.test(location.search))return;
+var pk=(location.pathname.split('/').pop()||'x').replace('.html','')||'x';
+if(/^(index|acceso_SIGEJ|SIGEJ_inicio)$/.test(pk))return;if(!document.body)return;
+function J(k){try{return JSON.parse(localStorage.getItem(k)||'null');}catch(e){return null;}}
+function ec(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+var DEF=[
+ {amb:'Interna',cat:'Contratos',nombre:'Normatividad de Contratos',url:'https://secgral.udg.mx/normatividad/contratos',mods:['instrumentos_SIGEJ']},
+ {amb:'Interna',cat:'Contratos',nombre:'Empresa Universitaria',url:'https://secgral.udg.mx/normatividad/contratos/empresa-universitaria',mods:['instrumentos_SIGEJ','patrimonio_SIGEJ']},
+ {amb:'Interna',cat:'Acuerdos',nombre:'Acuerdos de Rectoría General',url:'https://secgral.udg.mx/acuerdos/rectoria-general',mods:[]},
+ {amb:'Interna',cat:'Acuerdos',nombre:'Acuerdos Comisión de Hacienda',url:'https://secgral.udg.mx/acuerdos/comision-de-hacienda',mods:['instrumentos_SIGEJ','administracion_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Comisión de Hacienda',url:'https://secgral.udg.mx/circulares/comision-de-hacienda',mods:['administracion_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Comisión de Responsabilidades y Sanciones',url:'https://secgral.udg.mx/circulares/comision-de-responsabilidades-y-sanciones',mods:['contencioso_SIGEJ','resp_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Rectoría General',url:'https://secgral.udg.mx/circulares/rectoria-general',mods:[]},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Secretaría General',url:'https://secgral.udg.mx/circulares/secretaria-general',mods:['oficialia_SIGEJ']},
+ {amb:'Interna',cat:'Circulares',nombre:'Circulares Anuales',url:'https://secgral.udg.mx/circulares-anuales',mods:[]},
+ {amb:'Interna',cat:'Normatividad',nombre:'Normatividad General',url:'https://secgral.udg.mx/normatividad/general',mods:['normatividad_SIGEJ','instrumentos_SIGEJ','contencioso_SIGEJ']},
+ {amb:'Interna',cat:'Normatividad',nombre:'Normatividad Específica',url:'https://secgral.udg.mx/normatividad/especifica',mods:['normatividad_SIGEJ']},
+ {amb:'Interna',cat:'Órganos colegiados',nombre:'Sesiones del CGU',url:'http://www.hcgu.udg.mx/sesioneshcgu',mods:['normatividad_SIGEJ']},
+ {amb:'Interna',cat:'Órganos colegiados',nombre:'Dictámenes del CGU',url:'http://www.hcgu.udg.mx/dictamenes',mods:['normatividad_SIGEJ','instrumentos_SIGEJ']},
+ {amb:'Interna',cat:'Órganos colegiados',nombre:'Sesiones de Comisiones',url:'http://www.hcgu.udg.mx/sesiones-de-comisiones',mods:['normatividad_SIGEJ']},
+ {amb:'Externa',cat:'Federal',nombre:'Legislación Federal (Diputados)',url:'https://www.diputados.gob.mx/LeyesBiblio/index.htm',mods:['instrumentos_SIGEJ','contencioso_SIGEJ','internacional_SIGEJ','patrimonio_SIGEJ']},
+ {amb:'Externa',cat:'Federal',nombre:'Reglamentos Federales',url:'https://www.diputados.gob.mx/LeyesBiblio/regla.htm',mods:['instrumentos_SIGEJ','contencioso_SIGEJ']},
+ {amb:'Externa',cat:'Estatal',nombre:'Legislación de Jalisco',url:'https://congresoweb.congresojal.gob.mx/BibliotecaVirtual/LeyesEstatales.cfm',mods:['contencioso_SIGEJ','instrumentos_SIGEJ','oficialia_SIGEJ']},
+ {amb:'Externa',cat:'NOM',nombre:'Normas Oficiales Mexicanas',url:'https://platiica.economia.gob.mx/normalizacion/normas-oficiales-mexicanas/',mods:['patrimonio_SIGEJ','internacional_SIGEJ']}
+];
+function REPO(){var r=J('sigej_repo_normativo');return Array.isArray(r)&&r.length?r:DEF;}
+var base=pk;
+var rel=REPO().filter(function(x){return (x.mods||[]).indexOf(base)>=0;});
+var gen=REPO().filter(function(x){return !(x.mods||[]).length&&x.amb==='Interna';});
+var b=document.createElement('div');b.textContent='📖 Normativa';
+b.style.cssText='position:fixed;right:16px;bottom:100px;background:#5a2e8c;color:#fff;padding:9px 14px;border-radius:22px;font:600 12.5px system-ui,sans-serif;cursor:pointer;z-index:99994;box-shadow:0 4px 14px rgba(0,0,0,.25)';
+var p=document.createElement('div');
+p.style.cssText='position:fixed;right:16px;bottom:146px;width:360px;max-width:94vw;max-height:74vh;background:#fff;border:1px solid #cbd5e1;border-radius:12px;box-shadow:0 12px 34px rgba(0,0,0,.3);z-index:99995;display:none;flex-direction:column;overflow:hidden';
+document.body.appendChild(b);document.body.appendChild(p);
+function link(x){return '<a href="'+ec(x.url)+'" target="_blank" rel="noopener" style="display:flex;gap:7px;align-items:center;padding:7px 9px;border:1px solid #eef2f7;border-radius:8px;margin-bottom:5px;text-decoration:none;color:#0a2f4f;font:12px system-ui,sans-serif"><span>'+(x.amb==='Interna'?'🏛️':'🌐')+'</span><span>'+ec(x.nombre)+'</span><span style="margin-left:auto;font-size:10px;color:#94a3b8">↗</span></a>';}
+function render(){p.innerHTML='<div style="background:#5a2e8c;color:#fff;padding:9px 12px;font:700 13px system-ui,sans-serif;display:flex;justify-content:space-between;align-items:center"><span>📖 Normativa aplicable</span><span id="__nx" style="cursor:pointer;font-size:16px">✕</span></div><div style="overflow:auto;padding:10px 12px;flex:1">'+
+ (rel.length?'<div style="font:600 11px system-ui,sans-serif;color:#5a2e8c;margin-bottom:5px">RELACIONADA CON ESTE MÓDULO</div>'+rel.map(link).join(''):'<div style="font:12px system-ui,sans-serif;color:#94a3b8;margin-bottom:6px">Sin normas mapeadas específicamente a este módulo.</div>')+
+ '<div style="font:600 11px system-ui,sans-serif;color:#5a2e8c;margin:8px 0 5px">NORMATIVIDAD INSTITUCIONAL</div>'+gen.slice(0,5).map(link).join('')+
+ '<a href="cumplimiento_SIGEJ.html" style="display:block;text-align:center;margin-top:8px;background:#0a4d8c;color:#fff;border-radius:8px;padding:8px;text-decoration:none;font:600 12px system-ui,sans-serif">⚖️ Abrir Motor de Cumplimiento</a>'+
+ '<div style="font:10.5px system-ui,sans-serif;color:#64748b;margin-top:8px">Repositorio administrado por la Coordinación de Normatividad. Términos y plazos conforme a la ley aplicable.</div></div>';
+ p.querySelector('#__nx').onclick=function(){p.style.display='none';};}
+b.onclick=function(){var o=p.style.display!=='none';if(o){p.style.display='none';}else{render();p.style.display='flex';}};
+}catch(e){}})();
+</script>
+</body></html>"""
+open(B+"seguimiento_SIGEJ.html","w",encoding="utf-8").write(TPL)
+print("seguimiento_SIGEJ.html OK -",len(TPL),"bytes")
